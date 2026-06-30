@@ -1,0 +1,29 @@
+# curie_map:
+#   skos: "http://www.w3.org/2004/02/skos/core#"
+#   semapv: "https://w3id.org/semapv/vocab/"
+#   eccdm: "https://hl7.eu/fhir/ig/cancer-common/element/"
+#   miionko: "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/element/"
+#   obds: "https://www.basisdatensatz.de/element/"
+# mapping_set_id: "https://w3id.org/cancer-crosswalk/mappings/mii-onko-obds__to__eccdm"
+# mapping_set_title: "MII Onkologie / oBDS -> ECCDM element crosswalk"
+# mapping_set_version: "0.1.0"
+# license: "https://creativecommons.org/licenses/by/4.0/"
+# mapping_tool: "manual curation"
+# mapping_provider: "https://w3id.org/cancer-crosswalk"
+# subject_source: "MII Modul Onkologie / oBDS Basisdatensatz (DE)"
+# object_source: "HL7 Europe Cancer Common Data Model (ECCDM)"
+# comment: "Direction: subject (source) <predicate> object (ECCDM hub). SEED set - high-confidence items only; not exhaustive."
+subject_id	subject_label	predicate_id	object_id	object_label	mapping_justification	confidence	comment
+obds:patient.geburtsdatum	Geburtsdatum	skos:exactMatch	eccdm:CancerPatient.birthDate	BirthDate	semapv:ManualMappingCuration	0.95
+obds:patient.geschlecht	Geschlecht	skos:closeMatch	eccdm:CancerPatient.sexAtBirth	SexAtBirth	semapv:ManualMappingCuration	0.6	oBDS administrative/biological sex vs ECCDM sex-at-birth - semantic narrowing.
+obds:diagnose.icdo3_histologie	ICD-O-3 Histologie/Morphologie	skos:exactMatch	eccdm:CancerConditionAtDiagnosis.histologyBehaviour	HistologyBehaviour	semapv:ManualMappingCuration	0.9	Both recommend ICD-O-3.
+obds:diagnose.icdo3_topographie	ICD-O-3 Topographie (Lokalisation)	skos:exactMatch	eccdm:CancerConditionAtDiagnosis.bodySite	BodySite	semapv:ManualMappingCuration	0.9
+obds:diagnose.diagnosedatum	Diagnosedatum	skos:broadMatch	eccdm:CancerConditionAtDiagnosis.visitDate	VisitDate	semapv:ManualMappingCuration	0.5	oBDS has one diagnosis date; ECCDM splits into visit/biopsy/imaging/lab dates - subject broader.
+obds:diagnose.grading	Grading	skos:closeMatch	eccdm:CancerConditionAtDiagnosis.tumourGradeValue	TumourGradeValue	semapv:ManualMappingCuration	0.7	ECCDM separates gradeSystem + gradeValue.
+obds:tnm.tnm_komponenten	TNM-Klassifikation (T/N/M)	skos:closeMatch	eccdm:CancerStage.stage	StageValue	semapv:ManualMappingCuration	0.7	oBDS flat cT/cN/cM fields vs ECCDM (code,value) stage components.
+obds:vitalstatus.vitalstatus	Vitalstatus	skos:exactMatch	eccdm:LastFollowUp.vitalStatus	VitalStatus	semapv:ManualMappingCuration	0.9
+obds:vitalstatus.sterbedatum	Sterbedatum	skos:exactMatch	eccdm:LastFollowUp.deathDate	DeathDate	semapv:ManualMappingCuration	0.9
+obds:vitalstatus.todesursache	Todesursache	skos:exactMatch	eccdm:LastFollowUp.causeOfDeath	CauseOfDeath	semapv:ManualMappingCuration	0.85
+obds:op.op_datum	Operationsdatum	skos:exactMatch	eccdm:Surgery.date	Date	semapv:ManualMappingCuration	0.9
+obds:strahlentherapie.beginn	Strahlentherapie Beginndatum	skos:exactMatch	eccdm:Radiotherapy.startDate	StartDate	semapv:ManualMappingCuration	0.9
+obds:systemtherapie.beginn	Systemische Therapie Beginndatum	skos:exactMatch	eccdm:SystemicTreatment.startDate	StartDate	semapv:ManualMappingCuration	0.9

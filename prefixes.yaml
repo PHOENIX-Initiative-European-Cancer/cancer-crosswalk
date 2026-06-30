@@ -1,0 +1,26 @@
+# Shared CURIE map for the cancer-crosswalk SSSOM mapping sets.
+#
+# These prefixes are *minted for this crosswalk*. The source data models do not
+# publish per-element IRIs, so we synthesise stable namespaces. Each mapping set
+# embeds the subset of this map it actually uses (SSSOM requires the curie_map to
+# travel with the file).
+#
+# Hub  = ECCDM (HL7 Europe Cancer Common Data Model) — the nave.
+# Spokes = the source datasets, each mapped *to* the hub.
+curie_map:
+  # --- standard vocabularies (predicates & justifications) ---
+  skos: "http://www.w3.org/2004/02/skos/core#"
+  owl: "http://www.w3.org/2002/07/owl#"
+  rdfs: "http://www.w3.org/2000/01/rdf-schema#"
+  semapv: "https://w3id.org/semapv/vocab/"
+  sssom: "https://w3id.org/sssom/"
+
+  # --- hub ---
+  eccdm: "https://hl7.eu/fhir/ig/cancer-common/element/"
+
+  # --- spokes (source datasets) ---
+  miionko: "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/element/"
+  obds: "https://www.basisdatensatz.de/element/"
+  senol: "https://www.krebsgesellschaft.de/senologie/datenkranz/element/"
+  b1mg: "https://w3id.org/b1mg/cancer-minimal-dataset/element/"
+  nabon: "https://www.nabon.nl/informatiestandaard/mammacarcinoom/element/"
