@@ -9,7 +9,7 @@
 # license: "https://creativecommons.org/licenses/by/4.0/"
 # mapping_tool: "manual curation"
 # mapping_provider: "https://w3id.org/cancer-crosswalk"
-# subject_source: "NABON Informatiestandaard Mammacarcinoom (NL)"
-# object_source: "HL7 Europe Cancer Common Data Model (ECCDM)"
+# subject_source: "https://www.nabon.nl/informatiestandaard/mammacarcinoom"
+# object_source: "https://hl7.eu/fhir/ig/cancer-common"
 # comment: "Direction: subject (source) <predicate> object (ECCDM hub). TEMPLATE - no mappings curated yet."
 subject_id	subject_label	predicate_id	object_id	object_label	mapping_justification	confidence	comment

@@ -10,8 +10,8 @@
 # license: "https://creativecommons.org/licenses/by/4.0/"
 # mapping_tool: "manual curation"
 # mapping_provider: "https://w3id.org/cancer-crosswalk"
-# subject_source: "MII Modul Onkologie / oBDS Basisdatensatz (DE)"
-# object_source: "HL7 Europe Cancer Common Data Model (ECCDM)"
+# subject_source: "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko"
+# object_source: "https://hl7.eu/fhir/ig/cancer-common"
 # comment: "Direction: subject (source) <predicate> object (ECCDM hub). SEED set - high-confidence items only; not exhaustive."
 subject_id	subject_label	predicate_id	object_id	object_label	mapping_justification	confidence	comment
 obds:patient.geburtsdatum	Geburtsdatum	skos:exactMatch	eccdm:CancerPatient.birthDate	BirthDate	semapv:ManualMappingCuration	0.95
