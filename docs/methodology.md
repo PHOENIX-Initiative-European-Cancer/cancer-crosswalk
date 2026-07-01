@@ -52,6 +52,39 @@ can be added as separate SSSOM sets, e.g.
 `mappings/value/<source>-laterality__to__eccdm.sssom.tsv`. Keep them separate so
 element coverage and code coverage are reported independently.
 
+## Non-standard extension columns
+
+SSSOM allows extra columns beyond its core slots (documented in the `#` header).
+This crosswalk uses:
+
+| column | meaning | values |
+|---|---|---|
+| `subject_terminology` | code system the source element binds | free text / `—` (deferred) |
+| `mapping_cardinality` | element multiplicity source↔hub | `1:1`, `n:1`, `1:n`, `n:n` |
+| `element_kind` | SDTM/ADaM class of the source element | `collected`, `calculated` |
+| `source_context` | the capture-context axis the source indexes the concept by | see below |
+| `review_status` | curation state | `proposed`, `reviewed` |
+
+### `source_context` — the collision resolver
+
+Some sources record the **same clinical concept multiple times**, indexed by a
+cross-cutting dimension. `source_context` names that dimension so an n:1 fan-in
+to one hub element is explicit rather than arbitrary. The values are
+**source-specific**:
+
+| source | dimension | values |
+|---|---|---|
+| NABON | MDO (tumour-board) phase | `preoperatief`, `postoperatief`, `neoadjuvant`, `metastase`, `recidief` |
+| oBDS | Meldeanlass / time reference | `Diagnose`, `Verlauf`, `Pathologie`, `Tod` |
+| ECCDM (hub) | — (the hub is the context-free reference) | *(blank)* |
+
+**Rule:** two rows with the *same* `object_id` **must** differ in
+`source_context` — otherwise it is a genuine duplicate conflict, not a context
+split. It is orthogonal to `predicate_id` (context = *which*; predicate = *how
+equivalent*). Keeping e.g. NABON `postoperatief` rows alongside `preoperatief`
+ones surfaces hub limitations (ECCDM collapses the pre/post-op distinction into
+a single field → information loss made visible).
+
 ## CURIEs
 
 Source models do not publish per-element IRIs, so prefixes in `prefixes.yaml`
