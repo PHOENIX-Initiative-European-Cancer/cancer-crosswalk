@@ -1,0 +1,90 @@
+### ActiveSurveillance  (4 elements)
+  eccdm:ActiveSurveillance.subject  [1..1 CancerPatient]  "Subject"
+  eccdm:ActiveSurveillance.cancerConditionAtDiagnosisReference  [1..1 Reference(CancerConditionAtDiagnosis)]  "CancerCondition AtDiagnosis Reference"
+  eccdm:ActiveSurveillance.startDate  [1..1 dateTime]  "StartDate"
+  eccdm:ActiveSurveillance.endDate  [0..1 dateTime]  "EndDate"
+
+### CancerConditionAtDiagnosis [DONE - durchstich]  (9 elements)
+  eccdm:CancerConditionAtDiagnosis.subject  [1..1 Reference(CancerPatient)]  "Subject"
+  eccdm:CancerConditionAtDiagnosis.histologyBehaviour  [0..1 CodeableConcept]  "HistologyBehaviour"
+  eccdm:CancerConditionAtDiagnosis.bodySite  [1..1 CodeableConcept]  "BodySite"
+  eccdm:CancerConditionAtDiagnosis.tumourGradeSystem  [0..1 CodeableConcept]  "TumourGradeSystem"
+  eccdm:CancerConditionAtDiagnosis.tumourGradeValue  [0..1 string]  "TumourGradeValue"
+  eccdm:CancerConditionAtDiagnosis.visitDate  [0..1 dateTime]  "VisitDate"
+  eccdm:CancerConditionAtDiagnosis.biopsyDate  [0..1 dateTime]  "BiopsyDate"
+  eccdm:CancerConditionAtDiagnosis.imagingDate  [0..1 dateTime]  "ImagingDate"
+  eccdm:CancerConditionAtDiagnosis.labReportDate  [0..1 dateTime]  "LabReportDate"
+
+### CancerPatient  (4 elements)
+  eccdm:CancerPatient.birthDate  [1..1 dateTime]  "BirthDate"
+  eccdm:CancerPatient.sexAtBirth  [1..1 CodeableConcept]  "SexAtBirth"
+  eccdm:CancerPatient.observedSexGender  [0..1 CodeableConcept]  "ObservedSex Gender"
+  eccdm:CancerPatient.comorbiditiesAtCancerDiagnosis  [0..* CodeableConcept]  "ComorbiditiesAtCancerDiagnosis"
+
+### CancerStage  (8 elements)
+  eccdm:CancerStage.cancerConditionAtDiagnosisReference  [1..1 Reference(CancerConditionAtDiagnosis)]  "CancerCondition AtDiagnosis Reference"
+  eccdm:CancerStage.classificationType  [0..1 CodeableConcept]  "ClassificationType"
+  eccdm:CancerStage.stage  [1..* BackboneElement]  "StageValue"
+  eccdm:CancerStage.stage.code  [1..1 CodeableConcept]  "Stage element code"
+  eccdm:CancerStage.stage.value  [1..1 CodeableConcept]  "Stage element value"
+  eccdm:CancerStage.type  [1..1 CodeableConcept]  "Type"
+  eccdm:CancerStage.evidenceReference  [0..* Reference(Surgery or Imaging)]  "EvidenceReference"
+  eccdm:CancerStage.imagingReference  [0..* Reference(Imaging)]  "ImagingReference"
+
+### ClinicalCancerProgression  (8 elements)
+  eccdm:ClinicalCancerProgression.cancerConditionAtDiagnosisReference  [1..1 Reference(CancerConditionAtDiagnosis)]  "CancerConditionReference"
+  eccdm:ClinicalCancerProgression.diseaseStatus  [1..1 CodeableConcept]  "DiseaseStatus"
+  eccdm:ClinicalCancerProgression.tumourGradeSystem  [0..1 CodeableConcept]  "TumourGradeSystem"
+  eccdm:ClinicalCancerProgression.tumourGradeValue  [0..1 string]  "TumourGradeValue"
+  eccdm:ClinicalCancerProgression.assertedDate  [1..1 dateTime]  "AssertedDate"
+  eccdm:ClinicalCancerProgression.extentType  [0..1 CodeableConcept]  "ExtentType"
+  eccdm:ClinicalCancerProgression.locoRegionalSites  [0..* CodeableConcept]  "LocoRegionalSites"
+  eccdm:ClinicalCancerProgression.metastaticSites  [0..* CodeableConcept]  "MetastaticSites"
+
+### Imaging  (2 elements)
+  eccdm:Imaging.type  [1..1 CodeableConcept]  "Type"
+  eccdm:Imaging.bodySite  [1..* CodeableConcept]  "BodySite"
+
+### LastFollowUp  (6 elements)
+  eccdm:LastFollowUp.subject  [1..1 Reference(CancerPatient)]  "Patient Reference"
+  eccdm:LastFollowUp.vitalStatus  [1..1 CodeableConcept]  "VitalStatus"
+  eccdm:LastFollowUp.evidenceOfDisease  [0..1 boolean]  "EvidenceOfDisease"
+  eccdm:LastFollowUp.causeOfDeath  [0..1 CodeableConcept]  "CauseOfDeath"
+  eccdm:LastFollowUp.date  [1..1 dateTime]  "Date"
+  eccdm:LastFollowUp.deathDate  [0..1 dateTime]  "DeathDate"
+
+### OverallCancerTreatmentResponse  (4 elements)
+  eccdm:OverallCancerTreatmentResponse.cancerConditionAtDiagnosisReference  [1..1 Reference(CancerConditionAtDiagnosis)]  "CancerConditionAtDiagnosisReference"
+  eccdm:OverallCancerTreatmentResponse.clinicalCancerProgressionReference  [0..1 Reference(ClinicalCancerProgression)]  "ClinicalCancerProgressionReference"
+  eccdm:OverallCancerTreatmentResponse.treatmentResponseType  [1..1 CodeableConcept]  "TreatmentResponseType"
+  eccdm:OverallCancerTreatmentResponse.date  [1..1 dateTime]  "Date"
+
+### Radiotherapy  (8 elements)
+  eccdm:Radiotherapy.subject  [1..1 Reference(CancerPatient)]  "Subject"
+  eccdm:Radiotherapy.cancerConditionAtDiagnosisReference  [1..1 Reference(CancerConditionAtDiagnosis)]  "CancerCondition AtDiagnosis Reference"
+  eccdm:Radiotherapy.clinicalCancerProgressionReference  [0..1 Reference(ClinicalCancerProgression)]  "ClinicalCancerProgresionReference"
+  eccdm:Radiotherapy.intent  [1..1 CodeableConcept]  "Intent"
+  eccdm:Radiotherapy.startDate  [1..1 dateTime]  "StartDate"
+  eccdm:Radiotherapy.endDate  [0..1 dateTime]  "EndDate"
+  eccdm:Radiotherapy.bodySite  [1..* CodeableConcept]  "BodySite"
+  eccdm:Radiotherapy.setting  [0..1 CodeableConcept]  "Setting"
+
+### Surgery  (6 elements)
+  eccdm:Surgery.subject  [1..1 Reference(CancerPatient)]  "Subject"
+  eccdm:Surgery.cancerConditionAtDiagnosisReference  [1..1 Reference(CancerConditionAtDiagnosis)]  "CancerCondition AtDiagnosis Reference"
+  eccdm:Surgery.clinicalCancerProgressionReference  [0..1 Reference(ClinicalCancerProgression)]  "ClinicalCancerProgressionReference"
+  eccdm:Surgery.intent  [1..1 CodeableConcept]  "Intent"
+  eccdm:Surgery.date  [1..1 dateTime]  "Date"
+  eccdm:Surgery.bodySite  [1..* CodeableConcept]  "BodySite"
+
+### SystemicTreatment  (9 elements)
+  eccdm:SystemicTreatment.subject  [1..1 Reference(CancerPatient)]  "Subject"
+  eccdm:SystemicTreatment.cancerConditionAtDiagnosisReference  [1..1 Reference(CancerConditionAtDiagnosis)]  "CancerConditionAtDiagnosisReference"
+  eccdm:SystemicTreatment.clinicalCancerProgressionReference  [0..1 Reference(ClinicalCancerProgression)]  "ClinicalCancerProgresionReference"
+  eccdm:SystemicTreatment.intent  [1..1 CodeableConcept]  "Intent"
+  eccdm:SystemicTreatment.type  [1..1 CodeableConcept]  "Type"
+  eccdm:SystemicTreatment.startDate  [1..1 dateTime]  "StartDate"
+  eccdm:SystemicTreatment.endDate  [0..1 dateTime]  "EndDate"
+  eccdm:SystemicTreatment.ongoing  [0..1 boolean]  "Ongoing"
+  eccdm:SystemicTreatment.setting  [0..1 CodeableConcept]  "Setting"
+
