@@ -100,16 +100,15 @@ def main() -> int:
     # ---- Panel A: model x source coverage ----
     axA = fig.add_subplot(gs[0])
     nrows, ncols = len(models), len(srcs)
+    COVER_HUE = "#2c7fb8"   # single hue; intensity = coverage fraction only
     for i, model in enumerate(models):
         for j, src in enumerate(srcs):
             cov = covered[(model, src)]
             frac = len(cov) / size[model]
             if cov:
-                dom = preds[(model, src)].most_common(1)[0][0]
-                base = PRED.get(dom, "#888")
-                rgba = mcolors.to_rgba(base, alpha=0.25 + 0.6 * frac)
+                rgba = mcolors.to_rgba(COVER_HUE, alpha=0.18 + 0.72 * frac)
                 txt = f"{len(cov)}/{size[model]}"
-                tcol = "white" if frac > 0.5 else "#222"
+                tcol = "white" if frac > 0.55 else "#1a1a1a"
             else:
                 rgba = mcolors.to_rgba("#ececec", 1)
                 txt, tcol = "·", "#999"
@@ -127,11 +126,12 @@ def main() -> int:
     for sp in axA.spines.values():
         sp.set_visible(False)
     axA.set_title("A · Hub coverage per ECCDM model  (cell = elements mapped / "
-                  "model size; tint = dominant predicate)", fontsize=10, pad=26)
-    pred_legend = [Patch(facecolor=c, label=k.split(":")[1].replace("Match", ""))
-                   for k, c in PRED.items()] + [Patch(facecolor="#ececec", label="gap")]
-    axA.legend(handles=pred_legend, loc="upper left", bbox_to_anchor=(1.01, 1),
-               fontsize=7.5, frameon=False, title="predicate")
+                  "model size; darker = higher coverage)", fontsize=10, pad=26)
+    cov_legend = [Patch(facecolor=mcolors.to_rgba("#2c7fb8", a), label=lbl)
+                  for a, lbl in [(0.9, "high"), (0.5, "mid"), (0.2, "low")]] + \
+                 [Patch(facecolor="#ececec", label="gap")]
+    axA.legend(handles=cov_legend, loc="upper left", bbox_to_anchor=(1.01, 1),
+               fontsize=7.5, frameon=False, title="coverage")
 
     # ---- Panel B: Ergaenzungsmodule ----
     axB = fig.add_subplot(gs[1])
