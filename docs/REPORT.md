@@ -5,6 +5,8 @@ against the **HL7 Europe Cancer Common Data Model (ECCDM)** as a common hub. Not
 an Implementation Guide — an analysis that makes correspondences and gaps
 explicit and machine-readable.
 
+![Generic ECCDM spine (A: hub coverage per model) vs breast-specific extension need (B: extension modules).](overview.png){ width=100% }
+
 ## Approach
 
 - **Hub-and-spoke.** ECCDM is the hub (68 elements / 11 logical models, extracted
