@@ -1,0 +1,315 @@
+id,element,datatype,terminology,type,definition
+nabon:dataelement-729,Aankleuringspatroon massa,Code,Waardelijst: Mamma_Aankleuringspatroon_Massa 2019-10-17T15:11:35 (dynamisch / Verplicht/CNE),Item,
+nabon:dataelement-735,Aankleuringspatroon non-mass enhancement,Code,Waardelijst: Mamma_Aankleuringspatroon_Non-mass_Enhancement 2019-10-17T15:30:55 (dynamisch / Verplicht/CNE),Item,
+nabon:dataelement-672,Aantal biopten,Aantal,,Item,
+nabon:dataelement-640,Aantal onderzochte lymfeklieren,Aantal,,Item,Het aantal onderzochte lymfeklieren.
+nabon:dataelement-639,Aantal positieve lymfeklieren,Aantal,,Item,Aantal klieren met micro- en/of macrometastasen of geisoleerde tumorcellen.
+nabon:dataelement-782,Aantal verdachte lymfeklieren,Aantal,,Item,Het aantal lymfeklieren dat verdacht zijn
+nabon:dataelement-621,Aanvrager,String,,Item,Zorgverlener voor wie het MDO voor deze patient wordt aangevraagd.
+nabon:dataelement-543,Aanvullend onderzoek,String,,Item,Toelichting op relevant aanvullend onderzoek van de patient.
+nabon:dataelement-781,Aanvullende pathologie,Code,Waardelijst: Mamma_Aanvullende_Pathologie 2020-05-12T22:04:30 (dynamisch / Verplicht/CNE),Item,Moet er aanvullende pathologie uitgevoerd worden?
+nabon:dataelement-544,Aanwezigen,String,,Item,"Afhankelijk van de EPD-inrichting, worden de aanwezigen met vrije tekst vastgelegd, of vanuit een waardenlijst van zorgverleners."
+nabon:dataelement-765,Advies,String,,Item,
+nabon:dataelement-487,Advies klinische studie,Code,Waardelijst: JaNeeOnbekend 2015-05-30T00:00:00 (dynamisch),Item,
+nabon:dataelement-632,Afstand tot de tepel,Hoeveelheid,,Item,Afstand van de afwijking tot de tepel in cm
+nabon:dataelement-785,Afstand tot tumorpositieve snijvlak,Hoeveelheid,,Item,Afstand tot tumorpositieve snijvlak
+nabon:dataelement-407,Afwijken richtlijn,Code,Waardelijst: JaNee 2020-01-30T13:16:30 (dynamisch / Verplicht/CNE),Item,Wijkt het voorgestelde beleid af van de landelijke richtlijn voor borstkanker?
+nabon:dataelement-627,Algemeen lichamelijk onderzoek,String,,Item,Algemeen lichamelijk onderzoek
+nabon:dataelement-625,Anamnese,String,,Item,Uitkomsten van de anamnese van de patient.
+nabon:dataelement-456,Angioinvasie,Code,Waardelijst: LymfAngioinvasie_PALGA 2016-08-17T13:57:41 (dynamisch / Verplicht/CNE),Item,Is er angioinvasie?
+nabon:dataelement-661,Asymmetrie,Code,Waardelijst: Mamma_Asymmetrie 2019-06-05T11:50:36 (dynamisch / Verplicht/CNE),Item,
+nabon:dataelement-390,Behandelingsmodaliteit,Code,Waardelijst: Behandelingsmodaliteit 2015-10-08T10:19:55 (dynamisch / Verplicht/CNE),Item,Type behandelingsmodaliteit voor de behandeling van de patient.
+nabon:dataelement-391,Beeldvormend onderzoek,Code,Imaging - action (qualifier value) (SNOMED CT: 360037004),Item,Type beeldvormend onderzoek
+nabon:dataelement-664,Begrenzing massa,Code,Waardelijst: Mamma_Begrenzing_Massa 2019-06-05T12:00:15 (dynamisch / Verplicht/CNE),Item,
+nabon:dataelement-740,Begrenzing massa MRI,Code,Waardelijst: Mamma_Begrenzing_Massa_MRI 2020-01-06T16:31:25 (dynamisch / Verplicht/CNE),Item,
+nabon:dataelement-814,Bekend met nierfunctiestoornis,Code,Waardelijst: JaNee 2020-01-30T13:16:30 (dynamisch / Verplicht/CNE),Item,
+nabon:dataelement-406,Beleid,Tekst,,Item,Beleid voor de patient.
+nabon:dataelement-777,Beleidsadvies BI-RADS,Code,Waardelijst: Mamma_Beleidsadvies 2020-04-30T13:33:11 (dynamisch / Verplicht/CNE),Item,
+nabon:dataelement-789,Beleidsadvies familieanamnese,Code,Waardelijst: Mamma_Beleidsadvies_Familieanamnese 2020-06-09T00:01:10 (dynamisch / Verplicht/CNE),Item,
+nabon:dataelement-790,Beleidsadvies screening,Code,Waardelijst: Mamma_Beleidsadvies_Screening 2020-06-09T00:08:44 (dynamisch / Verplicht/CNE),Item,
+nabon:dataelement-770,Beoordeling lymfeklieren,Code,Waardelijst: Mamma_Beoordeling_Lymfeklieren 2020-04-29T21:17:03 (dynamisch / Verplicht/CNE),Item,
+nabon:dataelement-648,Bepaling receptorstatus,Code,Waardelijst: Mamma_Bepaling_Receptorstatus 2019-06-03T10:23:51 (dynamisch / Verplicht/CNE),Item,Is de receptorstatus bepaald op biopt of excisiepreparaat?
+nabon:dataelement-737,Bevindingen,Code,Waardelijst: Mamma_Bevindingen 2019-10-17T15:53:37 (dynamisch / Verplicht/CNE),Item,
+nabon:dataelement-764,Biopsierichting,Code,Waardelijst: Mamma_Biopsierichting 2020-04-28T23:09:16 (dynamisch / Verplicht/CNE),Item,
+nabon:dataelement-31,BI-RADS (birads),Code,Waardelijst: BI-RADS_BI-RADS5 2015-07-16T07:02:43 (dynamisch / Verplicht/CNE),Item,BI-RADS eindcategorie voor het beeldvormend onderzoek van de afwijking(en) in de borst.
+nabon:dataelement-418,Borstvoedend,Code,Mother currently breast-feeding (finding) (SNOMED CT: 169750002),Item,Geeft de patient borstvoeding?
+nabon:dataelement-642,Boost,Code,Boost radiation therapy (procedure) (SNOMED CT: 445232009),Item,Moet een boost worden gegeven?
+nabon:dataelement-420,Calcificaties,Code,Calcification of breast (finding) (SNOMED CT: 309587003),Item,Zijn er calcificaties aanwezig in de borst ?
+nabon:dataelement-767,Calcificaties echografie,Code,Waardelijst: Mamma_Calcificaties_Echografie 2020-04-29T21:20:25 (dynamisch / Verplicht/CNE),Item,
+nabon:dataelement-29,cN,Code,cN category (observable entity) (SNOMED CT: 399534004),Item,Stadiering van de lymfeklieren volgens TNM voorafgaand aan behandeling.
+nabon:dataelement-405,Conclusie,Samengestelde gegevens,,Item,De conclusie van het multidisciplinair overleg (MDO)
+nabon:dataelement-818,Contrastallergie,Code,Waardelijst: Mamma_Contrastallergie 2020-06-12T15:19:37 (dynamisch / Verplicht/CNE),Item,
+nabon:dataelement-816,Complicaties,Code,Waardelijst: Mamma_Complicaties 2020-06-23T15:47:52 (dynamisch / Verplicht/CNE),Item,
+nabon:dataelement-776,Corpus alienum,Code,Waardelijst: Mamma_Corpus_Alienum 2020-04-29T21:36:43 (dynamisch / Verplicht/CNE),Item,
+nabon:dataelement-430,Cortexdikte verdachte okselklier,Hoeveelheid,,Item,
+nabon:dataelement-774,Cyste,Code,Waardelijst: Mamma_Cyste 2020-04-29T21:34:38 (dynamisch / Verplicht/CNE),Item,
+nabon:dataelement-27,cT,Code,Waardelijst: Mamma_cT_TNM7 2020-01-30T13:08:17 (dynamisch / Verplicht/CNE),Item,De stadiering van de afwijking in de borst volgens TNM voorafgaand aan behandeling
+nabon:dataelement-404,cTNM,Tekst,TNM classification of malignant tumor before any treatment (tumor staging) (SNOMED CT: 106248000),Item,De stadiering van de ziekte van de patient volgens TNM voorafgaand aan behandeling.
+nabon:dataelement-6,cT-diameter (Doorsnede),Hoeveelheid,Diameter of lump (observable entity) (SNOMED CT: 248530000),Item,De diameter van de afwijking zoals vastgesteld voor de start van een behandeling.
+nabon:dataelement-538,Datum van aanmelding,Datum,,Item,Datum van aanmelding van het patient voor het MDO
+nabon:dataelement-539,Datum MDO,Datum,,Item,Datum van het MDO waarop de patient besproken wordt.
+nabon:dataelement-665,Densiteit massa,Code,Waardelijst: Mamma_Densiteit_Massa 2019-06-05T12:01:38 (dynamisch / Verplicht/CNE),Item,
+nabon:dataelement-545,Diameter,Hoeveelheid,Diameter of lump (observable entity) (SNOMED CT: 248530000),Item,Diameter van de afwijking in 2 dimensies
+nabon:dataelement-725,Diepte van de afwijking,Code,Waardelijst: Mamma_Diepte_Van_De_Afwijking 2019-10-02T16:59:35 (dynamisch / Verplicht/CNE),Item,
+nabon:dataelement-678,Diepte laesie,Hoeveelheid,,Item,
+nabon:dataelement-681,Differentiaal diagnose,Code,Waardelijst: Mamma_Differentiaal_Diagnose 2019-06-21T17:37:32 (dynamisch / Verplicht/CNE),Item,
+nabon:dataelement-736,Distributie non-mass enhancement,Code,Waardelijst: Mamma_Distributie_Non-mass_Enhancement 2019-10-17T15:40:54 (dynamisch / Verplicht/CNE),Item,
+nabon:dataelement-460,Distributie van de calcificaties,Code,Radiographic calcification finding (finding) (SNOMED CT: 129748009),Item,De distributie van de calcificaties in de borst zoals vastgesteld op beeldvorming.
+nabon:dataelement-669,Drainage,Code,Waardelijst: Mamma_Drainage 2019-06-21T13:21:07 (dynamisch / Verplicht/CNE),Item,
+nabon:dataelement-787,Dynamische curve initiÃ«le fase,Code,Waardelijst: Mamma_Dynamische_Curve_InitiÃ«le_Fase 2020-06-08T23:31:38 (dynamisch / Verplicht/CNE),Item,
+nabon:dataelement-788,Dynamische curve late fase,Code,Waardelijst: Mamma_Dynamische_Curve_Late_Fase 2020-06-08T23:33:21 (dynamisch / Verplicht/CNE),Item,
+nabon:dataelement-766,Echogeniteit massa,Code,Waardelijst: Mamma_Echogenitieit_Massa 2020-04-29T21:15:00 (dynamisch / Verplicht/CNE),Item,
+nabon:dataelement-571,Eerdere behandelingen,String,,Item,Welke relevante behandelingen heeft de patient eerder gehad?
+nabon:dataelement-773,Elasticitieit,Code,Waardelijst: Mamma_Elasticiteit 2020-04-29T21:25:17 (dynamisch / Verplicht/CNE),Item,
+nabon:dataelement-461,ER-percentage afwijking postoperatief,Hoeveelheid,,Item,percentage oestrogeen receptor positieve cellen postoperatief. Deze is bepaald op het excisiepreparaat.
+nabon:dataelement-399,ER-percentage afwijking preoperatief,Hoeveelheid,,Item,Percentage oestrogeen receptor positieve cellen preoperatief. Deze is bepaald op het biopt.
+nabon:dataelement-831,ER-percentage lymfeklieren,Hoeveelheid,,Item,
+nabon:dataelement-572,ER-percentage metastase,Hoeveelheid,,Item,Percentage oestrogeen receptor positieve cellen van de metastase.
+nabon:dataelement-21,ER-status afwijking preoperatief,Code,Hormone receptor positive tumor (disorder) (SNOMED CT: 417742002),Item,Oestrogeenreceptor status preoperatief. Deze is bepaald op het biopt.
+nabon:dataelement-462,ER-status afwijking postoperatief,Code,Hormone receptor positive tumor (disorder) (SNOMED CT: 417742002),Item,Oestrogreenreceptorstatus postoperatief. Deze is bepaald op het excisiepreparaat.
+nabon:dataelement-833,ER-status lymfeklieren,Code,Waardelijst: ER-Status 2015-06-05T09:09:32 (dynamisch / Verplicht/CNE),Item,
+nabon:dataelement-437,ER-status metastase,Code,Hormone receptor positive tumor (disorder) (SNOMED CT: 417742002),Item,Oestrogeenreceptorstatus van de metastase
+nabon:dataelement-447,ER-status recidief,Code,Hormone receptor positive tumor (disorder) (SNOMED CT: 417742002),Item,Oestrogeenreceptorstatus van het recidief
+nabon:dataelement-792,Evaluatie na beeindigen NAC,Code,Waardelijst: Mamma_BeeldvormendOnderzoek_v2 2020-07-29T16:23:52 (dynamisch / Verplicht/CNE),Item,
+nabon:dataelement-646,Extranodale groei intrammaire klier,Code,Waardelijst: Mamma_ExtranodaleGroei 2015-11-05T10:08:11 (dynamisch / Verplicht/CNE),Item,Is er extranodale groei van de intramammaire klier?
+nabon:dataelement-454,Extranodale groei OKD,Code,Waardelijst: Mamma_ExtranodaleGroei 2015-11-05T10:08:11 (dynamisch / Verplicht/CNE),Item,"De mate van extranodale groei vastgesteld op basis van de okselklierdissectie. Van massale extranodale groei is sprake als er zodanige tumorgroei is in het okselvet, dat er twijfel is over de radicaliteit ter plaatse van de oksel."
+nabon:dataelement-561,Extranodale groei Mariklier,Code,Waardelijst: Mamma_ExtranodaleGroei 2015-11-05T10:08:11 (dynamisch / Verplicht/CNE),Item,Is er extranodale groei van de Mariklier?
+nabon:dataelement-453,Extranodale groei SNB,Code,Waardelijst: Mamma_ExtranodaleGroei 2015-11-05T10:08:11 (dynamisch / Verplicht/CNE),Item,"De mate van extranodale groei vastgesteld op basis van de schildwachtklierprocedure. Van massale extranodale groei is sprake als er zodanige tumorgroei is in het okselvet, dat er twijfel is over de radicaliteit ter plaatse van de oksel."
+nabon:dataelement-817,Extravasaat,Code,Waardelijst: JaNee 2020-01-30T13:16:30 (dynamisch / Verplicht/CNE),Item,
+nabon:dataelement-791,Follow-up,String,,Item,Over hoeveel tijd follow-up?
+nabon:dataelement-755,Follow-up,Code,Waardelijst: Mamma_Follow-up 2020-02-10T16:27:51 (dynamisch / Verplicht/CNE),Item,
+nabon:dataelement-796,Familie anamnese,,,Groep,Familie anamnese
+nabon:dataelement-823,Aandoeningen familieanamnese,Code,Waardelijst: Mamma_Aandoeningen_Familieanamnese 2020-06-12T15:53:15 (dynamisch / Verplicht/CNE),Item,
+nabon:dataelement-825,Familieleden,,,Item,
+nabon:dataelement-826,Aantal familieleden,Aantal,,Item,
+nabon:dataelement-836,Familie anamnese,String,,Item,Familie anamnese
+nabon:dataelement-824,Familieanamnese uitgevoerd,Code,Waardelijst: JaNeeOnbekend 2015-05-30T00:00:00 (dynamisch / Verplicht/CNE),Item,
+nabon:dataelement-837,Familieanamnese,,,Groep,Rootconcept van de bouwsteen Familieanamnese. Dit rootconcept bevat alle gegevenselementen van de bouwsteen Familieanamnese.
+nabon:dataelement-838,Datum,Datum/tijd,,Item,Datum van afname van de familieanamnese. Een vage datum is toegestaan.
+nabon:dataelement-839,Familielid,,,Groep,Container van het concept familielid. Deze container bevat alle gegevenselementen van het concept familielid.
+nabon:dataelement-840,BiologischeRelatie,Code,Waardelijst: BiologischeRelatieCodelijst 2017-12-31T00:00:00 (statisch),Item,Geeft de biologische relatie van het familielid tot de patiÃ«nt.
+nabon:dataelement-841,Toelichting,String,,Item,"Toelichting met, voor de familieanamnese relevante, informatie betreffende het familielid."
+nabon:dataelement-842,OverlijdensIndicator,Boolean,,Item,Indicator die aangeeft of het familielid overleden is.
+nabon:dataelement-843,LeeftijdBijOverlijden,Aantal,,Item,De leeftijd waarop het familielid overleden is.
+nabon:dataelement-844,Aandoening,,,Groep,Container van het concept Aandoening. Deze container bevat alle gegevenselementen van het concept Aandoening.
+nabon:dataelement-845,Probleem,,,Groep,Het gezondheidsprobleem van het betreffende familielid dat in het kader van de familieanamnese wordt vastgelegd.
+nabon:dataelement-846,Probleem,,,Groep,Rootconcept van de bouwsteen Probleem.
+nabon:dataelement-847,IsDoodsoorzaak,Boolean,,Item,Aanduiding of het beschreven gezondheidsprobleem de doodsoorzaak is van het familielid.
+nabon:dataelement-813,Gauge,Code,Waardelijst: Mamma_Gauge 2020-06-12T15:15:44 (dynamisch / Verplicht/CNE),Item,
+nabon:dataelement-662,Geassocieerde bevindingen,Code,Waardelijst: Mamma_Geassocieerde_Bevindingen 2019-06-05T11:54:12 (dynamisch / Verplicht/CNE),Item,
+nabon:dataelement-741,Geassocieerde bevindingen huidinvasie,Code,Waardelijst: Mamma_Geassocieerde_Bevindingen_Huidinvasie 2020-01-06T16:33:21 (dynamisch / Verplicht/CNE),Item,
+nabon:dataelement-757,Gelokaliseerd,Code,Waardelijst: Mamma_Afwijking_Gelokaliseerd 2020-02-19T13:00:23 (dynamisch / Verplicht/CNE),Item,"Is de tumor gelokaliseerd bijvoorbeeld middels draadlokalisatie, jodiumbron, magneetlokalisatie of andere lokalisatie."
+nabon:dataelement-822,Genetisch onderzoek verricht,Code,Waardelijst: JaNee 2020-01-30T13:16:30 (dynamisch / Verplicht/CNE),Item,
+nabon:dataelement-12,Genmutatie,Code,Waardelijst: Mamma_Genmutaties 2020-07-29T15:58:13 (dynamisch / Verplicht/CNE),Item,Soort genmutatie relevant voor de behandeling van borstkanker
+nabon:dataelement-754,Genprofieltest,Code,Waardelijst: Mamma_Genprofieltest 2019-02-06T17:50:08 (dynamisch / Verplicht/CNE),Item,
+nabon:dataelement-546,Graad DCIS preoperatief,Code,Histological grade finding (finding) (SNOMED CT: 373372005),Item,De preoperatieve graad van een DCIS bepaald op het biopt.
+nabon:dataelement-560,Graad invasieve tumor postoperatief,Code,Histological grade finding (finding) (SNOMED CT: 373372005),Item,De postoperatieve graad van de invasieve tumor bepaald op het excisiepreparaat.
+nabon:dataelement-17,Graad invasieve tumor preoperatief,Code,Histological grade finding (finding) (SNOMED CT: 373372005),Item,De graad van de tumor die preoperatief bepaald is (op biopt) van de invasieve tumor.
+nabon:dataelement-392,Graad DCIS postoperatief,Code,Histological grade finding (finding) (SNOMED CT: 373372005),Item,De graad van de DCIS die postoperatief is bepaald (op excisiepreparaat)
+nabon:dataelement-463,HER2-status afwijking postoperatief,Code,Waardelijst: HER2-Status 2015-06-05T09:15:04 (dynamisch / Verplicht/CNE),Item,HER2-NEU-Status van de afwijking postoperatief. Deze is bepaald op het excisiepreparaat.
+nabon:dataelement-749,Herbespreken,Code,Waardelijst: Mamma_Herbespreken_MDO 2020-02-10T12:04:17 (dynamisch / Verplicht/CNE),Item,Of de patient herbesproken moet worden op het MDO
+nabon:dataelement-401,HER2-status afwijking preoperatief,Code,Waardelijst: HER2-Status 2015-06-05T09:15:04 (dynamisch / Verplicht/CNE),Item,HER2-NEU-Status van de afwijking preoperatief. Deze is bepaald op het biopt.
+nabon:dataelement-835,HER2-status lymfeklieren,Code,Waardelijst: HER2-Status 2015-06-05T09:15:04 (dynamisch / Verplicht/CNE),Item,
+nabon:dataelement-438,HER2-status metastase,Code,Waardelijst: HER2-Status 2015-06-05T09:15:04 (dynamisch / Verplicht/CNE),Item,HER2-NEU-Status van de metastase.
+nabon:dataelement-657,Hoeveelheid fibroglandulair weefsel,Code,Waardelijst: Mamma_Hoeveelheid_Fibroglandulair_Weefsel 2019-06-05T12:18:25 (dynamisch / Verplicht/CNE),Item,
+nabon:dataelement-815,Hoeveelheid jodiumhoudend contrast,Hoeveelheid,,Item,
+nabon:dataelement-771,Houding van de patiÃ«nt,Code,Waardelijst: Mamma_Houding_Van_De_PatiÃ«nt 2020-04-29T21:30:31 (dynamisch / Verplicht/CNE),Item,
+nabon:dataelement-551,Huidige therapie,String,,Item,Wat is de huidige therapie van de patient.
+nabon:dataelement-570,Huidig probleem,String,,Item,Omschrijving van het huidig probleem van de patient.
+nabon:dataelement-778,Huidsparend,Code,Waardelijst: Mamma_Huidsparende_Ablatio 2020-05-12T21:31:21 (dynamisch / Verplicht/CNE),Item,Wordt er wel/niet een huidsparende ablatio uitgevoerd.
+nabon:dataelement-751,Hyperthermie,Code,Waardelijst: Mamma_Hyperthermie 2020-02-10T14:27:39 (dynamisch / Verplicht/CNE),Item,
+nabon:dataelement-730,Implantaten,Code,Waardelijst: JaNeeOnbekend 2015-05-30T00:00:00 (dynamisch / Verplicht/CNE),Item,
+nabon:dataelement-658,Intensiteit achtergrondkleuring,Code,Waardelijst: Mamma_Intensiteit_Achtergrondaankleuring 2019-06-05T12:20:22 (dynamisch / Verplicht/CNE),Item,
+nabon:dataelement-654,Interventie radiologie,Code,Waardelijst: Mamma_Interventie 2019-06-05T12:02:59 (dynamisch / Verplicht/CNE),Item,
+nabon:dataelement-410,Klinische studie,String,,Item,Relevante klinische studies voor de patient. Dit kan een waardenlijst zijn met de actuele lopende klinische studies (dit heeft de voorkeur) of een vrije tekstveld.
+nabon:dataelement-667,Kwalificatie lymfeklier,Code,Waardelijst: Mamma_Kwalificatie_Lymfeklier 2019-06-05T12:28:55 (dynamisch / Verplicht/CNE),Item,
+nabon:dataelement-731,Laesies aanwezig,Code,Waardelijst: JaNee 2020-01-30T13:16:30 (dynamisch / Verplicht/CNE),Item,
+nabon:dataelement-742,Laesies mamma (Laesies mamma),Code,Waardelijst: Mamma_Laesies_Mamma 2020-01-06T17:37:48 (dynamisch / Verplicht/CNE),Item,
+nabon:dataelement-743,Laesies lymfeklieren (Laesies lymfeklieren),Code,Waardelijst: Mamma_Laesies_Lymfeklieren 2020-01-06T17:39:48 (dynamisch / Verplicht/CNE),Item,
+nabon:dataelement-760,Ligging prothese,Code,Waardelijst: Mamma_Ligging_Prothese 2020-04-28T19:13:57 (dynamisch / Verplicht/CNE),Item,
+nabon:dataelement-775,Littekenweefsel,Code,Waardelijst: Mamma_Littekenweefsel 2020-04-29T21:35:41 (dynamisch / Verplicht/CNE),Item,
+nabon:dataelement-761,Locatie afwijking (projectierichting),Code,Waardelijst: Mamma_Locatie 2020-04-28T19:42:28 (dynamisch / Verplicht/CNE),Item,
+nabon:dataelement-5,Locatie afwijking (kwadranten),Code,Breast quadrant (body structure) (SNOMED CT: 272670002),Item,De locatie van de afwijking in kwadranten
+nabon:dataelement-396,Locatie afwijking (uren),Code,Waardelijst: Mamma_Lokalisatie_Laesie_Uren 2020-06-10T14:33:15 (dynamisch / Verplicht/CNE),Item,Locatie van de tumor in uren
+nabon:dataelement-568,Locatie benigne afwijking,Code,Anatomical structure (body structure) (SNOMED CT: 91723000),Item,Wat is de locatie van de benigne afwijking(en)?
+nabon:dataelement-11,Locatie lymfeklieren preoperatief,Code,Upper limb lymph node structure (body structure) (SNOMED CT: 44914007),Item,Locatie van de positieve lymfeklieren zoals deze preoperatief wordt geregistreerd.
+nabon:dataelement-645,Locatie lymfeklieren postoperatief,Code,Upper limb lymph node structure (body structure) (SNOMED CT: 44914007),Item,Locatie van de positieve lymfeklieren zoals deze postoperatief wordt gedefinieerd.
+nabon:dataelement-13,Locatie metastasen,Code,Anatomical site notations for tumor staging (body structure) (SNOMED CT: 258331007),Item,Lokalisatie van de metastasen
+nabon:dataelement-641,Locatie radiotherapie,Code,Waardelijst: Mamma_Lokatie_Radiotherapie 2019-05-27T15:27:17 (dynamisch / Verplicht/CNE),Item,Op welke lokatie moet radiotherapie gegeven worden?
+nabon:dataelement-15,Locatie recidief,Code,Local recurrence of malignant tumor of breast (disorder) (SNOMED CT: 314955001),Item,De lokalisatie van het recidief.
+nabon:dataelement-635,Locatie tumorpositieve snijvlak,Code,General site descriptor (qualifier value) (SNOMED CT: 272425003),Item,"Wanneer het snijvlak niet vrij is, de lokatie van het tumorpositieve snijvlak."
+nabon:dataelement-449,Lymphangitis cutis,Code,Waardelijst: JaNee 2020-01-30T13:16:30 (dynamisch / Verplicht/CNE),Item,is er sprake van lymphangitis cutis?
+nabon:dataelement-629,Naam patient,String,,Item,Naam van de patient
+nabon:dataelement-411,pN0-risicostatus,Code,Waardelijst: Mamma_N0RisicoStatus 2015-05-30T00:00:00 (dynamisch / Verplicht/CNE),Item,Wat is de pN0-risicostatus van de patient?
+nabon:dataelement-723,cN0-risicostatus,Code,Waardelijst: Mamma_N0RisicoStatus 2015-05-30T00:00:00 (dynamisch / Verplicht/CNE),Item,
+nabon:dataelement-558,Neoadjuvante behandeling,Code,Waardelijst: JaNee 2020-01-30T13:16:30 (dynamisch / Verplicht/CNE),Item,Heeft de patient een neoadjuvante behandeling gekregen?
+nabon:dataelement-388,M,Code,M category (observable entity) (SNOMED CT: 277208005),Item,De stadiering van de metastase(n) volgens TNM.
+nabon:dataelement-652,Mammadensiteit,Code,Waardelijst: Mamma_Mammadensiteit 2019-06-05T12:23:07 (dynamisch / Verplicht/CNE),Item,
+nabon:dataelement-23,Mammaprint,Code,Waardelijst: Mammaprint_PALGA 2016-08-17T15:03:24 (dynamisch / Verplicht/CNE),Item,Wat is de uitslag van de Mammaprint?
+nabon:dataelement-819,Mass enhancement,String,,Item,
+nabon:dataelement-578,Menopauzale status,Code,Menopause finding (finding) (SNOMED CT: 276477006),Item,
+nabon:dataelement-677,Methode echo mamma,Code,Waardelijst: Mamma_Methode_Echo_Mamma 2019-06-21T13:14:18 (dynamisch / Verplicht/CNE),Item,
+nabon:dataelement-674,Methode mammografie,Code,Waardelijst: Mamma_Methode_Mammografie 2019-06-19T17:39:05 (dynamisch / Verplicht/CNE),Item,
+nabon:dataelement-675,Methode mammografie aanvullend,Code,Waardelijst: Mamma_Methode_Mammografie_Aanvullend 2019-06-19T17:41:24 (dynamisch / Verplicht/CNE),Item,
+nabon:dataelement-20,Microcalcificaties,Code,Waardelijst: Microcalcificaties_PALGA 2016-08-17T14:12:04 (dynamisch / Verplicht/CNE),Item,Zijn er microcalcificaties aangetroffen?
+nabon:dataelement-554,Modaliteit,Code,Imaging - action (qualifier value) (SNOMED CT: 360037004),Item,Gebruikte modaliteit voor de bepaling van ycN.
+nabon:dataelement-655,Morfologie echografie,Code,Waardelijst: Mamma_Morfologie_Echografie 2019-06-05T12:11:23 (dynamisch / Verplicht/CNE),Item,
+nabon:dataelement-653,Morfologie mammografie,Code,Waardelijst: Mamma_Morfologie_Mammografie 2019-06-05T11:00:07 (dynamisch / Verplicht/CNE),Item,
+nabon:dataelement-656,Morfologie MRI,Code,Waardelijst: Mamma_Morfologie_MRI 2019-06-05T12:43:25 (dynamisch / Verplicht/CNE),Item,
+nabon:dataelement-408,Motivatie afwijken richtlijn,Code,Waardelijst: MotivatieAfwijkenRichtlijn 2015-05-30T00:00:00 (dynamisch),Item,Reden voor afwijken van de richtlijn (indien van toepassing)
+nabon:dataelement-821,Negatieve enhancement,String,,Item,
+nabon:dataelement-732,Niet aankleurende bevindingen,Code,Waardelijst: Mamma_Niet_Aankleurende_Bevindingen 2019-10-17T15:20:34 (dynamisch / Verplicht/CNE),Item,
+nabon:dataelement-820,Non-mass enhancement,String,,Item,
+nabon:dataelement-423,Occulte massa in borst,Code,Occult carcinoma (qualifier value) (SNOMED CT: 261481006),Item,Is er een occulte massa aanwezig in de borst?
+nabon:dataelement-779,Oncoplastische reconstructie met plastisch chirurg,Code,Waardelijst: Mamma_oncoplastische reconstructie 2020-05-12T21:34:30 (dynamisch / Verplicht/CNE),Item,Wordt de oncoplastische reconstructie na de lumpectomie uitgevoerd met een plastisch chirurg?
+nabon:dataelement-28,Operatie lymfeklieren,Code,Excision of lymph node (procedure) (SNOMED CT: 58347006),Item,Type operatie van de lymfeklieren.
+nabon:dataelement-32,Operatie tumor,Code,Operation on breast (procedure) (SNOMED CT: 392090004),Item,Type operatie van de tumor
+nabon:dataelement-768,OriÃ«ntatie massa,Code,Waardelijst: Mamma_OriÃ«ntatie_Massa 2020-04-29T21:13:18 (dynamisch / Verplicht/CNE),Item,
+nabon:dataelement-733,Overige bevindingen,String,,Item,
+nabon:dataelement-7,Palpabel,Code,Palpable mass (finding) (SNOMED CT: 443607001),Item,Is de afwijking palpabel?
+nabon:dataelement-569,Palliatieve therapie,Code,Waardelijst: Mamma_Palliatieve_Therapie 2019-02-07T21:52:22 (dynamisch / Verplicht/CNE),Item,Keuze/waardenlijst voor de veelvookomende beleidsopties voor de behandeling van gemetastaseerde patiÃ«nten.
+nabon:dataelement-489,PatiÃ«nt,,,Groep,Rootconcept van de bouwsteen PatiÃ«nt. Dit rootconcept bevat alle gegevenselementen van de bouwsteen PatiÃ«nt.
+nabon:dataelement-848,Geslacht,Code,Waardelijst: GeslachtBiologisch 2015-05-30T00:00:00 (dynamisch),Item,tijdelijke versie totdat de bouwsteen aangepast wordt naar de Nederlandse taal.
+nabon:dataelement-502,Naamgegevens,,,Groep,Container van het concept Naamgegevens. Deze container bevat alle gegevenselementen van het concept Naamgegevens.
+nabon:dataelement-503,Voornamen,String,,Item,OfficiÃ«le voornamen van de persoon.
+nabon:dataelement-504,Initialen,String,,Item,Initialen van de persoon.
+nabon:dataelement-505,Roepnaam,String,,Item,De naam waarmee de persoon gebruikelijk aangesproken wordt.
+nabon:dataelement-506,Naamgebruik,Code,Waardelijst: NaamgebruikCodelijst 2016-05-01T00:00:00 (dynamisch),Item,Dit concept geeft de achternaam of volgorde van achternamen aan waarmee de persoon aangesproken of aangeschreven wil worden.
+nabon:dataelement-507,Geslachtsnaam,,,Groep,Container van het concept Geslachtsnaam. Deze container bevat alle gegevenselementen van het concept Geslachtsnaam
+nabon:dataelement-508,Voorvoegsels,String,,Item,Bij de eigen achternaam behorende voorvoegsels.
+nabon:dataelement-509,Achternaam,String,,Item,Achternaam die bij geboorte gekregen is.
+nabon:dataelement-510,GeslachtsnaamPartner,,,Groep,Container van het concept GeslachtsnaamPartner. Deze container bevat alle gegevenselementen van het concept GeslachtsnaamPartner.
+nabon:dataelement-511,VoorvoegselsPartner,String,,Item,Bij de achternaam van de partner behorende voorvoegsels
+nabon:dataelement-512,AchternaamPartner,String,,Item,Achternaam van de partner die bij geboorte gekregen is.
+nabon:dataelement-513,Adresgegevens,,,Groep,Container van het concept Adresgegevens. Deze container bevat alle gegevenselementen van het concept Adresgegevens.
+nabon:dataelement-514,Straat,String,,Item,Straatnaam van het adres.
+nabon:dataelement-515,Huisnummer,String,,Item,Huisnummer van het adres.
+nabon:dataelement-516,Huisnummerletter,String,,Item,Een alfabetisch teken achter het huisnummer zoals dit door het gemeentebestuur is toegekend.
+nabon:dataelement-517,Huisnummertoevoeging,String,,Item,"Die letters of tekens die noodzakelijk zijn om, naast het huisnummer en de letter, de brievenbus te vinden."
+nabon:dataelement-518,AanduidingBijNummer,Code,Waardelijst: AanduidingBijNummerCodelijst 2016-05-01T00:00:00 (dynamisch),Item,De aanduiding die wordt gebruikt voor adressen die niet zijn voorzien van de gebruikelijke straatnaam en huisnummeraanduidingen.
+nabon:dataelement-519,Postcode,String,,Item,Postcode van het adres.
+nabon:dataelement-520,Woonplaats,String,,Item,Een geografisch bepaald gebied dat een deel is van het gemeentelijke grondgebied.
+nabon:dataelement-521,Gemeente,String,,Item,Gemeente van inschrijving.
+nabon:dataelement-522,Land,Code,Waardelijst: LandGBACodelijst 2016-05-01T00:00:00 (dynamisch),Item,Land waar het adres zich bevindt.
+nabon:dataelement-523,AdditioneleInformatie,String,,Item,"Extra informatie zoals naam van het gebouw, gebouwnummer, ingang, routenummer."
+nabon:dataelement-524,AdresSoort,Code,Waardelijst: AdresSoortCodelijst 2016-05-01T00:00:00 (dynamisch),Item,"Het soort adres waarvan sprake is, bijv. woonadres, postadres."
+nabon:dataelement-525,Contactgegevens,,,Groep,Container van het concept Contactgegevens. Deze container bevat alle gegevenselementen van het concept Contactgegevens.
+nabon:dataelement-526,Telefoonnummers,,,Groep,Container van het concept Telefoonnummers. Deze container bevat alle gegevenselementen van het concept Telefoonnummers.
+nabon:dataelement-527,Telefoonnummer,String,,Item,Een telefoonnummer van de patiÃ«nt.
+nabon:dataelement-528,NummerSoort,Code,Waardelijst: NummerSoortCodelijst 2016-05-01T00:00:00 (dynamisch),Item,"Met NummerSoort kan aangegeven worden of het om een vast, tijdelijk, werk of mobiel nummer gaat."
+nabon:dataelement-529,EmailAdressen,,,Groep,Container van het concept EmailAdressen. Deze container bevat alle gegevenselementen van het concept Emailadressen.
+nabon:dataelement-530,EmailAdres,String,,Item,Een e-mailadres van de patiÃ«nt
+nabon:dataelement-531,EmailSoort,Code,Waardelijst: EmailSoortCodelijst 2016-05-01T00:00:00 (dynamisch),Item,Met EmailSoort kan aangegeven worden of het om een prive of zakelijk e-mail adres gaat.
+nabon:dataelement-532,PatientIdentificatienummer,Identificatie,,Item,"Identificatienummer van de patiÃ«nt. Bij overdrachtsituaties dient het gebruik van het burgerservicenummer (BSN) in overeenstemming te zijn met de 'Wet gebruik burgerservicenummer in de zorg (Wbsn-z)'. In andere situaties kunnen andere nummersystemen gebruikt worden, zoals bijv. interne ziekenhuis patiÃ«ntnummers."
+nabon:dataelement-533,Geboortedatum,Datum/tijd,,Item,Geboortedatum van de patiÃ«nt. Bij een patiÃ«nt is de geboortedatum verplicht. Vage datum (bv. alleen jaar) is toegestaan.
+nabon:dataelement-534,Geslacht,Code,Waardelijst: GeslachtCodelijst 2017-12-31T00:00:00 (dynamisch),Item,Administratief geslacht van de patiÃ«nt.
+nabon:dataelement-535,MeerlingIndicator,Boolean,,Item,Indicator die aangeeft of de patiÃ«nt Ã©Ã©n van een meerling is.
+nabon:dataelement-536,OverlijdensIndicator,Boolean,,Item,Indicator die aangeeft of de patiÃ«nt overleden is.
+nabon:dataelement-537,DatumOverlijden,Datum/tijd,,Item,"De datum waarop de patiÃ«nt overleden is. Een vage datum, b.v. alleen jaartal is toegestaan."
+nabon:dataelement-638,PA-respons op neoadjuvante therapie tumor,Code,Finding related to therapeutic response (finding) (SNOMED CT: 118208006),Item,"Wat is de  respons van de (invasieve) tumor op de neoadjuvante therapie, die door de patholoog is vastgesteld?"
+nabon:dataelement-786,PA-respons op neoadjuvante therapie lymfeklieren,Code,Waardelijst: Mamma_Pathologie_Respons_Eusoma_Lymfeklieren 2020-05-18T20:43:08 (dynamisch / Verplicht/CNE),Item,
+nabon:dataelement-30,pN,Code,Stage of tumor involvement of regional lymph nodes (observable entity) (SNOMED CT: 371494008),Item,Stadiering van de lymfeklieren volgens TNM na operatie
+nabon:dataelement-643,pN okselklier,Code,Stage of tumor involvement of regional lymph nodes (observable entity) (SNOMED CT: 371494008),Item,"Stadiering van de okselklier, mariklier, intramammaire klier volgens TNM na operatie"
+nabon:dataelement-644,pN schildwachtklier,Code,Stage of tumor involvement of regional lymph nodes (observable entity) (SNOMED CT: 371494008),Item,Stadiering van de schildwachtklier volgens TNM na operatie
+nabon:dataelement-763,Positie,Code,Waardelijst: Mamma_Positie 2020-04-28T23:02:23 (dynamisch / Verplicht/CNE),Item,
+nabon:dataelement-769,Posterieure geluidstransmissie,Code,Waardelijst: Mamma_Posterieure_Geluidstransmissie 2020-04-29T21:18:49 (dynamisch / Verplicht/CNE),Item,
+nabon:dataelement-728,Procedure lokalisatie,Code,Waardelijst: Mamma_Procedure_Lokalisatie 2019-10-17T15:08:31 (dynamisch / Verplicht/CNE),Item,
+nabon:dataelement-464,PR-percentage afwijking postoperatief,Hoeveelheid,,Item,Percentage progesteron receptor positieve cellen postoperatief (bepaald op excisiepreparaat).
+nabon:dataelement-400,PR-percentage afwijking preoperatief,Hoeveelheid,,Item,Percentage progesteron receptor positieve cellen preoperatief (bepaald op biopt).
+nabon:dataelement-832,PR-percentage lymfeklieren,Hoeveelheid,,Item,
+nabon:dataelement-573,PR-percentage metastase,Hoeveelheid,,Item,Percentage progesteron receptor positieve cellen van de metastase.
+nabon:dataelement-465,PR-status afwijking postoperatief,Code,Hormone receptor positive tumor (disorder) (SNOMED CT: 417742002),Item,Status van de progesteron receptor positieve cellen postoperatief (bepaald op excisiepreparaat).
+nabon:dataelement-22,PR-status afwijking preoperatief,Code,Hormone receptor positive tumor (disorder) (SNOMED CT: 417742002),Item,Status van de progesteronreceptor positieve cellen preoperatief (bepaald op biopt).
+nabon:dataelement-834,PR-status lymfeklieren,Code,Waardelijst: ER-Status 2015-06-05T09:09:32 (dynamisch / Verplicht/CNE),Item,
+nabon:dataelement-574,PR-status metastase,Code,Hormone receptor positive tumor (disorder) (SNOMED CT: 417742002),Item,Status van de progesteron receptor positieve cellen in de metastase.
+nabon:dataelement-567,Primaire tumor aanwezig,Code,Waardelijst: JaNee 2020-01-30T13:16:30 (dynamisch / Verplicht/CNE),Item,Is de primaire tumor nog aanwezig?
+nabon:dataelement-637,Proliferatie KI-67,Hoeveelheid,Rapidly proliferating cell marker (substance) (SNOMED CT: 259981004),Item,
+nabon:dataelement-26,pT,Code,pT category (observable entity) (SNOMED CT: 384625004),Item,Stadiering van de afwijking volgens TNM na operatie
+nabon:dataelement-457,pT-diameter,Hoeveelheid,Diameter of lump (observable entity) (SNOMED CT: 248530000),Item,Diameter van de afwijking postoperatief bepaald (op het excisiepreparaat).
+nabon:dataelement-565,pTNM,Tekst,TNM classification of malignant tumor after operation (tumor staging) (SNOMED CT: 106249008),Item,Postoperatief TNM-stadium volgens UICC.
+nabon:dataelement-576,Behandellijn,Code,Procedure by intent (procedure) (SNOMED CT: 362961001),Item,Welke lijns behandeling systemische therapie wordt gegeven?
+nabon:dataelement-33,Reconstructie,Code,Reconstruction of breast (procedure) (SNOMED CT: 33496007),Item,Type reconstructie van de borst na verwijdering van de tumor
+nabon:dataelement-552,Reden neoadjuvante therapie,Code,Waardelijst: Mamma_Reden_Therapie 2019-02-06T17:01:53 (dynamisch / Verplicht/CNE),Item,Wat is de reden van de neoadjuvante therapie.
+nabon:dataelement-393,Reden verwijzing,String,,Item,De reden van verwijzing van de patient.
+nabon:dataelement-673,Reden verwijzing radiologie,Code,Waardelijst: Mamma_Reden_Verwijzing_Radiologie 2019-06-21T17:29:54 (dynamisch / Verplicht/CNE),Item,Reden verwijzing per laesie voor radiologieverslag
+nabon:dataelement-752,Re-excisie,Code,Waardelijst: Mamma_Re-excisie 2020-02-10T16:26:35 (dynamisch / Verplicht/CNE),Item,
+nabon:dataelement-542,Relevante voorgeschiedenis,String,,Item,De relevante voorgeschiedenis van de patient.
+nabon:dataelement-680,Representatief,Code,Waardelijst: JaNee 2020-01-30T13:16:30 (dynamisch / Verplicht/CNE),Item,
+nabon:dataelement-448,Resectabiliteit recidief,Code,Tumor finding (finding) (SNOMED CT: 395557000),Item,Is het recidief resectabel?
+nabon:dataelement-557,Respons therapie lymfeklieren,Code,Finding related to therapeutic response (finding) (SNOMED CT: 118208006),Item,Respons van de lymfeklieren op de neoadjuvante therapie.
+nabon:dataelement-556,Respons therapie tumor,Code,Finding related to therapeutic response (finding) (SNOMED CT: 118208006),Item,De respons van de tumor op de neoadjuvante therapie.
+nabon:dataelement-14,Respons therapie metastase(n),Code,Finding related to therapeutic response (finding) (SNOMED CT: 118208006),Item,Respons van de metastase(n) op de systemische behandeling
+nabon:dataelement-679,Restcalcificaties (Restcalcificaties),Code,Waardelijst: JaNee 2020-01-30T13:16:30 (dynamisch / Verplicht/CNE),Item,
+nabon:dataelement-676,Richting methode mammografie,Code,Waardelijst: Mamma_Richting_Methode_Mammografie_Aanvullend 2019-06-19T17:43:31 (dynamisch / Verplicht/CNE),Item,
+nabon:dataelement-446,rT,Code,T stage (tumor staging) (SNOMED CT: 78873005),Item,Stadiering van het recidief volgens TNM.
+nabon:dataelement-724,Samenstelling fibroglandulair weefsel,Code,Waardelijst: Mamma_Samenstelling_Fibroglandulair_Weefsel 2019-10-17T13:39:30 (dynamisch / Verplicht/CNE),Item,
+nabon:dataelement-442,Snijvlak,Code,Surgical margin finding (finding) (SNOMED CT: 395536008),Item,Het snijvlak van de tumor bepaald op basis van het excisiepreparaat
+nabon:dataelement-421,Solide massa in borst,Code,Solid tumor configuration (qualifier value) (SNOMED CT: 369757002),Item,Is een solide massa in de borst aanwezig?
+nabon:dataelement-670,Soort interventie,Code,Waardelijst: Mamma_Soort_Interventie 2019-06-21T13:22:12 (dynamisch / Verplicht/CNE),Item,
+nabon:dataelement-666,Specifieke diagnosen,Code,Waardelijst: Mamma_Specifieke_Diagnosen 2019-06-05T12:16:06 (dynamisch / Verplicht/CNE),Item,Specifieke diagnose op basis van echo mamma
+nabon:dataelement-659,Symmetrie achtergrondkleuring,Code,Waardelijst: Mamma_Symmetrie_Achtergrondaankleuring 2019-06-05T12:21:43 (dynamisch / Verplicht/CNE),Item,
+nabon:dataelement-440,Systemische behandeling,Code,Drug therapy (procedure) (SNOMED CT: 416608005),Item,Type systemische behandeling
+nabon:dataelement-784,Switch naar (therapie),Samengestelde gegevens,,Item,"De therapie waarnaar geswitched wordt vanwege bijwerkingen, omdat het niet werkt, andere reden,..."
+nabon:dataelement-747,Tepelsparend,Code,Waardelijst: Mamma_Tepelsparende_Ablatio 2020-02-07T09:32:48 (dynamisch / Verplicht/CNE),Item,Hiermee wordt aangegeven of de ablatio wel/niet tepelsparend wordt uitgevoerd.
+nabon:dataelement-403,Toelichting metastasen,Samengestelde gegevens,,Item,Toelichting op de gevonden metastasen
+nabon:dataelement-748,Therapie,Code,Waardelijst: Mamma_Therapie 2019-02-06T15:40:25 (dynamisch / Verplicht/CNE),Item,De therapie die de patient geadviseerd wordt om te ontvangen/ontvangt/ontvangen heeft.
+nabon:dataelement-649,Toelichting radiotherapie,String,,Item,Toelichting op de voorgestelde radiotherapie
+nabon:dataelement-452,Topklier,Code,Waardelijst: Mamma_Topklier_PALGA 2016-08-18T18:55:15 (dynamisch / Verplicht/CNE),Item,
+nabon:dataelement-394,Tumordistributie,Code,Distributions (qualifier value) (SNOMED CT: 255464007),Item,De distributie van de gevonden afwijkingen in de borst.
+nabon:dataelement-631,Tussentijdse controle NAC,Code,Waardelijst: Mamma_BeeldvormendOnderzoek_v2 2020-07-29T16:23:52 (dynamisch / Verplicht/CNE),Item,Tussentijdse controle van afwijkingen bij neoadjuvante therapie
+nabon:dataelement-671,Type biopsie,Code,Waardelijst: Mamma_Type_Biopsie 2019-06-21T13:29:08 (dynamisch / Verplicht/CNE),Item,
+nabon:dataelement-660,Type calcificaties,Code,Waardelijst: Mamma_Type_Calcificaties 2019-06-05T11:43:50 (dynamisch / Verplicht/CNE),Item,
+nabon:dataelement-395,Type laesie(s),Code,Waardelijst: Mamma_Recidief_Aanwezig 2018-11-27T13:13:36 (dynamisch / Verplicht/CNE),Item,Wat voor type laesie(s) betreft het?
+nabon:dataelement-668,Type lokalisatie,Code,Waardelijst: Mamma_Type_Lokalisatie 2019-06-21T13:35:10 (dynamisch / Verplicht/CNE),Item,
+nabon:dataelement-540,Type MDO,Code,Waardelijst: Type_MDO 2019-02-06T14:23:38 (dynamisch / Verplicht/CNE),Item,"Middels type MDO wordt aangegeven of het de MDO-bespreking van een preoperatieve, neoadjuvante, postoperatieve of gemetastaseerde patiÃ«nt betreft."
+nabon:dataelement-623,Type patient,Code,Waardelijst: Type_Patient 2019-05-15T12:48:14 (dynamisch / Verplicht/CNE),Item,"Het type patient dat tijdens het MDO besproken wordt. Betreft het een nieuwe patient, controle patient of patient voor 2nd opinion."
+nabon:dataelement-486,Type tumor postoperatief,Code,"Ductal, lobular AND/OR medullary neoplasm (morphologic abnormality) (SNOMED CT: 115218002)",Item,
+nabon:dataelement-850,Type tumor preoperatief,Code,Waardelijst: Mamma_Morfologie_Tumor_PreOperatief_ICDO3 2019-01-31T11:25:46 (dynamisch / Verplicht/CNE),Item,
+nabon:dataelement-624,Type verwijzer,Code,Waardelijst: Mamma_Type_Verwijzer 2019-05-21T11:51:13 (dynamisch / Verplicht/CNE),Item,"Type verwijzer, bijv. ""via bevolkingsonderzoek"""
+nabon:dataelement-726,Typisch benigne,Code,Waardelijst: Mamma_Typisch_Benigne 2019-10-17T14:30:47 (dynamisch / Verplicht/CNE),Item,
+nabon:dataelement-829,Uitslag beeldvormend onderzoek,String,,Item,De uitslag per laesie in de lymfeklieren van het beeldvormend onderzoek.
+nabon:dataelement-426,Uitslag biopt borstafwijking (Type tumor preoperatief),Code,Waardelijst: Mamma_UitslagBioptMamma 2015-05-30T00:00:00 (dynamisch / Verplicht/CNE),Item,
+nabon:dataelement-425,Uitslag cytologie borstafwijking (Uitslag cytologie borst),Code,Waardelijst: Mamma_Uitslag_Cytologie_Borstafwijking 2020-08-26T10:17:34 (dynamisch / Verplicht/CNE),Item,
+nabon:dataelement-686,Uitslag cytologie lymfeklier,Code,Waardelijst: Mamma_Uitslag_Cytologie 2020-05-12T22:02:11 (dynamisch / Verplicht/CNE),Item,
+nabon:dataelement-687,Uitslag histologie lymfeklier,Code,Waardelijst: Mamma_Histologie_Lymfeklieren 2020-06-11T10:34:57 (dynamisch / Verplicht/CNE),Item,
+nabon:dataelement-783,Uitgevoerde pathologie,Code,Waardelijst: Mamma_Aanvullende_Pathologie 2020-05-12T22:04:30 (dynamisch / Verplicht/CNE),Item,Welke pathologie-onderzoeken zijn uitgevoerd voor de afwijkingen in de borst?
+nabon:dataelement-772,Vascularisatie,Code,Waardelijst: Mamma_Vascularisatie 2020-04-29T21:24:07 (dynamisch / Verplicht/CNE),Item,
+nabon:dataelement-828,Verdachte lymfeklieren,Code,Waardelijst: JaNee 2020-01-30T13:16:30 (dynamisch / Verplicht/CNE),Item,
+nabon:dataelement-727,Verdachte vorm,Code,Waardelijst: Mamma_Verdachte_Vorm 2019-10-17T14:37:15 (dynamisch / Verplicht/CNE),Item,
+nabon:dataelement-750,Vervolg therapie,Code,Waardelijst: Mamma_Vervolg_Therapie 2020-02-10T14:11:33 (dynamisch / Verplicht/CNE),Item,Gewenste vervolg van de huidige therapie
+nabon:dataelement-622,Verwijzer,String,,Item,"Zorgverlener die de patient verwezen heeft,"
+nabon:dataelement-756,Verwijzing,Code,Waardelijst: Mamma_Verwijzing 2020-02-10T16:29:20 (dynamisch / Verplicht/CNE),Item,
+nabon:dataelement-734,Vethoudende afwijkingen,Code,Waardelijst: Mamma_Vethoudende_Afwijkingen 2019-10-17T15:22:22 (dynamisch / Verplicht/CNE),Item,
+nabon:dataelement-626,Voorkeur patient,String,,Item,Welke voorkeur heeft de patient voor beleid en behandeling?
+nabon:dataelement-2,Voorkeur patient operatie borst,Code,Waardelijst: Mamma_VoorkeurPatientOperatie 2019-07-10T14:01:13 (dynamisch / Verplicht/CNE),Item,De voorkeur van de patient voor borstsparende operatie of mastectomie
+nabon:dataelement-549,Voorzitter,String,,Item,"Afhankelijk van de EPD-inrichting, wordt de naam van de voorzitter met vrije tekst vastgelegd, of vanuit een waardenlijst van zorgverleners."
+nabon:dataelement-762,Vorm marker,String,,Item,
+nabon:dataelement-663,Vorm massa,Code,Waardelijst: Mamma_Vorm_Massa 2019-06-05T11:57:49 (dynamisch / Verplicht/CNE),Item,Vorm van de massa
+nabon:dataelement-541,Vraagstelling,String,,Item,De vraagstelling omtrent de patient voor het MDO.
+nabon:dataelement-628,WHO Performance status,Code,Waardelijst: WHOPerformanceStatus 2015-12-08T13:01:42 (dynamisch),Item,WHO Performance status van de patient
+nabon:dataelement-1,Wijze van detectie (Hoe is de patient verwezen),Code,Evaluation finding (finding) (SNOMED CT: 441742003),Item,Hoe is borstkanker bij de patient ontdekt?
+nabon:dataelement-459,ycN,Code,N category (observable entity) (SNOMED CT: 277206009),Item,Stadiering van de lymfeklieren na neoadjuvante behandeling.
+nabon:dataelement-458,ycT,Code,cT category (observable entity) (SNOMED CT: 399504009),Item,Stadiering van de tumor na neoadjuvante behandeling.
+nabon:dataelement-553,ycTNM,Code,TNM classification of malignant tumor before any treatment (tumor staging) (SNOMED CT: 106248000),Item,"Het TNM stadium van de patient, vastgesteld in de neoadjuvante behandelfase."
+nabon:dataelement-633,ycTNM,String,TNM classification of malignant tumor before any treatment (tumor staging) (SNOMED CT: 106248000),Item,De stadiering van de ziekte van de patient volgens TNM tijdens en na neoadjuvante behandeling.
+nabon:dataelement-562,ypN,Code,N category (observable entity) (SNOMED CT: 277206009),Item,Postneoadjuvant postoperatief N-stadium van de lymfeklieren.
+nabon:dataelement-636,ypN okselklier,Code,N category (observable entity) (SNOMED CT: 277206009),Item,Postneoadjuvant postoperatief N-stadium van de lymfeklieren.
+nabon:dataelement-647,ypN schildwachtklier,Code,N category (observable entity) (SNOMED CT: 277206009),Item,Postneoadjuvant postoperatief N-stadium van de lymfeklieren.
+nabon:dataelement-563,ypT,Code,pT category (observable entity) (SNOMED CT: 384625004),Item,Postneoadjuvant postoperatief T-stadium van de tumor.
+nabon:dataelement-564,ypTNM,Code,TNM classification of malignant tumor after operation (tumor staging) (SNOMED CT: 106249008),Item,Postneoadjuvant postoperatief TNM-stadium.
+nabon:dataelement-634,ypTNM,String,TNM classification of malignant tumor after operation (tumor staging) (SNOMED CT: 106249008),Item,De stadiering van de ziekte van de patient volgens TNM na neoadjuvante therape en operatie.
+nabon:dataelement-10,Zijde,Code,Waardelijst: Lateratisatie_zonder_waarde_onbekend 2018-02-08T11:41:30 (dynamisch / Verplicht/CNE),Item,Aan welke zijde bevindt de afwijking zich?
+nabon:dataelement-746,Zichtbaar in projectierichting,Code,Waardelijst: Mamma_Zichtbaar_In_Projectierichting 2020-02-04T15:05:06 (dynamisch / Verplicht/CNE),Item,
+nabon:dataelement-488,Zorgverlener,,,Groep,Rootconcept van de bouwsteen Zorgverlener. Dit rootconcept bevat alle gegevenselementen van de bouwsteen Zorgverlener.
+nabon:dataelement-490,ZorgverlenerIdentificatienummer,Identificatie,,Item,Het zorgverleneridentificatienummer is een nummer dat de zorgverlener uniek identificeert.
+nabon:dataelement-491,Naamgegevens,,,Groep,"De naamgegevens van de zorgverlener. Indien een zorgverleneridentificatienummer wordt opgegeven, is dit de naam zoals vermeld in UZI, AGB of in de instelling."
+nabon:dataelement-492,Naamgegevens,,,Groep,Rootconcept van de subbouwsteen Naamgegevens. Dit rootconcept bevat alle gegevenselementen van de subbouwsteen Naamgegevens.
+nabon:dataelement-493,Specialisme,Code,Waardelijst: SpecialismeUZICodelijst 2017-12-31T00:00:00 (statisch),Item,Medisch specialisme van de zorgverlener. Het betreft hierbij de erkende medische specialismen zoals vermeld in de wet BIG. Bijvoorbeeld huisarts of cardioloog.
+nabon:dataelement-494,Adresgegevens,,,Groep,Adresgegevens van de zorgverlener.
+nabon:dataelement-495,Adresgegevens,,,Groep,Rootconcept van de subbouwsteen Adresgegevens. Dit rootconcept bevat alle gegevenselementen van de subbouwsteen Adresgegevens.
+nabon:dataelement-496,Contactgegevens,,,Groep,Telefoonnummer(s) of e-mailadres(sen) van de zorgverlener.
+nabon:dataelement-497,Contactgegevens,,,Groep,Rootconcept van de sub-bouwsteen Contactgegevens. Dit rootconcept bevat alle gegevenselementen van de sub-bouwsteen Contactgegevens.
+nabon:dataelement-498,Zorgaanbieder,,,Groep,De organisatie waarbij de zorgverlener werkzaam is.
+nabon:dataelement-499,Zorgaanbieder,,,Groep,Rootconcept van de bouwsteen Zorgaanbieder. Dit rootconcept bevat alle gegevenselementen van de bouwsteen Zorgaanbieder.
+nabon:dataelement-500,ZorgverlenersRol,Code,Waardelijst: ZorgverlenerRolCodelijst 2017-12-31T00:00:00 (statisch),Item,"De rol die de zorgverlener in het zorgproces vervult. Voor zorgverleners kan dit bijvoorbeeld behandelaar, verwijzer of uitvoerder zijn."
+nabon:dataelement-419,Zwanger,Code,Waardelijst: JaNee 2020-01-30T13:16:30 (dynamisch / Verplicht/CNE),Item,Is de patient zwanger?
