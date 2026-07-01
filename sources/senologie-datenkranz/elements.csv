@@ -1,0 +1,300 @@
+id,model,element,label,cardinality,type,definition
+senol:BIH_LM_Senologie.Diagnose,BIH_LM_Senologie,Diagnose,Diagnose Mamma,0..*,BackboneElement,
+senol:BIH_LM_Senologie.Diagnose.Falltyp,BIH_LM_Senologie,Diagnose.Falltyp,Falltyp,0..1,CodeableConcept,"Ersterkrankung, Rezidiv oder metastasierte Erkrankung"
+senol:BIH_LM_Senologie.Diagnose.Diagnosekode,BIH_LM_Senologie,Diagnose.Diagnosekode,Diagnose,1..1,CodeableConcept,"SNOMED CT, ICD-10-GM, ICD-11 (Dual-Coding)"
+senol:BIH_LM_Senologie.Diagnose.DiagnoseB3SubTyp,BIH_LM_Senologie,Diagnose.DiagnoseB3SubTyp,B3-Subtyp,0..1,CodeableConcept,"ADH, FEA, Papillom, LIN etc."
+senol:BIH_LM_Senologie.Diagnose.Seite,BIH_LM_Senologie,Diagnose.Seite,Seitenlokalisation,0..1,CodeableConcept,"Rechts, Links, Beidseits"
+senol:BIH_LM_Senologie.Diagnose.DatumErstdiagnose,BIH_LM_Senologie,Diagnose.DatumErstdiagnose,Datum der Erstdiagnose,0..1,date,assertedDate der Diagnosestellung
+senol:BIH_LM_Senologie.Diagnose.Diagnosesicherung,BIH_LM_Senologie,Diagnose.Diagnosesicherung,Diagnosesicherung,0..1,CodeableConcept,oBDS-konforme Diagnosesicherung
+senol:BIH_LM_Senologie.Diagnose.Tumormanifestation,BIH_LM_Senologie,Diagnose.Tumormanifestation,Tumormanifestation,0..*,CodeableConcept,"Primärtumor, Rezidiv, LK-Metastase, Fernmetastase"
+senol:BIH_LM_Senologie.Diagnose.Metastasierungsstadium,BIH_LM_Senologie,Diagnose.Metastasierungsstadium,Metastasierungsstadium,0..1,CodeableConcept,"cM0, cM1, pM1"
+senol:BIH_LM_Senologie.Diagnose.Grad,BIH_LM_Senologie,Diagnose.Grad,Grading,0..1,CodeableConcept,Differenzierungsgrad G1–G4
+senol:BIH_LM_Senologie.Tumorlokalisation,BIH_LM_Senologie,Tumorlokalisation,Tumorlokalisation,0..*,BackboneElement,
+senol:BIH_LM_Senologie.Tumorlokalisation.Seite,BIH_LM_Senologie,Tumorlokalisation.Seite,Seite,1..1,CodeableConcept,"Links, Rechts, Beidseits"
+senol:BIH_LM_Senologie.Tumorlokalisation.Quadrant,BIH_LM_Senologie,Tumorlokalisation.Quadrant,Quadrant,0..1,CodeableConcept,Quadrant der Brust
+senol:BIH_LM_Senologie.Tumorlokalisation.Uhrzeitposition,BIH_LM_Senologie,Tumorlokalisation.Uhrzeitposition,Uhrzeitposition,0..1,CodeableConcept,Uhrzeit-Lokalisation (12-Uhr-Schema)
+senol:BIH_LM_Senologie.Tumorlokalisation.Mamillenabstand,BIH_LM_Senologie,Tumorlokalisation.Mamillenabstand,Mamillenabstand,0..1,string,Abstand zur Mamille in mm
+senol:BIH_LM_Senologie.Vorstellung,BIH_LM_Senologie,Vorstellung,Vorstellungsgrund,0..1,BackboneElement,
+senol:BIH_LM_Senologie.Vorstellung.Typ,BIH_LM_Senologie,Vorstellung.Typ,Art der Vorstellung,0..1,CodeableConcept,Erst- oder Verlaufsvorstellung
+senol:BIH_LM_Senologie.Vorstellung.Erstvorstellung,BIH_LM_Senologie,Vorstellung.Erstvorstellung,Datum der Erstvorstellung,0..1,date,Datum der Erstvorstellung
+senol:BIH_LM_Senologie.GynaekologischeAnamnese,BIH_LM_Senologie,GynaekologischeAnamnese,Gynäkologische Anamnese,0..1,BackboneElement,
+senol:BIH_LM_Senologie.GynaekologischeAnamnese.Menarche,BIH_LM_Senologie,GynaekologischeAnamnese.Menarche,Alter bei Menarche,0..1,Quantity,Alter bei Menarche in Jahren
+senol:BIH_LM_Senologie.GynaekologischeAnamnese.Menopausenstatus,BIH_LM_Senologie,GynaekologischeAnamnese.Menopausenstatus,Menopausenstatus,0..1,CodeableConcept,Prä-/peri-/postmenopausal
+senol:BIH_LM_Senologie.GynaekologischeAnamnese.Schwangerschaften,BIH_LM_Senologie,GynaekologischeAnamnese.Schwangerschaften,Anzahl Schwangerschaften,0..1,Quantity,Gravida
+senol:BIH_LM_Senologie.GynaekologischeAnamnese.Hormonersatztherapie,BIH_LM_Senologie,GynaekologischeAnamnese.Hormonersatztherapie,Hormonersatztherapie,0..1,CodeableConcept,HRT ja/nein
+senol:BIH_LM_Senologie.Familienanamnese,BIH_LM_Senologie,Familienanamnese,Familienanamnese,0..*,BackboneElement,
+senol:BIH_LM_Senologie.Familienanamnese.Verwandtschaftsgrad,BIH_LM_Senologie,Familienanamnese.Verwandtschaftsgrad,Verwandtschaftsgrad,1..1,CodeableConcept,"Mutter, Schwester, Tante, etc."
+senol:BIH_LM_Senologie.Familienanamnese.Mammakarzinom,BIH_LM_Senologie,Familienanamnese.Mammakarzinom,Mammakarzinom,0..1,BackboneElement,Mammakarzinom in der Familie
+senol:BIH_LM_Senologie.Familienanamnese.Mammakarzinom.Erkrankungsalter,BIH_LM_Senologie,Familienanamnese.Mammakarzinom.Erkrankungsalter,Erkrankungsalter,0..1,Quantity,Alter bei Erkrankung
+senol:BIH_LM_Senologie.Familienanamnese.Ovarialkarzinom,BIH_LM_Senologie,Familienanamnese.Ovarialkarzinom,Ovarialkarzinom,0..1,BackboneElement,Ovarialkarzinom in der Familie
+senol:BIH_LM_Senologie.Familienanamnese.Ovarialkarzinom.Erkrankungsalter,BIH_LM_Senologie,Familienanamnese.Ovarialkarzinom.Erkrankungsalter,Erkrankungsalter,0..1,Quantity,Alter bei Erkrankung
+senol:BIH_LM_Senologie.ChecklisteErblicheBelastung,BIH_LM_Senologie,ChecklisteErblicheBelastung,Checkliste Erbliche Belastung,0..1,BackboneElement,
+senol:BIH_LM_Senologie.ChecklisteErblicheBelastung.Durchgefuehrt,BIH_LM_Senologie,ChecklisteErblicheBelastung.Durchgefuehrt,Durchgeführt,0..1,boolean,Checkliste durchgeführt ja/nein
+senol:BIH_LM_Senologie.ChecklisteErblicheBelastung.Score,BIH_LM_Senologie,ChecklisteErblicheBelastung.Score,Score,0..1,integer,Punktwert der Checkliste
+senol:BIH_LM_Senologie.KlinischeUntersuchung,BIH_LM_Senologie,KlinischeUntersuchung,Klinische Untersuchung,0..*,BackboneElement,
+senol:BIH_LM_Senologie.KlinischeUntersuchung.Datum,BIH_LM_Senologie,KlinischeUntersuchung.Datum,Untersuchungsdatum,0..1,dateTime,Datum der klinischen Untersuchung
+senol:BIH_LM_Senologie.KlinischeUntersuchung.Seite,BIH_LM_Senologie,KlinischeUntersuchung.Seite,Seite,0..1,CodeableConcept,Links/Rechts
+senol:BIH_LM_Senologie.KlinischeUntersuchung.Palpationsbefund,BIH_LM_Senologie,KlinischeUntersuchung.Palpationsbefund,Palpationsbefund,0..1,CodeableConcept,Befund bei Tastuntersuchung
+senol:BIH_LM_Senologie.KlinischeUntersuchung.Hautveraenderungen,BIH_LM_Senologie,KlinischeUntersuchung.Hautveraenderungen,Hautveränderungen,0..1,CodeableConcept,"Einziehung, Rötung, Peau d'orange"
+senol:BIH_LM_Senologie.KlinischeUntersuchung.Mamillenbefund,BIH_LM_Senologie,KlinischeUntersuchung.Mamillenbefund,Mamillenbefund,0..1,CodeableConcept,"Sekretion, Einziehung"
+senol:BIH_LM_Senologie.KlinischeUntersuchung.Lymphknotenstatus,BIH_LM_Senologie,KlinischeUntersuchung.Lymphknotenstatus,Lymphknotenstatus,0..1,CodeableConcept,Klinischer Lymphknotenbefund
+senol:BIH_LM_Senologie.KlinischeUntersuchung.KlinischeTumorformel,BIH_LM_Senologie,KlinischeUntersuchung.KlinischeTumorformel,Klinische Tumorformel (cTNM),0..1,BackboneElement,Klinische TNM-Klassifikation aus körperlicher Untersuchung und Bildgebung
+senol:BIH_LM_Senologie.KlinischeUntersuchung.KlinischeTumorformel.cT,BIH_LM_Senologie,KlinischeUntersuchung.KlinischeTumorformel.cT,cT,0..1,CodeableConcept,"Klinische T-Kategorie (x, 0, is, 1a/b/c, 2, 3, 4a/b/c/d)"
+senol:BIH_LM_Senologie.KlinischeUntersuchung.KlinischeTumorformel.cN,BIH_LM_Senologie,KlinischeUntersuchung.KlinischeTumorformel.cN,cN,0..1,CodeableConcept,"Klinische N-Kategorie (x, 0, 1, 2a/b, 3a/b/c)"
+senol:BIH_LM_Senologie.KlinischeUntersuchung.KlinischeTumorformel.cM,BIH_LM_Senologie,KlinischeUntersuchung.KlinischeTumorformel.cM,cM,0..1,CodeableConcept,"Klinische M-Kategorie (0, 1)"
+senol:BIH_LM_Senologie.KlinischeUntersuchung.KlinischeTumorformel.cUICC,BIH_LM_Senologie,KlinischeUntersuchung.KlinischeTumorformel.cUICC,cUICC-Stadium,0..1,CodeableConcept,Klinisches UICC-Stadium
+senol:BIH_LM_Senologie.KlinischeUntersuchung.KlinischeTumorformel.y,BIH_LM_Senologie,KlinischeUntersuchung.KlinischeTumorformel.y,y-Präfix,0..1,boolean,Befund nach neoadjuvanter Therapie
+senol:BIH_LM_Senologie.KlinischeUntersuchung.KlinischeTumorformel.r,BIH_LM_Senologie,KlinischeUntersuchung.KlinischeTumorformel.r,r-Präfix,0..1,boolean,Rezidiv-Befund
+senol:BIH_LM_Senologie.BildgebungMamma,BIH_LM_Senologie,BildgebungMamma,Bildgebung Mamma,0..*,BackboneElement,
+senol:BIH_LM_Senologie.BildgebungMamma.Datum,BIH_LM_Senologie,BildgebungMamma.Datum,Untersuchungsdatum,0..1,dateTime,Datum der Bildgebung
+senol:BIH_LM_Senologie.BildgebungMamma.Art,BIH_LM_Senologie,BildgebungMamma.Art,Art der Bildgebung,1..1,CodeableConcept,"Mammografie, Sonografie, MRT, Tomosynthese"
+senol:BIH_LM_Senologie.BildgebungMamma.Standort,BIH_LM_Senologie,BildgebungMamma.Standort,Untersuchungsstandort,0..1,string,Standort der Untersuchung
+senol:BIH_LM_Senologie.BildgebungMamma.BIRADS,BIH_LM_Senologie,BildgebungMamma.BIRADS,BI-RADS,0..1,CodeableConcept,BI-RADS Kategorie 0–6
+senol:BIH_LM_Senologie.BildgebungMamma.ACRDichte,BIH_LM_Senologie,BildgebungMamma.ACRDichte,ACR-Dichte,0..1,CodeableConcept,ACR-Dichtegrad a–d
+senol:BIH_LM_Senologie.BildgebungMamma.Herdbefund,BIH_LM_Senologie,BildgebungMamma.Herdbefund,Herdbefund,0..1,CodeableConcept,Beschreibung des Herdbefunds
+senol:BIH_LM_Senologie.BildgebungMamma.Mikrokalk,BIH_LM_Senologie,BildgebungMamma.Mikrokalk,Mikrokalk,0..1,CodeableConcept,Mikrokalkbefund
+senol:BIH_LM_Senologie.BildgebungMamma.LymphknotenBildgebung,BIH_LM_Senologie,BildgebungMamma.LymphknotenBildgebung,Lymphknotenstatus,0..1,CodeableConcept,Bildgebender Lymphknotenbefund
+senol:BIH_LM_Senologie.BildgebungMamma.Befundtext,BIH_LM_Senologie,BildgebungMamma.Befundtext,Befundtext,0..1,string,Gesamtzusammenfassung
+senol:BIH_LM_Senologie.BildgebungSonstige,BIH_LM_Senologie,BildgebungSonstige,Bildgebung Sonstige,0..*,BackboneElement,
+senol:BIH_LM_Senologie.BildgebungSonstige.Datum,BIH_LM_Senologie,BildgebungSonstige.Datum,Untersuchungsdatum,0..1,dateTime,Datum der Bildgebung
+senol:BIH_LM_Senologie.BildgebungSonstige.Art,BIH_LM_Senologie,BildgebungSonstige.Art,Art der Bildgebung,1..1,CodeableConcept,"CT, PET-CT, Szintigrafie etc."
+senol:BIH_LM_Senologie.BildgebungSonstige.Befundtext,BIH_LM_Senologie,BildgebungSonstige.Befundtext,Befundtext,0..1,string,Befundzusammenfassung
+senol:BIH_LM_Senologie.BildgebungSonstige.KodierteBefundaussage,BIH_LM_Senologie,BildgebungSonstige.KodierteBefundaussage,Kodierte Befundaussage,0..*,CodeableConcept,Strukturierte Befundkodierung
+senol:BIH_LM_Senologie.Pathologie,BIH_LM_Senologie,Pathologie,Pathologie,0..*,BackboneElement,
+senol:BIH_LM_Senologie.Pathologie.Datum,BIH_LM_Senologie,Pathologie.Datum,Befunddatum,0..1,dateTime,Datum der Befunderstellung
+senol:BIH_LM_Senologie.Pathologie.DatumProbeneingang,BIH_LM_Senologie,Pathologie.DatumProbeneingang,Probeneingang,0..1,dateTime,Datum Probeneingang im Labor
+senol:BIH_LM_Senologie.Pathologie.DatumEntnahme,BIH_LM_Senologie,Pathologie.DatumEntnahme,Entnahmedatum,0..1,dateTime,Datum der Präparateentnahme
+senol:BIH_LM_Senologie.Pathologie.ZeitpunktEntnahme,BIH_LM_Senologie,Pathologie.ZeitpunktEntnahme,Zeitpunkt Präparatentnahme,0..1,string,Uhrzeit der Entnahme
+senol:BIH_LM_Senologie.Pathologie.DatumMitteilungPatient,BIH_LM_Senologie,Pathologie.DatumMitteilungPatient,Datum Mitteilung Patient*in,0..1,dateTime,Datum Befundmitteilung
+senol:BIH_LM_Senologie.Pathologie.PathologischesInstitut,BIH_LM_Senologie,Pathologie.PathologischesInstitut,Pathologisches Institut,0..1,string,Befundendes Institut
+senol:BIH_LM_Senologie.Pathologie.EinrichtungEntnahme,BIH_LM_Senologie,Pathologie.EinrichtungEntnahme,Einrichtung Präparateentnahme,0..1,string,Einrichtung der Probenentnahme
+senol:BIH_LM_Senologie.Pathologie.StrukturierterBefund,BIH_LM_Senologie,Pathologie.StrukturierterBefund,Strukturierter Befund,0..1,boolean,Strukturierter Befund angelegt
+senol:BIH_LM_Senologie.Pathologie.Praeparat,BIH_LM_Senologie,Pathologie.Praeparat,Präparat,0..1,BackboneElement,Pathologisches Präparat
+senol:BIH_LM_Senologie.Pathologie.Praeparat.Art,BIH_LM_Senologie,Pathologie.Praeparat.Art,Art des Präparats,1..1,CodeableConcept,"Biopsie, Resektat, etc."
+senol:BIH_LM_Senologie.Pathologie.Praeparat.Entnahmemethode,BIH_LM_Senologie,Pathologie.Praeparat.Entnahmemethode,Entnahmemethode,0..1,CodeableConcept,Methode der Gewebeentnahme
+senol:BIH_LM_Senologie.Pathologie.Praeparat.Lokalisation,BIH_LM_Senologie,Pathologie.Praeparat.Lokalisation,Entnahmelokalisation,0..1,CodeableConcept,Körperstelle der Entnahme
+senol:BIH_LM_Senologie.Pathologie.Praeparat.Seite,BIH_LM_Senologie,Pathologie.Praeparat.Seite,Seite,0..1,CodeableConcept,Lateralität des Präparats
+senol:BIH_LM_Senologie.Pathologie.Praeparat.Uhrzeit,BIH_LM_Senologie,Pathologie.Praeparat.Uhrzeit,Uhrzeit-Position,0..1,string,Lokalisation als Uhrzeit
+senol:BIH_LM_Senologie.Pathologie.Praeparat.Mamillenabstand,BIH_LM_Senologie,Pathologie.Praeparat.Mamillenabstand,Mamillenabstand,0..1,Quantity,Abstand zur Mamille in mm
+senol:BIH_LM_Senologie.Pathologie.Histologie,BIH_LM_Senologie,Pathologie.Histologie,Histologischer Typ,0..1,CodeableConcept,ICD-O-3 Morphologie
+senol:BIH_LM_Senologie.Pathologie.BefundInvasiv,BIH_LM_Senologie,Pathologie.BefundInvasiv,Befund invasives Karzinom,0..1,BackboneElement,Pathologische Befundung invasives Mammakarzinom
+senol:BIH_LM_Senologie.Pathologie.BefundInvasiv.Subtyp,BIH_LM_Senologie,Pathologie.BefundInvasiv.Subtyp,Subtyp,0..1,CodeableConcept,"Histologischer Subtyp (NST, lobulär, etc.)"
+senol:BIH_LM_Senologie.Pathologie.BefundInvasiv.MaxTumordurchmesser,BIH_LM_Senologie,Pathologie.BefundInvasiv.MaxTumordurchmesser,Max. Tumordurchmesser,0..1,Quantity,Maximaler invasiver Tumordurchmesser in mm
+senol:BIH_LM_Senologie.Pathologie.BefundInvasiv.Multifokalitaet,BIH_LM_Senologie,Pathologie.BefundInvasiv.Multifokalitaet,Multifokal (m),0..1,boolean,Multifokales/multizentrisches Karzinom
+senol:BIH_LM_Senologie.Pathologie.BefundInvasiv.Grading,BIH_LM_Senologie,Pathologie.BefundInvasiv.Grading,Grading,0..1,CodeableConcept,G1–G4
+senol:BIH_LM_Senologie.Pathologie.BefundInvasiv.NukleaeresGrading,BIH_LM_Senologie,Pathologie.BefundInvasiv.NukleaeresGrading,Nukleäres Grading,0..1,CodeableConcept,Nukleäres Grading
+senol:BIH_LM_Senologie.Pathologie.BefundInvasiv.pT,BIH_LM_Senologie,Pathologie.BefundInvasiv.pT,pT (BC),0..1,CodeableConcept,Pathologische T-Kategorie
+senol:BIH_LM_Senologie.Pathologie.BefundInvasiv.cN,BIH_LM_Senologie,Pathologie.BefundInvasiv.cN,cN (BC),0..1,CodeableConcept,Klinische N-Kategorie (im Patho-Befund dokumentiert)
+senol:BIH_LM_Senologie.Pathologie.BefundInvasiv.pN,BIH_LM_Senologie,Pathologie.BefundInvasiv.pN,pN (BC),0..1,CodeableConcept,Pathologische N-Kategorie
+senol:BIH_LM_Senologie.Pathologie.BefundInvasiv.CpSwitch,BIH_LM_Senologie,Pathologie.BefundInvasiv.CpSwitch,c/p-Switch,0..1,CodeableConcept,Befund klinisch (c) oder pathologisch (p) klassifiziert
+senol:BIH_LM_Senologie.Pathologie.BefundInvasiv.y,BIH_LM_Senologie,Pathologie.BefundInvasiv.y,y-Präfix,0..1,boolean,Nach neoadjuvanter Therapie
+senol:BIH_LM_Senologie.Pathologie.BefundInvasiv.r,BIH_LM_Senologie,Pathologie.BefundInvasiv.r,r-Präfix,0..1,boolean,Rezidiv-Befund
+senol:BIH_LM_Senologie.Pathologie.BefundInvasiv.L,BIH_LM_Senologie,Pathologie.BefundInvasiv.L,L-Status,0..1,CodeableConcept,Lymphgefäßinvasion (L0/L1/LX)
+senol:BIH_LM_Senologie.Pathologie.BefundInvasiv.V,BIH_LM_Senologie,Pathologie.BefundInvasiv.V,V-Status,0..1,CodeableConcept,Veneninvasion (V0/V1/V2/VX)
+senol:BIH_LM_Senologie.Pathologie.BefundInvasiv.Pn,BIH_LM_Senologie,Pathologie.BefundInvasiv.Pn,Pn-Status,0..1,CodeableConcept,Perineuralscheideninvasion (Pn0/Pn1/PnX)
+senol:BIH_LM_Senologie.Pathologie.BefundInvasiv.R,BIH_LM_Senologie,Pathologie.BefundInvasiv.R,R-Status (BC),0..1,CodeableConcept,Residualstatus invasiv
+senol:BIH_LM_Senologie.Pathologie.BefundInvasiv.Resektionsraender,BIH_LM_Senologie,Pathologie.BefundInvasiv.Resektionsraender,Resektionsränder,0..1,BackboneElement,Abstände zu Resektionsrändern in mm
+senol:BIH_LM_Senologie.Pathologie.BefundInvasiv.Resektionsraender.Anterior,BIH_LM_Senologie,Pathologie.BefundInvasiv.Resektionsraender.Anterior,anterior,0..1,Quantity,Abstand anterior
+senol:BIH_LM_Senologie.Pathologie.BefundInvasiv.Resektionsraender.Posterior,BIH_LM_Senologie,Pathologie.BefundInvasiv.Resektionsraender.Posterior,posterior,0..1,Quantity,Abstand posterior
+senol:BIH_LM_Senologie.Pathologie.BefundInvasiv.Resektionsraender.Superior,BIH_LM_Senologie,Pathologie.BefundInvasiv.Resektionsraender.Superior,superior,0..1,Quantity,Abstand superior
+senol:BIH_LM_Senologie.Pathologie.BefundInvasiv.Resektionsraender.Inferior,BIH_LM_Senologie,Pathologie.BefundInvasiv.Resektionsraender.Inferior,inferior,0..1,Quantity,Abstand inferior
+senol:BIH_LM_Senologie.Pathologie.BefundInvasiv.Resektionsraender.Medial,BIH_LM_Senologie,Pathologie.BefundInvasiv.Resektionsraender.Medial,medial,0..1,Quantity,Abstand medial
+senol:BIH_LM_Senologie.Pathologie.BefundInvasiv.Resektionsraender.Lateral,BIH_LM_Senologie,Pathologie.BefundInvasiv.Resektionsraender.Lateral,lateral,0..1,Quantity,Abstand lateral
+senol:BIH_LM_Senologie.Pathologie.BefundInvasiv.Biomarker,BIH_LM_Senologie,Pathologie.BefundInvasiv.Biomarker,Biomarker invasiv,0..1,BackboneElement,Tumor-Biomarker BC
+senol:BIH_LM_Senologie.Pathologie.BefundInvasiv.Biomarker.ER,BIH_LM_Senologie,Pathologie.BefundInvasiv.Biomarker.ER,ER-Status (Östrogenrezeptor),0..1,BackboneElement,Erlaubt ER-low-Klassifikation; IRS und Allred sind alternative Scoring-Systeme
+senol:BIH_LM_Senologie.Pathologie.BefundInvasiv.Biomarker.ER.Gesamtstatus,BIH_LM_Senologie,Pathologie.BefundInvasiv.Biomarker.ER.Gesamtstatus,Gesamtstatus,0..1,CodeableConcept,positiv | gering-positiv (= ER-low) | negativ | unbekannt (MII-Onko Leitlinien-VS; oBDS-Slice nur positiv/negativ/unbekannt)
+senol:BIH_LM_Senologie.Pathologie.BefundInvasiv.Biomarker.ER.ProzentPositiveZellen,BIH_LM_Senologie,Pathologie.BefundInvasiv.Biomarker.ER.ProzentPositiveZellen,% positive Zellen,0..1,Quantity,Anteil ER-positiver Tumorzellen in Prozent (UCUM %)
+senol:BIH_LM_Senologie.Pathologie.BefundInvasiv.Biomarker.ER.Faerbeintensitaet,BIH_LM_Senologie,Pathologie.BefundInvasiv.Biomarker.ER.Faerbeintensitaet,Färbeintensität,0..1,CodeableConcept,Intensität 0 | 1+ | 2+ | 3+
+senol:BIH_LM_Senologie.Pathologie.BefundInvasiv.Biomarker.ER.IRSScore,BIH_LM_Senologie,Pathologie.BefundInvasiv.Biomarker.ER.IRSScore,IRS (Remmele-Stegner),0..1,Quantity,Immunreaktiver Score 0–12 (DE-Standard)
+senol:BIH_LM_Senologie.Pathologie.BefundInvasiv.Biomarker.ER.AllredScore,BIH_LM_Senologie,Pathologie.BefundInvasiv.Biomarker.ER.AllredScore,Allred Score,0..1,Quantity,Allred Score 0–8 (international)
+senol:BIH_LM_Senologie.Pathologie.BefundInvasiv.Biomarker.PR,BIH_LM_Senologie,Pathologie.BefundInvasiv.Biomarker.PR,PR-Status (Progesteronrezeptor),0..1,BackboneElement,Analog ER; IRS und Allred sind alternative Scoring-Systeme
+senol:BIH_LM_Senologie.Pathologie.BefundInvasiv.Biomarker.PR.Gesamtstatus,BIH_LM_Senologie,Pathologie.BefundInvasiv.Biomarker.PR.Gesamtstatus,Gesamtstatus,0..1,CodeableConcept,positiv | gering-positiv (= PR-low) | negativ | unbekannt (MII-Onko Leitlinien-VS)
+senol:BIH_LM_Senologie.Pathologie.BefundInvasiv.Biomarker.PR.ProzentPositiveZellen,BIH_LM_Senologie,Pathologie.BefundInvasiv.Biomarker.PR.ProzentPositiveZellen,% positive Zellen,0..1,Quantity,Anteil PR-positiver Tumorzellen in Prozent
+senol:BIH_LM_Senologie.Pathologie.BefundInvasiv.Biomarker.PR.Faerbeintensitaet,BIH_LM_Senologie,Pathologie.BefundInvasiv.Biomarker.PR.Faerbeintensitaet,Färbeintensität,0..1,CodeableConcept,0 | 1+ | 2+ | 3+
+senol:BIH_LM_Senologie.Pathologie.BefundInvasiv.Biomarker.PR.IRSScore,BIH_LM_Senologie,Pathologie.BefundInvasiv.Biomarker.PR.IRSScore,IRS (Remmele-Stegner),0..1,Quantity,Immunreaktiver Score 0–12
+senol:BIH_LM_Senologie.Pathologie.BefundInvasiv.Biomarker.PR.AllredScore,BIH_LM_Senologie,Pathologie.BefundInvasiv.Biomarker.PR.AllredScore,Allred Score,0..1,Quantity,Allred Score 0–8
+senol:BIH_LM_Senologie.Pathologie.BefundInvasiv.Biomarker.HER2,BIH_LM_Senologie,Pathologie.BefundInvasiv.Biomarker.HER2,HER2-Status (IHC),0..1,BackboneElement,IHC-Befund; ermöglicht HER2-low-Klassifikation. ISH-Reflextestung wird über MII MTB INSITUHYBRIDIZATION_HER2 abgebildet.
+senol:BIH_LM_Senologie.Pathologie.BefundInvasiv.Biomarker.HER2.IHCScore,BIH_LM_Senologie,Pathologie.BefundInvasiv.Biomarker.HER2.IHCScore,HER2 IHC-Score,0..1,CodeableConcept,0 | 1+ | 2+ | 3+
+senol:BIH_LM_Senologie.Pathologie.BefundInvasiv.Biomarker.HER2.ISHDurchgefuehrt,BIH_LM_Senologie,Pathologie.BefundInvasiv.Biomarker.HER2.ISHDurchgefuehrt,ISH durchgeführt,0..1,boolean,wurde ISH-Reflextestung durchgeführt (typ. bei IHC 2+)? Quantitative Details siehe Genetik.ISHReflexHER2
+senol:BIH_LM_Senologie.Pathologie.BefundInvasiv.Biomarker.HER2.ISHStatus,BIH_LM_Senologie,Pathologie.BefundInvasiv.Biomarker.HER2.ISHStatus,ISH-Ergebnis (Zusammenfassung),0..1,CodeableConcept,"amplifiziert | nicht amplifiziert | equivocal — Detailwerte (Ratio, Kopienzahl) in MII MTB ISH HER2"
+senol:BIH_LM_Senologie.Pathologie.BefundInvasiv.Biomarker.HER2.Gesamtstatus,BIH_LM_Senologie,Pathologie.BefundInvasiv.Biomarker.HER2.Gesamtstatus,HER2-Gesamtstatus,0..1,CodeableConcept,positiv | HER2-low | HER2-ultralow | negativ | equivocal (MII-Onko Leitlinien-VS)
+senol:BIH_LM_Senologie.Pathologie.BefundInvasiv.Biomarker.Ki67,BIH_LM_Senologie,Pathologie.BefundInvasiv.Biomarker.Ki67,Ki-67,0..1,Quantity,Ki-67 Proliferationsindex in Prozent
+senol:BIH_LM_Senologie.Pathologie.BefundInvasiv.Biomarker.PDL1CPS,BIH_LM_Senologie,Pathologie.BefundInvasiv.Biomarker.PDL1CPS,PD-L1 CPS,0..1,Quantity,Combined Positive Score
+senol:BIH_LM_Senologie.Pathologie.BefundInvasiv.Biomarker.PDL1TPS,BIH_LM_Senologie,Pathologie.BefundInvasiv.Biomarker.PDL1TPS,PD-L1 TPS,0..1,Quantity,Tumor Proportion Score
+senol:BIH_LM_Senologie.Pathologie.BefundInvasiv.Biomarker.PDL1IC,BIH_LM_Senologie,Pathologie.BefundInvasiv.Biomarker.PDL1IC,PD-L1 IC,0..1,Quantity,Immune Cell Score
+senol:BIH_LM_Senologie.Pathologie.BefundDCIS,BIH_LM_Senologie,Pathologie.BefundDCIS,Befund DCIS,0..1,BackboneElement,Pathologische Befundung Ductales Carcinoma in situ
+senol:BIH_LM_Senologie.Pathologie.BefundDCIS.Art,BIH_LM_Senologie,Pathologie.BefundDCIS.Art,DCIS Art,0..1,CodeableConcept,Art des DCIS
+senol:BIH_LM_Senologie.Pathologie.BefundDCIS.MaxAusdehnung,BIH_LM_Senologie,Pathologie.BefundDCIS.MaxAusdehnung,Maximale Ausdehnung,0..1,Quantity,Größte Ausdehnung des DCIS in mm
+senol:BIH_LM_Senologie.Pathologie.BefundDCIS.Grading,BIH_LM_Senologie,Pathologie.BefundDCIS.Grading,DCIS Grading,0..1,CodeableConcept,G1–G3
+senol:BIH_LM_Senologie.Pathologie.BefundDCIS.pT,BIH_LM_Senologie,Pathologie.BefundDCIS.pT,T (DCIS),0..1,CodeableConcept,T-Kategorie für DCIS (typ. pTis)
+senol:BIH_LM_Senologie.Pathologie.BefundDCIS.cN,BIH_LM_Senologie,Pathologie.BefundDCIS.cN,cN (DCIS),0..1,CodeableConcept,Klinische N-Kategorie
+senol:BIH_LM_Senologie.Pathologie.BefundDCIS.pN,BIH_LM_Senologie,Pathologie.BefundDCIS.pN,pN (DCIS),0..1,CodeableConcept,Pathologische N-Kategorie
+senol:BIH_LM_Senologie.Pathologie.BefundDCIS.y,BIH_LM_Senologie,Pathologie.BefundDCIS.y,y-Präfix,0..1,boolean,Nach neoadjuvanter Therapie
+senol:BIH_LM_Senologie.Pathologie.BefundDCIS.r,BIH_LM_Senologie,Pathologie.BefundDCIS.r,r-Präfix,0..1,boolean,Rezidiv-Befund
+senol:BIH_LM_Senologie.Pathologie.BefundDCIS.R,BIH_LM_Senologie,Pathologie.BefundDCIS.R,R-Status (DCIS),0..1,CodeableConcept,Residualstatus DCIS
+senol:BIH_LM_Senologie.Pathologie.BefundDCIS.Resektionsraender,BIH_LM_Senologie,Pathologie.BefundDCIS.Resektionsraender,Resektionsränder DCIS,0..1,BackboneElement,Abstände zu Resektionsrändern in mm
+senol:BIH_LM_Senologie.Pathologie.BefundDCIS.Resektionsraender.Anterior,BIH_LM_Senologie,Pathologie.BefundDCIS.Resektionsraender.Anterior,anterior,0..1,Quantity,Abstand anterior
+senol:BIH_LM_Senologie.Pathologie.BefundDCIS.Resektionsraender.Posterior,BIH_LM_Senologie,Pathologie.BefundDCIS.Resektionsraender.Posterior,posterior,0..1,Quantity,Abstand posterior
+senol:BIH_LM_Senologie.Pathologie.BefundDCIS.Resektionsraender.Superior,BIH_LM_Senologie,Pathologie.BefundDCIS.Resektionsraender.Superior,superior,0..1,Quantity,Abstand superior
+senol:BIH_LM_Senologie.Pathologie.BefundDCIS.Resektionsraender.Inferior,BIH_LM_Senologie,Pathologie.BefundDCIS.Resektionsraender.Inferior,inferior,0..1,Quantity,Abstand inferior
+senol:BIH_LM_Senologie.Pathologie.BefundDCIS.Resektionsraender.Medial,BIH_LM_Senologie,Pathologie.BefundDCIS.Resektionsraender.Medial,medial,0..1,Quantity,Abstand medial
+senol:BIH_LM_Senologie.Pathologie.BefundDCIS.Resektionsraender.Lateral,BIH_LM_Senologie,Pathologie.BefundDCIS.Resektionsraender.Lateral,lateral,0..1,Quantity,Abstand lateral
+senol:BIH_LM_Senologie.Pathologie.BefundDCIS.Biomarker,BIH_LM_Senologie,Pathologie.BefundDCIS.Biomarker,Biomarker DCIS,0..1,BackboneElement,Tumor-Biomarker DCIS
+senol:BIH_LM_Senologie.Pathologie.BefundDCIS.Biomarker.ER,BIH_LM_Senologie,Pathologie.BefundDCIS.Biomarker.ER,ER-Status DCIS,0..1,BackboneElement,Östrogenrezeptor am DCIS
+senol:BIH_LM_Senologie.Pathologie.BefundDCIS.Biomarker.ER.Gesamtstatus,BIH_LM_Senologie,Pathologie.BefundDCIS.Biomarker.ER.Gesamtstatus,Gesamtstatus,0..1,CodeableConcept,positiv | gering-positiv (= ER-low) | negativ | unbekannt (MII-Onko Leitlinien-VS; oBDS-Slice nur positiv/negativ/unbekannt)
+senol:BIH_LM_Senologie.Pathologie.BefundDCIS.Biomarker.ER.ProzentPositiveZellen,BIH_LM_Senologie,Pathologie.BefundDCIS.Biomarker.ER.ProzentPositiveZellen,% positive Zellen,0..1,Quantity,Anteil ER-positiver DCIS-Zellen in Prozent
+senol:BIH_LM_Senologie.Pathologie.BefundDCIS.Biomarker.ER.Faerbeintensitaet,BIH_LM_Senologie,Pathologie.BefundDCIS.Biomarker.ER.Faerbeintensitaet,Färbeintensität,0..1,CodeableConcept,0 | 1+ | 2+ | 3+
+senol:BIH_LM_Senologie.Pathologie.BefundDCIS.Biomarker.ER.IRSScore,BIH_LM_Senologie,Pathologie.BefundDCIS.Biomarker.ER.IRSScore,IRS (Remmele-Stegner),0..1,Quantity,Immunreaktiver Score 0–12
+senol:BIH_LM_Senologie.Pathologie.BefundDCIS.Biomarker.ER.AllredScore,BIH_LM_Senologie,Pathologie.BefundDCIS.Biomarker.ER.AllredScore,Allred Score,0..1,Quantity,Allred Score 0–8
+senol:BIH_LM_Senologie.Pathologie.BefundDCIS.Biomarker.PR,BIH_LM_Senologie,Pathologie.BefundDCIS.Biomarker.PR,PR-Status DCIS,0..1,BackboneElement,Progesteronrezeptor am DCIS
+senol:BIH_LM_Senologie.Pathologie.BefundDCIS.Biomarker.PR.Gesamtstatus,BIH_LM_Senologie,Pathologie.BefundDCIS.Biomarker.PR.Gesamtstatus,Gesamtstatus,0..1,CodeableConcept,positiv | gering-positiv (= PR-low) | negativ | unbekannt (MII-Onko Leitlinien-VS)
+senol:BIH_LM_Senologie.Pathologie.BefundDCIS.Biomarker.PR.ProzentPositiveZellen,BIH_LM_Senologie,Pathologie.BefundDCIS.Biomarker.PR.ProzentPositiveZellen,% positive Zellen,0..1,Quantity,Anteil PR-positiver DCIS-Zellen in Prozent
+senol:BIH_LM_Senologie.Pathologie.BefundDCIS.Biomarker.PR.Faerbeintensitaet,BIH_LM_Senologie,Pathologie.BefundDCIS.Biomarker.PR.Faerbeintensitaet,Färbeintensität,0..1,CodeableConcept,0 | 1+ | 2+ | 3+
+senol:BIH_LM_Senologie.Pathologie.BefundDCIS.Biomarker.PR.IRSScore,BIH_LM_Senologie,Pathologie.BefundDCIS.Biomarker.PR.IRSScore,IRS (Remmele-Stegner),0..1,Quantity,Immunreaktiver Score 0–12
+senol:BIH_LM_Senologie.Pathologie.BefundDCIS.Biomarker.PR.AllredScore,BIH_LM_Senologie,Pathologie.BefundDCIS.Biomarker.PR.AllredScore,Allred Score,0..1,Quantity,Allred Score 0–8
+senol:BIH_LM_Senologie.Pathologie.BefundDCIS.Biomarker.HER2,BIH_LM_Senologie,Pathologie.BefundDCIS.Biomarker.HER2,HER2-Status DCIS (IHC),0..1,BackboneElement,IHC am DCIS; ISH-Details via MII MTB
+senol:BIH_LM_Senologie.Pathologie.BefundDCIS.Biomarker.HER2.IHCScore,BIH_LM_Senologie,Pathologie.BefundDCIS.Biomarker.HER2.IHCScore,HER2 IHC-Score,0..1,CodeableConcept,0 | 1+ | 2+ | 3+
+senol:BIH_LM_Senologie.Pathologie.BefundDCIS.Biomarker.HER2.ISHDurchgefuehrt,BIH_LM_Senologie,Pathologie.BefundDCIS.Biomarker.HER2.ISHDurchgefuehrt,ISH durchgeführt,0..1,boolean,
+senol:BIH_LM_Senologie.Pathologie.BefundDCIS.Biomarker.HER2.ISHStatus,BIH_LM_Senologie,Pathologie.BefundDCIS.Biomarker.HER2.ISHStatus,ISH-Ergebnis (Zusammenfassung),0..1,CodeableConcept,amplifiziert | nicht amplifiziert | equivocal
+senol:BIH_LM_Senologie.Pathologie.BefundDCIS.Biomarker.HER2.Gesamtstatus,BIH_LM_Senologie,Pathologie.BefundDCIS.Biomarker.HER2.Gesamtstatus,HER2-Gesamtstatus,0..1,CodeableConcept,positiv | HER2-low | HER2-ultralow | negativ | equivocal (MII-Onko Leitlinien-VS)
+senol:BIH_LM_Senologie.Pathologie.BefundDCIS.Biomarker.Ki67,BIH_LM_Senologie,Pathologie.BefundDCIS.Biomarker.Ki67,Ki-67 DCIS,0..1,Quantity,Ki-67 Proliferationsindex in Prozent
+senol:BIH_LM_Senologie.Pathologie.M,BIH_LM_Senologie,Pathologie.M,M-Kategorie,0..1,CodeableConcept,Pathologische M-Klassifikation (gilt für BC und DCIS)
+senol:BIH_LM_Senologie.Pathologie.DetailM,BIH_LM_Senologie,Pathologie.DetailM,Detail M,0..1,string,Details zur M-Klassifikation
+senol:BIH_LM_Senologie.Pathologie.UICC,BIH_LM_Senologie,Pathologie.UICC,UICC-Stadium,0..1,CodeableConcept,Pathologisches UICC-Gesamtstadium
+senol:BIH_LM_Senologie.Pathologie.LymphknotenUntersucht,BIH_LM_Senologie,Pathologie.LymphknotenUntersucht,Lymphknoten untersucht,0..1,integer,Anzahl untersuchter LK
+senol:BIH_LM_Senologie.Pathologie.LymphknotenBefallen,BIH_LM_Senologie,Pathologie.LymphknotenBefallen,Lymphknoten befallen,0..1,integer,Anzahl befallener LK
+senol:BIH_LM_Senologie.Pathologie.SentinelUntersucht,BIH_LM_Senologie,Pathologie.SentinelUntersucht,Sentinel-LK untersucht,0..1,integer,Anzahl untersuchter Sentinel-LK
+senol:BIH_LM_Senologie.Pathologie.SentinelBefallen,BIH_LM_Senologie,Pathologie.SentinelBefallen,Sentinel-LK befallen,0..1,integer,Anzahl befallener Sentinel-LK
+senol:BIH_LM_Senologie.Pathologie.LKRatioText,BIH_LM_Senologie,Pathologie.LKRatioText,LK-Ratio (+LK/LK insg),0..1,string,Verhältnis befallene/untersuchte LK
+senol:BIH_LM_Senologie.Pathologie.CPSEGScore,BIH_LM_Senologie,Pathologie.CPSEGScore,CPS-EG-Score,0..1,Quantity,CPS-EG Score (MD Anderson)
+senol:BIH_LM_Senologie.Pathologie.AbsoluterChemoNutzen,BIH_LM_Senologie,Pathologie.AbsoluterChemoNutzen,Absoluter Chemotherapie-Nutzen,0..1,Quantity,Prognostischer Nutzen einer Chemotherapie
+senol:BIH_LM_Senologie.Pathologie.Befundtext,BIH_LM_Senologie,Pathologie.Befundtext,Befundtext,0..1,string,Gesamtbeurteilung des Pathologen
+senol:BIH_LM_Senologie.Pathologie.Sonstiges,BIH_LM_Senologie,Pathologie.Sonstiges,Sonstiges,0..1,string,Sonstige Befundaspekte
+senol:BIH_LM_Senologie.Genetik,BIH_LM_Senologie,Genetik,Genetische Diagnostik,0..1,BackboneElement,
+senol:BIH_LM_Senologie.Genetik.SomatischeMutation,BIH_LM_Senologie,Genetik.SomatischeMutation,Somatische Mutation,0..*,BackboneElement,Tumorgewebemutation
+senol:BIH_LM_Senologie.Genetik.SomatischeMutation.Gen,BIH_LM_Senologie,Genetik.SomatischeMutation.Gen,Gen,1..1,CodeableConcept,"BRCA1, BRCA2, PALB2 etc."
+senol:BIH_LM_Senologie.Genetik.SomatischeMutation.Ergebnis,BIH_LM_Senologie,Genetik.SomatischeMutation.Ergebnis,Ergebnis,0..1,CodeableConcept,Mutation/Wildtyp/nicht bestimmbar
+senol:BIH_LM_Senologie.Genetik.Genexpressionstest,BIH_LM_Senologie,Genetik.Genexpressionstest,Genexpressionstest,0..*,BackboneElement,"Oncotype DX, MammaPrint, Prosigna, EndoPredict"
+senol:BIH_LM_Senologie.Genetik.Genexpressionstest.Testmethode,BIH_LM_Senologie,Genetik.Genexpressionstest.Testmethode,Testmethode,1..1,CodeableConcept,Art des Genexpressionstests
+senol:BIH_LM_Senologie.Genetik.Genexpressionstest.Score,BIH_LM_Senologie,Genetik.Genexpressionstest.Score,Score,0..1,Quantity,Numerischer Score-Wert
+senol:BIH_LM_Senologie.Genetik.Genexpressionstest.Risikoklasse,BIH_LM_Senologie,Genetik.Genexpressionstest.Risikoklasse,Risikoklasse,0..1,CodeableConcept,Niedrig/mittel/hoch
+senol:BIH_LM_Senologie.Genetik.Genexpressionstest.Fernrezidivrisiko,BIH_LM_Senologie,Genetik.Genexpressionstest.Fernrezidivrisiko,Fernrezidivrisiko,0..1,decimal,Rezidivrisiko in Prozent
+senol:BIH_LM_Senologie.Operationsplanung,BIH_LM_Senologie,Operationsplanung,Operationsplanung,0..1,BackboneElement,
+senol:BIH_LM_Senologie.Operationsplanung.GeplanteOP,BIH_LM_Senologie,Operationsplanung.GeplanteOP,Geplante OP,0..1,CodeableConcept,Art der geplanten Operation
+senol:BIH_LM_Senologie.Operationsplanung.Seite,BIH_LM_Senologie,Operationsplanung.Seite,Seite,0..1,CodeableConcept,Geplante Lateralität
+senol:BIH_LM_Senologie.Operationsplanung.Operateur,BIH_LM_Senologie,Operationsplanung.Operateur,Geplanter Operateur,0..1,string,Geplanter Operateur
+senol:BIH_LM_Senologie.Operationsplanung.OPDauer,BIH_LM_Senologie,Operationsplanung.OPDauer,Geplante OP-Dauer,0..1,Quantity,Dauer in Minuten
+senol:BIH_LM_Senologie.Operationsplanung.PraeoperativeMarkierung,BIH_LM_Senologie,Operationsplanung.PraeoperativeMarkierung,Präoperative Markierung,0..1,CodeableConcept,"Magnetclip, Draht, Tusche etc."
+senol:BIH_LM_Senologie.Operationsplanung.PraeoperativeBlutabnahme,BIH_LM_Senologie,Operationsplanung.PraeoperativeBlutabnahme,Präoperative Blutabnahme,0..1,boolean,Geplant ja/nein
+senol:BIH_LM_Senologie.Operationsplanung.PraeoperativeAntibiotikatherapie,BIH_LM_Senologie,Operationsplanung.PraeoperativeAntibiotikatherapie,Präoperative Antibiotikatherapie,0..1,boolean,Geplant ja/nein
+senol:BIH_LM_Senologie.Operationsplanung.OPLagerung,BIH_LM_Senologie,Operationsplanung.OPLagerung,OP-Lagerung,0..1,CodeableConcept,Tischanordnung
+senol:BIH_LM_Senologie.Operation,BIH_LM_Senologie,Operation,Operation,0..*,BackboneElement,
+senol:BIH_LM_Senologie.Operation.Art,BIH_LM_Senologie,Operation.Art,Art der Operation,1..1,CodeableConcept,OPS- und SNOMED-codiert
+senol:BIH_LM_Senologie.Operation.Datum,BIH_LM_Senologie,Operation.Datum,Operationsdatum,0..1,dateTime,Datum der Operation
+senol:BIH_LM_Senologie.Operation.Seite,BIH_LM_Senologie,Operation.Seite,Seite,0..1,CodeableConcept,Lateralität
+senol:BIH_LM_Senologie.Operation.Intention,BIH_LM_Senologie,Operation.Intention,Intention,0..1,CodeableConcept,Diagnostisch/therapeutisch
+senol:BIH_LM_Senologie.Operation.Erstoperateur,BIH_LM_Senologie,Operation.Erstoperateur,Erstoperateur,0..1,Reference,Erstoperateur
+senol:BIH_LM_Senologie.Operation.Zweitoperateur,BIH_LM_Senologie,Operation.Zweitoperateur,Zweitoperateur,0..1,Reference,Zweitoperateur
+senol:BIH_LM_Senologie.Operation.PraeoperativeMarkierung,BIH_LM_Senologie,Operation.PraeoperativeMarkierung,Präoperative Markierung,0..*,CodeableConcept,Art der Markierung
+senol:BIH_LM_Senologie.Operation.IntraoperativesImaging,BIH_LM_Senologie,Operation.IntraoperativesImaging,Intraoperatives Imaging,0..*,CodeableConcept,Präparateradiografie etc.
+senol:BIH_LM_Senologie.Operation.Outcome,BIH_LM_Senologie,Operation.Outcome,Outcome,0..1,CodeableConcept,Ergebnis der Operation
+senol:BIH_LM_Senologie.Operation.PostoperativeAnordnungen,BIH_LM_Senologie,Operation.PostoperativeAnordnungen,Postoperative Anordnungen,0..1,BackboneElement,Follow-up-Maßnahmen
+senol:BIH_LM_Senologie.Operation.PostoperativeAnordnungen.Drainage,BIH_LM_Senologie,Operation.PostoperativeAnordnungen.Drainage,Drainage,0..1,CodeableConcept,Art der Drainage
+senol:BIH_LM_Senologie.Operation.PostoperativeAnordnungen.Verband,BIH_LM_Senologie,Operation.PostoperativeAnordnungen.Verband,Verband,0..1,CodeableConcept,Art des Verbandes
+senol:BIH_LM_Senologie.Operation.PostoperativeAnordnungen.Antibiotika,BIH_LM_Senologie,Operation.PostoperativeAnordnungen.Antibiotika,Antibiotika,0..1,CodeableConcept,Postoperative Antibiotika
+senol:BIH_LM_Senologie.Operation.PostoperativeAnordnungen.Mobilisation,BIH_LM_Senologie,Operation.PostoperativeAnordnungen.Mobilisation,Mobilisation,0..1,CodeableConcept,Mobilisationsplan
+senol:BIH_LM_Senologie.Operation.PostoperativeAnordnungen.Laborkontrolle,BIH_LM_Senologie,Operation.PostoperativeAnordnungen.Laborkontrolle,Laborkontrolle,0..1,CodeableConcept,Geplante Laborkontrollen
+senol:BIH_LM_Senologie.Operation.Komplikation,BIH_LM_Senologie,Operation.Komplikation,Operative Komplikation,0..*,BackboneElement,Clavien-Dindo-klassifiziert
+senol:BIH_LM_Senologie.Operation.Komplikation.ClavienDindo,BIH_LM_Senologie,Operation.Komplikation.ClavienDindo,Clavien-Dindo Grad,0..1,CodeableConcept,Grad I–V
+senol:BIH_LM_Senologie.Operation.Komplikation.Art,BIH_LM_Senologie,Operation.Komplikation.Art,Art der Komplikation,0..1,CodeableConcept,SNOMED-kodierte Komplikationsart
+senol:BIH_LM_Senologie.Operation.Komplikation.Zeitpunkt,BIH_LM_Senologie,Operation.Komplikation.Zeitpunkt,Zeitpunkt,0..1,CodeableConcept,Intraoperativ/postoperativ/stationär/ambulant
+senol:BIH_LM_Senologie.Operation.Komplikation.Konsequenz,BIH_LM_Senologie,Operation.Komplikation.Konsequenz,Konsequenz,0..1,string,Folgen der Komplikation
+senol:BIH_LM_Senologie.Operation.Implantat,BIH_LM_Senologie,Operation.Implantat,Implantat,0..*,BackboneElement,Brustimplantat
+senol:BIH_LM_Senologie.Operation.Implantat.Art,BIH_LM_Senologie,Operation.Implantat.Art,Art,0..1,CodeableConcept,Art des Implantats
+senol:BIH_LM_Senologie.Operation.Implantat.Hersteller,BIH_LM_Senologie,Operation.Implantat.Hersteller,Hersteller,0..1,string,Hersteller des Implantats
+senol:BIH_LM_Senologie.Operation.Implantat.REFNummer,BIH_LM_Senologie,Operation.Implantat.REFNummer,REF-Nummer,0..1,string,Referenznummer
+senol:BIH_LM_Senologie.Operation.Implantat.Seriennummer,BIH_LM_Senologie,Operation.Implantat.Seriennummer,Seriennummer,0..1,string,Seriennummer
+senol:BIH_LM_Senologie.SystemischeTherapie,BIH_LM_Senologie,SystemischeTherapie,Systemische Therapie,0..*,BackboneElement,
+senol:BIH_LM_Senologie.SystemischeTherapie.Intention,BIH_LM_Senologie,SystemischeTherapie.Intention,Intention,0..1,CodeableConcept,"Neoadjuvant, adjuvant, palliativ"
+senol:BIH_LM_Senologie.SystemischeTherapie.Therapielinie,BIH_LM_Senologie,SystemischeTherapie.Therapielinie,Therapielinie,0..1,integer,"1., 2., 3. Linie"
+senol:BIH_LM_Senologie.SystemischeTherapie.FirstLineMetastasiert,BIH_LM_Senologie,SystemischeTherapie.FirstLineMetastasiert,First-Line bei Metastasierung,0..1,boolean,Erste Linie bei metastasierter Erkrankung
+senol:BIH_LM_Senologie.SystemischeTherapie.Startdatum,BIH_LM_Senologie,SystemischeTherapie.Startdatum,Startdatum,0..1,dateTime,Beginn der Therapie
+senol:BIH_LM_Senologie.SystemischeTherapie.Enddatum,BIH_LM_Senologie,SystemischeTherapie.Enddatum,Enddatum,0..1,dateTime,Ende der Therapie
+senol:BIH_LM_Senologie.SystemischeTherapie.Protokoll,BIH_LM_Senologie,SystemischeTherapie.Protokoll,Therapieprotokoll,0..1,CodeableConcept,Protokollname
+senol:BIH_LM_Senologie.SystemischeTherapie.Outcome,BIH_LM_Senologie,SystemischeTherapie.Outcome,Outcome,0..1,CodeableConcept,Abgeschlossen/abgebrochen
+senol:BIH_LM_Senologie.SystemischeTherapie.Medikation,BIH_LM_Senologie,SystemischeTherapie.Medikation,Medikation,0..*,BackboneElement,Einzelne Substanz/Gabe
+senol:BIH_LM_Senologie.SystemischeTherapie.Medikation.Substanz,BIH_LM_Senologie,SystemischeTherapie.Medikation.Substanz,Substanz,1..1,CodeableConcept,SNOMED-codierte Substanz
+senol:BIH_LM_Senologie.SystemischeTherapie.Medikation.Zyklus,BIH_LM_Senologie,SystemischeTherapie.Medikation.Zyklus,Zyklus,0..1,integer,Therapiezyklus-Nummer
+senol:BIH_LM_Senologie.SystemischeTherapie.Medikation.TagImZyklus,BIH_LM_Senologie,SystemischeTherapie.Medikation.TagImZyklus,Tag im Zyklus,0..1,integer,Tag innerhalb des Zyklus
+senol:BIH_LM_Senologie.SystemischeTherapie.Medikation.Dosis,BIH_LM_Senologie,SystemischeTherapie.Medikation.Dosis,Dosis,0..1,Quantity,Verabreichte Dosis
+senol:BIH_LM_Senologie.SystemischeTherapie.Medikation.Datum,BIH_LM_Senologie,SystemischeTherapie.Medikation.Datum,Datum der Gabe,0..1,dateTime,Zeitpunkt der Medikamentengabe
+senol:BIH_LM_Senologie.GeplanteSystemtherapie,BIH_LM_Senologie,GeplanteSystemtherapie,Geplante Systemtherapie,0..*,BackboneElement,
+senol:BIH_LM_Senologie.GeplanteSystemtherapie.Substanz,BIH_LM_Senologie,GeplanteSystemtherapie.Substanz,Substanz,1..1,CodeableConcept,Geplantes Medikament
+senol:BIH_LM_Senologie.GeplanteSystemtherapie.Intention,BIH_LM_Senologie,GeplanteSystemtherapie.Intention,Intention,0..1,CodeableConcept,Neoadjuvant/adjuvant/palliativ
+senol:BIH_LM_Senologie.GeplanteSystemtherapie.Therapielinie,BIH_LM_Senologie,GeplanteSystemtherapie.Therapielinie,Therapielinie,0..1,integer,Geplante Therapielinie
+senol:BIH_LM_Senologie.GeplanteSystemtherapie.Protokoll,BIH_LM_Senologie,GeplanteSystemtherapie.Protokoll,Therapieprotokoll,0..1,CodeableConcept,Geplantes Protokoll
+senol:BIH_LM_Senologie.GeplanteSystemtherapie.GeplanteDosisDatum,BIH_LM_Senologie,GeplanteSystemtherapie.GeplanteDosisDatum,Geplante Dosis,0..1,Quantity,Geplante Dosierung
+senol:BIH_LM_Senologie.Strahlentherapie,BIH_LM_Senologie,Strahlentherapie,Strahlentherapie,0..*,BackboneElement,
+senol:BIH_LM_Senologie.Strahlentherapie.Intention,BIH_LM_Senologie,Strahlentherapie.Intention,Intention,0..1,CodeableConcept,"Adjuvant, neoadjuvant, palliativ"
+senol:BIH_LM_Senologie.Strahlentherapie.Startdatum,BIH_LM_Senologie,Strahlentherapie.Startdatum,Startdatum,0..1,dateTime,Beginn der Bestrahlung
+senol:BIH_LM_Senologie.Strahlentherapie.Enddatum,BIH_LM_Senologie,Strahlentherapie.Enddatum,Enddatum,0..1,dateTime,Ende der Bestrahlung
+senol:BIH_LM_Senologie.Strahlentherapie.Bestrahlungsregion,BIH_LM_Senologie,Strahlentherapie.Bestrahlungsregion,Bestrahlungsregion,0..1,CodeableConcept,Zielgebiet der Bestrahlung
+senol:BIH_LM_Senologie.Strahlentherapie.Gesamtdosis,BIH_LM_Senologie,Strahlentherapie.Gesamtdosis,Gesamtdosis,0..1,Quantity,Gesamtdosis in Gy
+senol:BIH_LM_Senologie.Strahlentherapie.Einzeldosis,BIH_LM_Senologie,Strahlentherapie.Einzeldosis,Einzeldosis,0..1,Quantity,Dosis pro Fraktion in Gy
+senol:BIH_LM_Senologie.Strahlentherapie.AnzahlFraktionen,BIH_LM_Senologie,Strahlentherapie.AnzahlFraktionen,Anzahl Fraktionen,0..1,integer,Anzahl der Bestrahlungssitzungen
+senol:BIH_LM_Senologie.Strahlentherapie.SimultaneRadiochemotherapie,BIH_LM_Senologie,Strahlentherapie.SimultaneRadiochemotherapie,Simultane Radiochemotherapie,0..1,boolean,Gleichzeitige Chemotherapie ja/nein
+senol:BIH_LM_Senologie.Nebenwirkung,BIH_LM_Senologie,Nebenwirkung,Nebenwirkung,0..*,BackboneElement,
+senol:BIH_LM_Senologie.Nebenwirkung.Ereignis,BIH_LM_Senologie,Nebenwirkung.Ereignis,Ereignis,1..1,CodeableConcept,MedDRA-kodiertes Ereignis
+senol:BIH_LM_Senologie.Nebenwirkung.CTCAEGrad,BIH_LM_Senologie,Nebenwirkung.CTCAEGrad,CTCAE-Grad,0..1,CodeableConcept,Schweregrad 1–5
+senol:BIH_LM_Senologie.Nebenwirkung.Datum,BIH_LM_Senologie,Nebenwirkung.Datum,Datum,0..1,dateTime,Zeitpunkt des Ereignisses
+senol:BIH_LM_Senologie.Nebenwirkung.VerursachendeTherapie,BIH_LM_Senologie,Nebenwirkung.VerursachendeTherapie,Verursachende Therapie,0..1,Reference,Bezug zur Systemtherapie
+senol:BIH_LM_Senologie.Begleitmedikation,BIH_LM_Senologie,Begleitmedikation,Begleitmedikation,0..*,BackboneElement,
+senol:BIH_LM_Senologie.Begleitmedikation.Medikament,BIH_LM_Senologie,Begleitmedikation.Medikament,Medikament,1..1,CodeableConcept,SNOMED-kodiertes Medikament
+senol:BIH_LM_Senologie.Begleitmedikation.Einnahmezeitraum,BIH_LM_Senologie,Begleitmedikation.Einnahmezeitraum,Einnahmezeitraum,0..1,Period,Start- und Enddatum
+senol:BIH_LM_Senologie.Begleitmedikation.Dosierschema,BIH_LM_Senologie,Begleitmedikation.Dosierschema,Dosierschema,0..1,string,Freitext-Dosierung
+senol:BIH_LM_Senologie.Begleitmedikation.Dosis,BIH_LM_Senologie,Begleitmedikation.Dosis,Dosis,0..1,Quantity,Dosierung
+senol:BIH_LM_Senologie.Tumorkonferenz,BIH_LM_Senologie,Tumorkonferenz,Tumorkonferenz,0..*,BackboneElement,
+senol:BIH_LM_Senologie.Tumorkonferenz.Datum,BIH_LM_Senologie,Tumorkonferenz.Datum,Datum,1..1,date,Datum der Tumorkonferenz
+senol:BIH_LM_Senologie.Tumorkonferenz.Fachdisziplinen,BIH_LM_Senologie,Tumorkonferenz.Fachdisziplinen,Fachdisziplinen,0..*,CodeableConcept,Teilnehmende Fachdisziplinen
+senol:BIH_LM_Senologie.Tumorkonferenz.Empfehlung,BIH_LM_Senologie,Tumorkonferenz.Empfehlung,Empfehlung,0..*,BackboneElement,Empfehlung der Tumorkonferenz
+senol:BIH_LM_Senologie.Tumorkonferenz.Empfehlung.EmpfehlungText,BIH_LM_Senologie,Tumorkonferenz.Empfehlung.EmpfehlungText,Empfehlungstext,0..1,string,Freitext-Empfehlung
+senol:BIH_LM_Senologie.Tumorkonferenz.Empfehlung.OperativeTherapie,BIH_LM_Senologie,Tumorkonferenz.Empfehlung.OperativeTherapie,Operative Therapie,0..1,CodeableConcept,Empfohlene OP
+senol:BIH_LM_Senologie.Tumorkonferenz.Empfehlung.Chemotherapie,BIH_LM_Senologie,Tumorkonferenz.Empfehlung.Chemotherapie,Chemotherapie,0..1,CodeableConcept,Empfohlene Chemotherapie
+senol:BIH_LM_Senologie.Tumorkonferenz.Empfehlung.Strahlentherapie,BIH_LM_Senologie,Tumorkonferenz.Empfehlung.Strahlentherapie,Strahlentherapie,0..1,CodeableConcept,Empfohlene Bestrahlung
+senol:BIH_LM_Senologie.Tumorkonferenz.Empfehlung.EndokrineTherapie,BIH_LM_Senologie,Tumorkonferenz.Empfehlung.EndokrineTherapie,Endokrine Therapie,0..1,CodeableConcept,Empfohlene Hormontherapie
+senol:BIH_LM_Senologie.Tumorkonferenz.Empfehlung.ZielgerichteteTherapie,BIH_LM_Senologie,Tumorkonferenz.Empfehlung.ZielgerichteteTherapie,Zielgerichtete Therapie,0..1,CodeableConcept,Empfohlene Targeted Therapy
+senol:BIH_LM_Senologie.Tumorkonferenz.Empfehlung.Immuntherapie,BIH_LM_Senologie,Tumorkonferenz.Empfehlung.Immuntherapie,Immuntherapie,0..1,CodeableConcept,Empfohlene Immuntherapie
+senol:BIH_LM_Senologie.Tumorkonferenz.Empfehlung.AntiresorptiveTherapie,BIH_LM_Senologie,Tumorkonferenz.Empfehlung.AntiresorptiveTherapie,Antiresorptive Therapie,0..1,CodeableConcept,Empfohlene Knochentherapie
+senol:BIH_LM_Senologie.Tumorkonferenz.Empfehlung.WeitereDiagnostik,BIH_LM_Senologie,Tumorkonferenz.Empfehlung.WeitereDiagnostik,Weitere Diagnostik,0..1,CodeableConcept,Empfohlene Diagnostik
+senol:BIH_LM_Senologie.Tumorkonferenz.Empfehlung.Studienempfehlung,BIH_LM_Senologie,Tumorkonferenz.Empfehlung.Studienempfehlung,Studienempfehlung,0..1,CodeableConcept,Empfohlene Studienteilnahme
+senol:BIH_LM_Senologie.Tumorkonferenz.Empfehlung.Genetik,BIH_LM_Senologie,Tumorkonferenz.Empfehlung.Genetik,Genetische Beratung,0..1,CodeableConcept,Empfohlene genetische Abklärung
+senol:BIH_LM_Senologie.Tumorkonferenz.Empfehlung.Nachsorge,BIH_LM_Senologie,Tumorkonferenz.Empfehlung.Nachsorge,Nachsorge,0..1,CodeableConcept,Empfohlene Nachsorge
+senol:BIH_LM_Senologie.Tumorkonferenz.Empfehlung.Wiedervorstellung,BIH_LM_Senologie,Tumorkonferenz.Empfehlung.Wiedervorstellung,Wiedervorstellung,0..1,date,Datum der Wiedervorstellung
+senol:BIH_LM_Senologie.Studienteilnahme,BIH_LM_Senologie,Studienteilnahme,Studienteilnahme,0..*,BackboneElement,
+senol:BIH_LM_Senologie.Studienteilnahme.Studienname,BIH_LM_Senologie,Studienteilnahme.Studienname,Studienname,1..1,string,Name der klinischen Studie
+senol:BIH_LM_Senologie.Studienteilnahme.StudiennameCode,BIH_LM_Senologie,Studienteilnahme.StudiennameCode,Studienname (kodiert),0..1,CodeableConcept,Kodierter Studienname
+senol:BIH_LM_Senologie.Studienteilnahme.Teilnahmestatus,BIH_LM_Senologie,Studienteilnahme.Teilnahmestatus,Teilnahmestatus,0..1,CodeableConcept,Kandidat/Screening/On-Study/Withdrawn etc.
+senol:BIH_LM_Senologie.Studienteilnahme.Studienscreening,BIH_LM_Senologie,Studienteilnahme.Studienscreening,Screening durchgeführt,0..1,boolean,Screening zur Studienteilnahme ja/nein
+senol:BIH_LM_Senologie.Studienteilnahme.Screeningstatus,BIH_LM_Senologie,Studienteilnahme.Screeningstatus,Screeningstatus,0..1,CodeableConcept,Ergebnis des Screenings
+senol:BIH_LM_Senologie.Studienteilnahme.Studienarm,BIH_LM_Senologie,Studienteilnahme.Studienarm,Studienarm,0..1,string,Zugewiesener Studienarm
+senol:BIH_LM_Senologie.Studienteilnahme.Aufklaerungsdatum,BIH_LM_Senologie,Studienteilnahme.Aufklaerungsdatum,Aufklärungsdatum,0..1,date,Datum der Aufklärung
+senol:BIH_LM_Senologie.Studienteilnahme.Teilnahmezeitraum,BIH_LM_Senologie,Studienteilnahme.Teilnahmezeitraum,Teilnahmezeitraum,0..1,Period,Beginn und Ende der Teilnahme
+senol:BIH_LM_Senologie.Studienteilnahme.Kontakt,BIH_LM_Senologie,Studienteilnahme.Kontakt,Kontaktperson,0..1,string,Kontaktperson für die Studie
+senol:BIH_LM_Senologie.Psychoonkologie,BIH_LM_Senologie,Psychoonkologie,Psychoonkologische Mitbetreuung,0..1,BackboneElement,
+senol:BIH_LM_Senologie.Psychoonkologie.Stattgefunden,BIH_LM_Senologie,Psychoonkologie.Stattgefunden,Stattgefunden,0..1,boolean,Kontakt erfolgt ja/nein
+senol:BIH_LM_Senologie.Psychoonkologie.Datum,BIH_LM_Senologie,Psychoonkologie.Datum,Datum,0..1,dateTime,Datum des ersten Kontakts
+senol:BIH_LM_Senologie.Sozialdienst,BIH_LM_Senologie,Sozialdienst,Sozialdienst-Kontakt,0..1,BackboneElement,
+senol:BIH_LM_Senologie.Sozialdienst.Stattgefunden,BIH_LM_Senologie,Sozialdienst.Stattgefunden,Stattgefunden,0..1,boolean,Kontakt erfolgt ja/nein
+senol:BIH_LM_Senologie.Sozialdienst.Datum,BIH_LM_Senologie,Sozialdienst.Datum,Datum,0..1,dateTime,Datum des Kontakts
+senol:BIH_LM_Senologie.Verlauf,BIH_LM_Senologie,Verlauf,Verlauf / Follow-Up,0..*,BackboneElement,
+senol:BIH_LM_Senologie.Verlauf.Meldedatum,BIH_LM_Senologie,Verlauf.Meldedatum,Meldedatum,1..1,date,Datum der Verlaufsmeldung (M01)
+senol:BIH_LM_Senologie.Verlauf.Melder,BIH_LM_Senologie,Verlauf.Melder,Melder,0..1,Reference,Meldende Einrichtung oder Person (M02)
+senol:BIH_LM_Senologie.Verlauf.NachsorgeArt,BIH_LM_Senologie,Verlauf.NachsorgeArt,Art der Nachsorge,0..1,CodeableConcept,Aktiv oder passiv (M03)
+senol:BIH_LM_Senologie.Verlauf.Vitalstatus,BIH_LM_Senologie,Verlauf.Vitalstatus,Vitalstatus,0..1,CodeableConcept,"Lebend, verstorben, unbekannt (M04)"
+senol:BIH_LM_Senologie.Verlauf.Gesamtbeurteilung,BIH_LM_Senologie,Verlauf.Gesamtbeurteilung,Gesamtbeurteilung,0..1,CodeableConcept,"CR, PR, SD, PD etc."
+senol:BIH_LM_Senologie.Verlauf.TumorstatusLokal,BIH_LM_Senologie,Verlauf.TumorstatusLokal,Tumorstatus lokal,0..1,CodeableConcept,Lokaler Tumorstatus (M05)
+senol:BIH_LM_Senologie.Verlauf.TumorstatusLK,BIH_LM_Senologie,Verlauf.TumorstatusLK,Tumorstatus Lymphknoten,0..1,CodeableConcept,Lymphknoten-Tumorstatus (M06)
+senol:BIH_LM_Senologie.Verlauf.TumorstatusFM,BIH_LM_Senologie,Verlauf.TumorstatusFM,Tumorstatus Fernmetastasen,0..1,CodeableConcept,Fernmetastasen-Tumorstatus (M07)
+senol:BIH_LM_Senologie.Verlauf.Zweittumor,BIH_LM_Senologie,Verlauf.Zweittumor,Zweittumor,0..1,CodeableConcept,Zweittumor ja/nein/unbekannt (M08)
+senol:BIH_LM_Senologie.Verlauf.ZweitttumorICD,BIH_LM_Senologie,Verlauf.ZweitttumorICD,Zweittumor ICD-10-GM,0..1,CodeableConcept,ICD-10-GM des Zweittumors (M09)
+senol:BIH_LM_Senologie.Verlauf.ZweitttumorDatum,BIH_LM_Senologie,Verlauf.ZweitttumorDatum,Zweittumor Diagnosedatum,0..1,date,Diagnosedatum des Zweittumors (M10)

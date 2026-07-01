@@ -4,12 +4,17 @@
 #   eccdm: "https://hl7.eu/fhir/ig/cancer-common/element/"
 #   b1mg: "https://w3id.org/b1mg/cancer-minimal-dataset/element/"
 # mapping_set_id: "https://w3id.org/cancer-crosswalk/mappings/b1mg-cmd__to__eccdm"
-# mapping_set_title: "B1MG Cancer Minimal Dataset -> ECCDM element crosswalk"
+# mapping_set_title: "B1MG 1+MG Minimal Dataset for Cancer -> ECCDM element crosswalk"
 # mapping_set_version: "0.1.0"
 # license: "https://creativecommons.org/licenses/by/4.0/"
-# mapping_tool: "manual curation"
+# mapping_tool: "semantic proposal (review pending)"
 # mapping_provider: "https://w3id.org/cancer-crosswalk"
-# subject_source: "https://w3id.org/b1mg/cancer-minimal-dataset"
+# subject_source: "https://doi.org/10.5281/zenodo.10784601"
 # object_source: "https://hl7.eu/fhir/ig/cancer-common"
-# comment: "Direction: subject (source) <predicate> object (ECCDM hub). TEMPLATE - no mappings curated yet."
-subject_id	subject_label	predicate_id	object_id	object_label	mapping_justification	confidence	comment
+# comment: "Direction: subject (B1MG) <predicate> object (ECCDM hub). Terminology deferred (subject_terminology blank/—). DURCHSTICH = CancerConditionAtDiagnosis only."
+subject_id	subject_label	subject_terminology	source_context	predicate_id	object_id	object_label	mapping_cardinality	element_kind	mapping_justification	confidence	review_status	comment
+b1mg:73	Topology	—	—	skos:exactMatch	eccdm:CancerConditionAtDiagnosis.bodySite	BodySite	1:1	collected	semapv:LogicalReasoning	0.9	proposed	B1MG Topology = ICD-O-3 topography code = primary anatomical site of cancer origin. Hub bodySite is the primary anatomical site at first diagnosis. Terminology: both resolve to ICD-O-3 topology axis; exact semantic correspondence. B1MG also has item 30 (4_SAMPLE/Anatomy, ICDO-3 for primary tumor sample) which is a related but sample-scoped equivalent.
+b1mg:74	Morfology	—	—	skos:exactMatch	eccdm:CancerConditionAtDiagnosis.histologyBehaviour	HistologyBehaviour	1:1	collected	semapv:LogicalReasoning	0.9	proposed	B1MG Morfology = ICD-O-3 morphology code; ICD-O-3 morphology encodes both cell type (histology) and biological behaviour (e.g. /3 = malignant) in a single code. Hub histologyBehaviour = "Histology and behaviour of the neoplasm". Exact semantic and terminological correspondence. Typo 'Morfology' is in the upstream source.
+b1mg:82	Scale	—	—	skos:closeMatch	eccdm:CancerConditionAtDiagnosis.tumourGradeSystem	TumourGradeSystem	1:1	collected	semapv:LogicalReasoning	0.8	proposed	B1MG Scale = "Classification scale used for cancer grading" with coded values (Scarff-Bloom-Richardson, Gleason, Bloom-Richardson, Elston-Ellis, Other). Hub tumourGradeSystem = the grading classification system used. Close match; B1MG applies only to solid-tumor grading (item 82 is in sub-domain 5.1.3_Grade), haematological staging uses a separate sub-domain (items 84-85 = 5.1.4_Haematologic) that maps to CancerStage, not grade. No subject_terminology specified in B1MG (values are free text).
+b1mg:83	Value (Grade)	—	—	skos:closeMatch	eccdm:CancerConditionAtDiagnosis.tumourGradeValue	TumourGradeValue	1:1	collected	semapv:LogicalReasoning	0.85	proposed	B1MG Value (item 83, sub-domain 5.1.3_Grade) = "Histological grade according to the scale indicated above". Hub tumourGradeValue = grade value per system. Close match; subject_label disambiguated from item 85 (5.1.4_Haematologic/Value) which maps to CancerStage. B1MG does not separate scale from value in the sense that 'Scale' (item 82) carries the system and 'Value' (item 83) carries the grade — this mirrors the hub's explicit system+value split.
+b1mg:77	Primary_Date	—	—	skos:closeMatch	eccdm:CancerConditionAtDiagnosis.visitDate	VisitDate	1:1	collected	semapv:LogicalReasoning	0.65	proposed	B1MG Primary_Date = "Date of primary cancer diagnosis". Hub visitDate = "Date of the clinical visit that established the diagnosis". Close but not exact: B1MG uses one general diagnosis date whereas ECCDM splits diagnostic dates into four subtypes (visitDate / biopsyDate / imagingDate / labReportDate). Primary_Date is mapped to visitDate as the most likely equivalent; biopsyDate / imagingDate / labReportDate have NO B1MG source — HUB GAP for those three elements. Hub element eccdm:CancerConditionAtDiagnosis.subject also has no B1MG counterpart (implicit patient link in flat dataset structure — HUB GAP).

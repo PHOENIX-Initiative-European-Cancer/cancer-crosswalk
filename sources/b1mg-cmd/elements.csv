@@ -1,0 +1,147 @@
+id,domain,element,datatype,terminology,definition
+b1mg:1,1_SUBMITTER,Identification,string,,Name and qualification of the Submitter
+b1mg:2,1_SUBMITTER,Email,string,,Email
+b1mg:3,1_SUBMITTER,Role,string,,"Role of the Submitter (e.g. oncologist in charge of the patient, research project PI)"
+b1mg:4,1_SUBMITTER,Data_Publisher,string,,"Identifies the person who is responsible for the data collection, in compliance with DCAT-AP-EU specifications"
+b1mg:5,1_SUBMITTER,Data_Center,string,,Refers to the Department or Center in charge of data production and/or analysis
+b1mg:6,1_SUBMITTER,Clinical_Center,string,,Refers to the Clinical Department in charge of the patient
+b1mg:7,1_SUBMITTER,Institution_Clinical,string,,Identifies the Institution of the Clinical Department
+b1mg:8,1_SUBMITTER,Institution_Data_Center,string,,Identifies the Institution of the Data Center or Department
+b1mg:9,1_SUBMITTER,Database_Dataset_ID,string,,May be used if data has already been put into a database (e.g. EGA archive)
+b1mg:10,1_SUBMITTER,Publication,uri,https://www.iso.org/standard/81599.html,Publication(s)
+b1mg:11,1_SUBMITTER,Projects,string,,Identifies projects which data are part of
+b1mg:12,1_SUBMITTER,Research_Consortia,string,,Identifies research consortia involved
+b1mg:13,1_SUBMITTER,Country,2- or 3-lettercode from ISO 3166-1,https://www.iso.org/iso-3166-country-codes.html,European Union country
+b1mg:14,2_PATIENT,Birth_Year,date,https://www.iso.org/iso-8601-date-and-time-format.html,Patient's year of birth as indicated on their birth certificate
+b1mg:15,2_PATIENT,Sex_at_Birth,code,http://hl7.org/fhir/ValueSet/administrative-gender,Sex as assigned at birth
+b1mg:16,2_PATIENT,Date_of_Last_Follow_Up,date,https://www.iso.org/iso-8601-date-and-time-format.html,Date of last collected information
+b1mg:17,2_PATIENT,Topology_Code,ICD-O-3,https://seer.cancer.gov/icd-o-3/,International code specifying the cancer primary site in a blood relative
+b1mg:18,2_PATIENT,Parentage,code,,Genetic relationship between the blood relative diagnosed with cancer and the patient
+b1mg:19,3_SEQUENCE,Protocol,code,,Protocol of the genomic preparation
+b1mg:20,3_SEQUENCE,Sequencing_Platform,"GEO database platform identifier, in the form of GPLxxx",https://www.ncbi.nlm.nih.gov/geo/browse/?view=platforms,"Sequencing platform, based on Gene Expression Omnibus (GEO)"
+b1mg:21,3_SEQUENCE,File_Format,code,,Sequence data format
+b1mg:22,3_SEQUENCE,Alignment,links to github or other public repositories with version tracking,,Software used for alignment
+b1mg:23,3_SEQUENCE,Alignment_Genome,code,,"Genome version (e.g. Hg38, Hg19) used for alignment"
+b1mg:24,3_SEQUENCE,Variant_Calling,links to github or other public repositories with version tracking,,Software used for variant calling
+b1mg:25,3_SEQUENCE,Variant_Annotation,links to github or other public repositories with version tracking,,Software used for variant annotation
+b1mg:26,3_SEQUENCE,Variant_Interpretation,links to github or other public repositories with version tracking,,"Workflow to determine the effect of the identified variant(s) (at gene, transcript, protein level)"
+b1mg:27,3_SEQUENCE,Clinical_Variant_Interpretation,code,,Workflow for interpretation of the clinical effect of the identified variant(s)
+b1mg:28,4_SAMPLE,Date,date,https://www.iso.org/iso-8601-date-and-time-format.html,Date of sampling
+b1mg:29,4_SAMPLE,ID,string,,Primary tumor sample identifier
+b1mg:30,4_SAMPLE,Anatomy,ICDO-3,https://seer.cancer.gov/icd-o-3/,Anatomic site of the primary tumor sample according to the International Classification of Diseases for Oncology
+b1mg:31,4_SAMPLE,Processing,code,,"Sample type, based on the technique used for extraction and preservation (multiple choices allowed)"
+b1mg:32,4_SAMPLE,Tumor_Normal_Matched,code,,"If both tumor and normal tissue are available, this item confirms if they are matched"
+b1mg:33,4_SAMPLE,Tumor_Normal_Matching_Sample,string,,Indicates the corresponding normal sample identifier
+b1mg:34,4_SAMPLE,Date,date,https://www.iso.org/iso-8601-date-and-time-format.html,Date of sampling
+b1mg:35,4_SAMPLE,ID,string,,Metastatic sample identifier
+b1mg:36,4_SAMPLE,Anatomy,ICDO-3,https://seer.cancer.gov/icd-o-3/,Anatomic site of the metastatic sample according to the International Classification of Diseases for Oncology
+b1mg:37,4_SAMPLE,Processing,code,,"Sample type, based on the technique used for extraction and preservation (multiple choices allowed)"
+b1mg:38,4_SAMPLE,Presence_of_Matching_Samples,code,,Indicates the presence of related additional samples
+b1mg:39,4_SAMPLE,Matching_Samples,string,,Indicates the corresponding additional sample identifier
+b1mg:40,4_SAMPLE,Date,date,https://www.iso.org/iso-8601-date-and-time-format.html,Date of sampling
+b1mg:41,4_SAMPLE,ID,string,,Hematopoietic/lymphoid neoplasm sample identifier
+b1mg:42,4_SAMPLE,Anatomy,ICDO-3,https://seer.cancer.gov/icd-o-3/,Anatomic site of the hematopoietic/lymphoid neoplasm sample according to the International Classification of Diseases for Oncology
+b1mg:43,4_SAMPLE,Processing,code,,"Sample type, based on the technique used for extraction and preservation (multiple choices allowed)"
+b1mg:44,4_SAMPLE,Presence_of_Matching_Samples,code,,"Indicates the presence of additional samples, in the natural history of the disease"
+b1mg:45,4_SAMPLE,Matching_Samples,string,,Indicates the corresponding additional sample identifier
+b1mg:46,4_SAMPLE,Date,date,https://www.iso.org/iso-8601-date-and-time-format.html,Date of sampling
+b1mg:47,4_SAMPLE,ID,string,,Hematopoietic/lymphoid recurrence sample identifier
+b1mg:48,4_SAMPLE,Anatomy,ICDO-3,https://seer.cancer.gov/icd-o-3/,Anatomic site of the hematopoietic/lymphoid recurrence sample according to the International Classification of Diseases for Oncology
+b1mg:49,4_SAMPLE,Processing,code,,"Sample type, based on the technique used for extraction and preservation (multiple choices allowed)"
+b1mg:50,4_SAMPLE,Presence_of_Matching_Samples,code,,"Indicates the presence of additional samples, in the natural history of the disease"
+b1mg:51,4_SAMPLE,Matching_Samples,string,,Indicates the corresponding additional sample identifier
+b1mg:52,4_SAMPLE,Date,date,https://www.iso.org/iso-8601-date-and-time-format.html,Date of sampling
+b1mg:53,4_SAMPLE,ID,string,,Normal sample (peritumoral) identifier
+b1mg:54,4_SAMPLE,Anatomy,string,,Anatomic site of the normal sample
+b1mg:55,4_SAMPLE,Processing,code,,"Sample type, based on the technique used for extraction and preservation (multiple choices allowed)"
+b1mg:56,4_SAMPLE,Normal_Tumor_Matched,code,,"If both tumor and normal tissue are available, this item confirms if they are matched"
+b1mg:57,4_SAMPLE,Normal_Tumor_Matching_Sample,string,,Indicates the corresponding tumor sample identifier
+b1mg:58,4_SAMPLE,Date,date,https://www.iso.org/iso-8601-date-and-time-format.html,Date of sampling
+b1mg:59,4_SAMPLE,ID,string,,Normal sample (blood) identifier
+b1mg:60,4_SAMPLE,Processing,code,,"Sample type, based on the technique used for extraction and preservation (multiple choices allowed)"
+b1mg:61,4_SAMPLE,Presence_of_Matching_Samples,code,,Indicates the presence of related additional samples
+b1mg:62,4_SAMPLE,Matching_Samples,string,,Indicates the corresponding additional sample identifier
+b1mg:63,4_SAMPLE,Date,date,https://www.iso.org/iso-8601-date-and-time-format.html,Date of sampling
+b1mg:64,4_SAMPLE,ID,string,,Liquid biopsy sample identifier
+b1mg:65,4_SAMPLE,Description,string,,Describes the processed material (e.g. circulating tumor cells)
+b1mg:66,4_SAMPLE,Processing,code,,"Sample type, based on the technique used for extraction and preservation (multiple choices allowed)"
+b1mg:67,4_SAMPLE,Presence_of_Matching_Samples,code,,Indicates the presence of related additional samples
+b1mg:68,4_SAMPLE,Matching_Samples,string,,Indicates the corresponding additional sample identifier
+b1mg:69,4_SAMPLE,Date,date,https://www.iso.org/iso-8601-date-and-time-format.html,Date of sampling
+b1mg:70,4_SAMPLE,ID,string,,Other sample identifier
+b1mg:71,4_SAMPLE,Description,string,,Describes the processed material
+b1mg:72,4_SAMPLE,Processing,code,,"Sample type, based on the technique used for extraction and preservation (multiple choices allowed)"
+b1mg:73,5_DISEASE,Topology,ICD-O-3 (Topology),https://seer.cancer.gov/icd-o-3/,Describes the tissue of origin of the cancer
+b1mg:74,5_DISEASE,Morfology,ICD-O-3 (Morphology),https://seer.cancer.gov/icd-o-3/,Describes the tumor cell type and biological activity
+b1mg:75,5_DISEASE,Definition,"(primary cancer, loco-regional or metastatic relapse) and ICD-10",https://icd.who.int/browse10/2019/en,Initial cancer event and subsequent cancer event(s)
+b1mg:76,5_DISEASE,Date,date,https://www.iso.org/iso-8601-date-and-time-format.html,Date of initial or subsequent cancer event
+b1mg:77,5_DISEASE,Primary_Date,date,https://www.iso.org/iso-8601-date-and-time-format.html,Date of primary cancer diagnosis
+b1mg:78,5_DISEASE,Tumor_Size,string,,Describes the size of the primary tumor according to the international TNM classification for solid tumors
+b1mg:79,5_DISEASE,Lymph_Node_Status,string,,Indicates lymph node involvement according to the international TNM classification for solid tumors
+b1mg:80,5_DISEASE,Metastases,string,,Indicates presence or absence of metastasis according to the international TNM classification for solid tumors
+b1mg:81,5_DISEASE,Version,decimal,,Version of the TNM classification
+b1mg:82,5_DISEASE,Scale,code,,Classification scale used for cancer grading
+b1mg:83,5_DISEASE,Value,string,,"Histological grade according to the scale indicated above, used to describe the tumor cell type and biological activity"
+b1mg:84,5_DISEASE,Staging,string,,Based on classifications used for haematological and lymphoid malignances
+b1mg:85,5_DISEASE,Value,string,,"Value, according to the classification system used above"
+b1mg:86,5_DISEASE,Classification,ICD-10,https://icd.who.int/browse10/2019/en,Specifies the comorbid condition
+b1mg:87,5_DISEASE,Clinical_Status,code,,Indicates the status of the comorbid condition
+b1mg:88,5_DISEASE,Age_at_Diagnosis,integer,,Indicates the age (years) at diagnosis of the comorbid condition
+b1mg:89,6_TREATMENT,Type,code,,Indicates the type of treatment regimen that the patient completed
+b1mg:90,6_TREATMENT,Pre-Treated,code,,Indicates if cancer has been pre-treated or is in course of treatment
+b1mg:91,6_TREATMENT,Date,date,https://www.iso.org/iso-8601-date-and-time-format.html,Defines the date of the procedure
+b1mg:92,6_TREATMENT,Resection_Quality,code,,Evaluation of the surgical resection quality based on coded values
+b1mg:93,6_TREATMENT,Drug_ID_ATC,ATC code,https://www.whocc.no/atc/structure_and_principles/,"Anatomical Therapeutic Chemical (ATC) classification system code, indicating, where possible, the 5th level (chemical substance)"
+b1mg:94,6_TREATMENT,Drug_Name,string,"https://seer.cancer.gov/seertools/seerrx/
+
+https://hemonc.org/wiki/Main_Page",Name of the drug
+b1mg:95,6_TREATMENT,Treatment_Aim,code,,Indicates the aim for which the treatment is administered
+b1mg:96,6_TREATMENT,Line,string,,"Indicates if the treatment was the primary treatment after the initial diagnosis or the 2nd, 3rd, .."
+b1mg:97,6_TREATMENT,Start,date,https://www.iso.org/iso-8601-date-and-time-format.html,Indicates the start date of the overall period of chemotherapy treatment regimen
+b1mg:98,6_TREATMENT,End,date,https://www.iso.org/iso-8601-date-and-time-format.html,Indicates the end of the overall chemotherapy treatment regimen
+b1mg:99,6_TREATMENT,Setting,code,"https://evs.nci.nih.gov/ftp1/CDISC/SDTM/SDTM%20Terminology.txt
+#NCIt C124308",Indicates the treatment setting
+b1mg:100,6_TREATMENT,Dosage_Units,code,https://ucum.org/trac,Indicates units used to record chemotherapy drug dosage
+b1mg:101,6_TREATMENT,Cumulative_Drug_Dosage,decimal,,Indicates the total actual drug dose in the units specified above (dosage_units)
+b1mg:102,6_TREATMENT,Outcome,code,,Outcome of the prescribed treatment
+b1mg:103,6_TREATMENT,Response_to_Treatment,code,https://recist.eortc.org/,The patient's response to the applied treatment regimen (based on RECIST)
+b1mg:104,6_TREATMENT,Adverse_Events,https://docs.icgc-argo.org/dictionary #adverse_events,NCI-CTCAE (v5.0) proposal,Reports any treatment-related adverse events
+b1mg:105,6_TREATMENT,Toxicity_Type,code,,"If the treatment was terminated early due to acute toxicity, indicates whether it was due to hematological or non-hematological toxicity"
+b1mg:106,6_TREATMENT,Treatment_Aim,code,,Indicates the aim for which the treatment is administered
+b1mg:107,6_TREATMENT,Line,string,,"Indicates if the treatment was the primary treatment after the initial diagnosis or the 2nd, 3rd, …"
+b1mg:108,6_TREATMENT,Modality,code,,Indicates the method of radiation treatment or modality
+b1mg:109,6_TREATMENT,Type,code,,Indicates the type of radiation therapy administered
+b1mg:110,6_TREATMENT,Fractions,integer,,Indicates the total number of fractions delivered as part of treatment
+b1mg:111,6_TREATMENT,Dosage,decimal,,Indicates the total dose given in Gray units
+b1mg:112,6_TREATMENT,Duration,integer,,Duration (days) of the treatment regimen
+b1mg:113,6_TREATMENT,Start,date,https://www.iso.org/iso-8601-date-and-time-format.html,Indicates the start date of the overall radiation treatment
+b1mg:114,6_TREATMENT,End,date,https://www.iso.org/iso-8601-date-and-time-format.html,Indicates the end of the overall radiation treatment
+b1mg:115,6_TREATMENT,Site,code,,Indicates the body region where radiation therapy was administered
+b1mg:116,6_TREATMENT,Outcome,code,,Outcome of the prescribed treatment
+b1mg:117,6_TREATMENT,Response_to_Treatment,code,https://recist.eortc.org/,The patient's response to the applied treatment regimen (based on RECIST)
+b1mg:118,6_TREATMENT,Adverse_Events,code,NCI-CTCAE (v5.0) proposal,Reports any treatment-related adverse events
+b1mg:119,6_TREATMENT,Toxicity_Type,code,,"If the treatment was terminated early due to acute toxicity, indicates whether it was due to hematological or non-hematological toxicity"
+b1mg:120,6_TREATMENT,Drug_Name,string,"https://seer.cancer.gov/seertools/seerrx/
+
+https://hemonc.org/wiki/Main_Page",Name of the drug
+b1mg:121,6_TREATMENT,Start,date,https://www.iso.org/iso-8601-date-and-time-format.html,Defines the start date for the treatment
+b1mg:122,6_TREATMENT,End,date,https://www.iso.org/iso-8601-date-and-time-format.html,Defines the end date for the treatment
+b1mg:123,6_TREATMENT,Treatment_Aim,code,,Indicates the aim for which the treatment is administered
+b1mg:124,6_TREATMENT,Line,string,,"Indicates if the treatment was the primary treatment after the initial diagnosis or the 2nd, 3rd, …"
+b1mg:125,6_TREATMENT,Setting,code,"https://evs.nci.nih.gov/ftp1/CDISC/SDTM/SDTM%20Terminology.txt
+#NCIt C124308",Indicates the treatment setting
+b1mg:126,6_TREATMENT,Outcome,code,,Indicates the patient's outcome of the prescribed treatment (coded values)
+b1mg:127,6_TREATMENT,Response_to_Treatment,code,https://recist.eortc.org/,The patient's response to the applied treatment regimen (based on RECIST)
+b1mg:128,6_TREATMENT,Adverse_Events,https://docs.icgc-argo.org/dictionary #adverse_events,NCI-CTCAE (v5.0) proposal,Reports any treatment-related adverse events
+b1mg:129,6_TREATMENT,Toxicity_Type,code,,"If the treatment was terminated early due to acute toxicity, indicates whether it was due to hematological  or non-hematological toxicity"
+b1mg:130,6_TREATMENT,Procedures,PROCEDURE (SNOMED-CT),https://www.snomed.org/,Indicates the type of treatment completed by the patient (coded values based on SNOMED)
+b1mg:131,6_TREATMENT,Drug_ID_ATC,ATC code,https://hemonc.org/wiki/Main_Page,"Anatomical Therapeutic Chemical (ACT) classification system code, indicating, where possible, the 5th level (chemical substance)"
+b1mg:132,6_TREATMENT,Drug_Name,string,https://www.whocc.no/atc/structure_and_principles/,Name of the drug
+b1mg:133,7_ENVIRONMENTAL_EXPOSURE,Smoking_Status,code,,Indicates patient's self-reported smoking status and history (coded values)
+b1mg:134,7_ENVIRONMENTAL_EXPOSURE,History,code,,Indicates if patient has consumed any alcoholic beverage in their lifetime
+b1mg:135,7_ENVIRONMENTAL_EXPOSURE,Quantity,code,,Indicates the amount of alcohol intake (coded values based on alcohol type)
+b1mg:136,7_ENVIRONMENTAL_EXPOSURE,Name,string,,Specifies the viral/bacterial agent
+b1mg:137,7_ENVIRONMENTAL_EXPOSURE,Type,string,,"Indicates other exposures, e.g. asbestos"
+b1mg:138,8_BIOMARKER,Type,code,,Information specifying the purpose of the biomarker used
+b1mg:139,8_BIOMARKER,Name,string,,Name of the biomarker
+b1mg:140,8_BIOMARKER,Code,LOINC code,https://loinc.org/,Code of the biomarker
