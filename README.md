@@ -24,45 +24,67 @@ Mappings use [SSSOM](https://github.com/mapping-commons/SSSOM) (Simple Standard
 for Sharing Ontological Mappings): a TSV of `subject → predicate → object` with
 embedded YAML metadata, SKOS predicates, `semapv` justifications and confidence.
 
+## Read this first
+
+- **`docs/REPORT.md`** (and `REPORT.pdf`) — the self-contained analysis report.
+- **`docs/BRIEF.md`** — a one-page problem statement.
+- **`docs/overview.png`** — the headline figure (hub coverage + extension modules).
+
 ## Layout
 
 | path | what |
 |---|---|
 | `hub/eccdm/elements.csv` | the hub vocabulary — 68 ECCDM logical-model elements (generated) |
 | `mappings/<source>__to__eccdm.sssom.tsv` | one SSSOM mapping set per source dataset |
-| `sources/<source>/` | provenance + extracted element list per source |
-| `scripts/extract_eccdm_hub.py` | regenerate the hub from the cancer-common FSH models |
-| `scripts/coverage.py` | gap analysis: hub coverage per source + uncovered elements |
+| `sources/<source>/` | `SOURCE.md` (provenance) + `elements.csv` (extracted vocabulary) + `ref/` (the fetched spec) |
+| `scripts/extract_*.py` | rebuild each vocabulary from its official source |
+| `scripts/coverage.py` | hub coverage per source + uncovered elements |
+| `scripts/inverse_gaps.py` | source-side gaps clustered into candidate extension modules |
+| `scripts/overview.py` · `hubspoke.py` · `heatmap.py` | figures |
 | `prefixes.yaml` | shared CURIE map (prefixes are minted for this crosswalk) |
-| `docs/methodology.md` | mapping conventions (direction, predicates, confidence) |
-| `docs/datasets.md` | the source datasets: versions, licenses, where to get them |
+| `docs/methodology.md` | mapping conventions (direction, predicates, confidence, extension columns) |
+| `docs/datasets.md` | the source datasets: versions, provenance |
+| `docs/extension-modules.md` | inverse-gap wishlist (what ECCDM would need) |
 
-## Usage
+## Reproduce
 
 ```bash
-python3 scripts/extract_eccdm_hub.py   # (re)build hub/eccdm/elements.csv
-python3 scripts/coverage.py            # gap analysis to stdout
-python3 scripts/coverage.py --md       # ... as Markdown
+python3 -m venv .venv && . .venv/bin/activate && pip install sssom matplotlib openpyxl
+
+# rebuild vocabularies from the official sources (specs are in sources/*/ref/)
+python3 scripts/extract_eccdm_hub.py
+for s in obds nabon b1mg senologie; do python3 scripts/extract_${s}_vocab.py; done
+
+# analysis + figures + validation
+python3 scripts/coverage.py
+python3 scripts/inverse_gaps.py
+python3 scripts/overview.py            # docs/overview.png
+sssom validate mappings/*.sssom.tsv
 ```
 
 ## Status
 
-| source | mapping rows | state |
-|---|---|---|
-| MII Onko / oBDS | 13 | seeded (high-confidence items only) |
-| Senologie-Datenkranz | 0 | template |
-| B1MG CMD | 0 | template |
-| NABON Mammacarcinoom | 0 | template |
+| source | jurisdiction / scope | elements | mapping rows |
+|---|---|---|---|
+| oBDS | DE · pan-cancer registry | 422 | 37 |
+| NABON | NL · breast | 314 | 34 |
+| B1MG | EU · pan-cancer minimal | 140 | 34 |
+| Senologie | DE · breast | 299 | 43 |
 
-Hub coverage so far: **19 %** (13 / 68 elements). See `scripts/coverage.py`.
+Hub coverage: **63 %** (43 / 68 elements). **All 148 mappings are `proposed`
+(not expert-reviewed).** Terminology/code-level mapping is deferred. See
+`docs/REPORT.md` for findings and limitations.
 
-## Optional next step: validate with sssom-py
+## Sources & attribution
 
-The mapping sets are plain SSSOM and can be linted/validated/converted with the
-official toolkit:
+Each spoke's provenance (spec version, URL, extractor) is in
+`sources/<source>/SOURCE.md`. This repository stores only *derived element
+inventories* and *correspondence statements* — not the full source specifications.
+Source datasets remain under their publishers' terms; ECCDM (the hub) is published
+by HL7 Europe.
 
-```bash
-pip install sssom
-sssom validate mappings/mii-onko-obds__to__eccdm.sssom.tsv
-sssom convert mappings/*.sssom.tsv -O owl   # or json, rdf, ...
-```
+## License
+
+This repository's own content (mappings, vocabularies, scripts, docs, figures) is
+licensed **CC BY 4.0** — see [`LICENSE`](LICENSE). The analysis is a work product,
+**not** an authoritative or normative mapping.

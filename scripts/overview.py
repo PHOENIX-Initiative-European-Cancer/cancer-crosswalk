@@ -5,7 +5,7 @@ Panel A (top): model-level hub coverage — 11 ECCDM models x 4 sources, cell
   shaded by coverage fraction (hub elements of that model mapped by the source),
   annotated m/n, tinted by the source's dominant predicate for that model.
 
-Panel B (bottom): Ergaenzungsmodule — the breast-specific / detailed content
+Panel B (bottom): Extension modules — the breast-specific / detailed content
   that has NO hub home, as stacked bars per candidate extension module, coloured
   by carriage (by-reference / new-module). Shows the hub is a thin generic spine
   while the specialised detail forms fat extension modules.
@@ -79,7 +79,7 @@ def main() -> int:
             if row.get("predicate_id"):
                 preds[(model, src)][row["predicate_id"]] += 1
 
-    # Ergaenzungsmodule (reuse inverse_gaps clustering)
+    # Extension modules (reuse inverse_gaps clustering)
     mapped = {row["subject_id"] for f in glob.glob(str(MAPPINGS / "*.sssom.tsv"))
               for row in read_sssom(Path(f)) if row.get("subject_id")}
     mod_src = defaultdict(lambda: defaultdict(int))
@@ -133,7 +133,7 @@ def main() -> int:
     axA.legend(handles=cov_legend, loc="upper left", bbox_to_anchor=(1.01, 1),
                fontsize=7.5, frameon=False, title="coverage")
 
-    # ---- Panel B: Ergaenzungsmodule ----
+    # ---- Panel B: Extension modules ----
     axB = fig.add_subplot(gs[1])
     order = sorted(mod_src, key=lambda m: sum(mod_src[m].values()))
     for i, m in enumerate(order):
@@ -155,7 +155,7 @@ def main() -> int:
     axB.tick_params(length=0)
     for sp in ("top", "right"):
         axB.spines[sp].set_visible(False)
-    axB.set_title("B · Ergaenzungsmodule — content the generic hub can't hold "
+    axB.set_title("B · Extension modules — content the generic hub can't hold "
                   "(→ attach by evidence-reference / new module)", fontsize=10, pad=8)
     axB.text(0.99, -0.14, "shading within a bar = the 4 sources; "
              "out-of-scope (admin/biobank) and unclustered fields omitted",

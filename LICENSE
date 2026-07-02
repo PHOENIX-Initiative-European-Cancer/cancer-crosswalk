@@ -1,0 +1,40 @@
+cancer-crosswalk — licensing
+
+SPDX-License-Identifier: CC-BY-4.0
+
+This repository's own content — the SSSOM mapping sets (mappings/), the derived
+vocabularies (hub/, sources/*/elements.csv), the analysis scripts (scripts/),
+the figures and the documentation (docs/, README.md) — is licensed under the
+Creative Commons Attribution 4.0 International License (CC BY 4.0).
+
+You are free to share and adapt this material for any purpose, provided you give
+appropriate credit. Full legal text: https://creativecommons.org/licenses/by/4.0/legalcode
+Human-readable summary:              https://creativecommons.org/licenses/by/4.0/
+
+Suggested attribution:
+  "cancer-crosswalk — SSSOM crosswalk of cancer datasets against the HL7 Europe
+   Cancer Common Data Model (ECCDM), 2026."
+
+SOURCE DATASETS — NOT covered by this license
+----------------------------------------------
+The source datasets analysed here remain the property of, and under the terms of,
+their respective publishers. This repository stores only *derived element
+inventories* and *correspondence statements about* them, not the source
+specifications themselves in full. Consult each source for its own terms:
+
+  - oBDS (onkologischer Basisdatensatz), Gesellschaft der epidemiologischen
+    Krebsregister / basisdatensatz.de
+  - NABON Informatiestandaard borstkanker, NABON / Nictiz (ART-DECOR)
+  - 1+MG Minimal Dataset for Cancer (B1MG), 1+Million Genomes / B1MG consortium,
+    CC BY (see Zenodo record 10.5281/zenodo.10784601)
+  - Senologie-Datenkranz / SenologieOnFHIR, BIH-CEI / Deutsche Krebsgesellschaft
+
+ECCDM (the hub) is published by HL7 Europe; its logical models are used here for
+analysis under the terms of the HL7 Europe Cancer Common IG.
+
+DISCLAIMER
+----------
+All mappings are marked review_status=proposed and have NOT been validated by
+domain experts. This is an analytical work product, not an authoritative or
+normative mapping. Do not use it for production data transformation without
+expert review.

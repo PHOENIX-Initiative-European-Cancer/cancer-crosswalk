@@ -39,7 +39,7 @@ What we found is a **two-sided mismatch** that is the core design tension:
 - **Analysis + figures:** `scripts/*` regenerate everything;
   `docs/overview.png` (coverage + extension modules), `docs/hub-spoke.png`
   (predicate profile), `docs/coverage-heatmap.png` (element drill-down),
-  `docs/ergaenzungsmodule.md` (extension wishlist), `docs/REPORT.md/.pdf`.
+  `docs/extension-modules.md` (extension wishlist), `docs/REPORT.md/.pdf`.
 
 ## The design questions to play through
 
