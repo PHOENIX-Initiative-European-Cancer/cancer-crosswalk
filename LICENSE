@@ -18,9 +18,11 @@ Suggested attribution:
 SOURCE DATASETS — NOT covered by this license
 ----------------------------------------------
 The source datasets analysed here remain the property of, and under the terms of,
-their respective publishers. This repository stores only *derived element
-inventories* and *correspondence statements about* them, not the source
-specifications themselves in full. Consult each source for its own terms:
+their respective publishers. This repository's CC-BY-4.0 grant covers only the
+*derived element inventories* and *correspondence statements*. For reproducibility,
+the fetched source specifications are vendored under `sources/*/ref/` (oBDS XSD,
+NABON and B1MG spreadsheets); these files remain under their publishers' own
+terms and are NOT relicensed here. Consult each source for its terms:
 
   - oBDS (onkologischer Basisdatensatz), Gesellschaft der epidemiologischen
     Krebsregister / basisdatensatz.de
