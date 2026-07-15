@@ -5,7 +5,7 @@
 - **Version:** `1+MG-MDC_01.xlsx` (with legend `1+MG-MDC_01_Legend.docx`).
 - **DOI:** https://doi.org/10.5281/zenodo.10784601 (Zenodo record 10784601).
 - **Publication:** Nature Genetics, https://www.nature.com/articles/s41588-024-01721-x
-- **Local copy:** `ref/1+MG-MDC_01.xlsx`, `ref/1+MG-MDC_01_Legend.docx`
+- **Local copy:** `ref/1+MG-MDC_01.xlsx`, `ref/1+MG-MDC_01_Legend.docx` (git-ignored — download from the DOI above)
 - **Extractor:** `scripts/extract_b1mg_vocab.py`.
 - **Result:** `elements.csv` — 140 items, id scheme `b1mg:<item-number>`.
 - **Publisher / terms:** 1+Million Genomes / B1MG consortium (Horizon 2020,

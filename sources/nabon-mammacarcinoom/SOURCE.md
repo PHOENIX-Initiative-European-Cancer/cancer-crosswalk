@@ -6,7 +6,7 @@
   `onco-mamma-new-`.
 - **URL:** https://www.nabon.nl/standaardisatie-epd/
   (Excel: https://www.nabon.nl/wp-content/uploads/2020/11/Informatiestandaard-borstkanker-12-nov-2020.xlsx)
-- **Local copy:** `ref/Informatiestandaard-borstkanker-12-nov-2020.xlsx`
+- **Local copy:** `ref/Informatiestandaard-borstkanker-12-nov-2020.xlsx` (git-ignored — download from the URL above)
 - **Extractor:** `scripts/extract_nabon_vocab.py` (parses `onco-mamma-new-dataelement-*` rows).
 - **Result:** `elements.csv` — 314 data elements, id scheme `nabon:dataelement-<N>`.
 - **Publisher / terms:** NABON / Nictiz — standard offered via ART-DECOR.

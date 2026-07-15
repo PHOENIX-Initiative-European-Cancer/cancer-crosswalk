@@ -4,7 +4,7 @@
   cancer-registry reporting dataset (and the basis of the MII Modul Onkologie).
 - **Spec version:** oBDS XML schema **v3.0.5** (dated 2025-09-22).
 - **URL:** https://www.basisdatensatz.de/xml/oBDS_v3.0.5.xsd
-- **Local copy:** `ref/oBDS_v3.0.5.xsd`
+- **Local copy:** `ref/oBDS_v3.0.5.xsd` (git-ignored — download from the URL above)
 - **Extractor:** `scripts/extract_obds_vocab.py` (walks every `xs:element`).
 - **Result:** `elements.csv` — 422 elements, id scheme `obds:<ComplexType>.<element>`.
 - **Publisher / terms:** Gesellschaft der epidemiologischen Krebsregister in

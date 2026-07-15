@@ -75,13 +75,23 @@ Hub coverage: **63 %** (43 / 68 elements). **All 148 mappings are `proposed`
 (not expert-reviewed).** Terminology/code-level mapping is deferred. See
 `docs/REPORT.md` for findings and limitations.
 
-## Sources & attribution
+## Source references
 
-Each spoke's provenance (spec version, URL, extractor) is in
-`sources/<source>/SOURCE.md`. This repository stores only *derived element
-inventories* and *correspondence statements* — not the full source specifications.
-Source datasets remain under their publishers' terms; ECCDM (the hub) is published
-by HL7 Europe.
+The source specifications are **not vendored** in this repository (they remain
+under their publishers' terms). Download them into `sources/<source>/ref/`
+(git-ignored) to re-run the extractors. Per-source detail: `sources/<source>/SOURCE.md`.
+
+| source | version | download |
+|---|---|---|
+| ECCDM (hub) | Cancer Common IG | https://build.fhir.org/ig/hl7-eu/cancer-common/ |
+| oBDS | XSD v3.0.5 (2025-09-22) | https://www.basisdatensatz.de/xml/oBDS_v3.0.5.xsd |
+| NABON | Informatiestandaard borstkanker (2020-11-12) | https://www.nabon.nl/wp-content/uploads/2020/11/Informatiestandaard-borstkanker-12-nov-2020.xlsx |
+| B1MG | 1+MG-MDC_01 | https://doi.org/10.5281/zenodo.10784601 |
+| Senologie | `bih-lm-senologie-complete.fsh` | https://bih-cei.github.io/SenologieOnFHIR/ |
+
+This repository contains only *derived element inventories* and *correspondence
+statements*. Source datasets remain under their publishers' terms; ECCDM (the
+hub) is published by HL7 Europe.
 
 ## License
 
