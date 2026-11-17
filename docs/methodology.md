@@ -7,6 +7,18 @@ The subject is always a source-dataset element; the object is always an ECCDM
 hub element (`eccdm:` prefix). This is why the predicate semantics matter: they
 describe the *source relative to the hub*.
 
+## Requirement sources
+
+A source may also be a *requirement* rather than a dataset: the ESMO breast
+cancer guidelines are mapped as the data points their recommendations depend
+on (`sources/esmo-breast/`). The direction and predicates are unchanged
+(subject = guideline data point, object = hub element). Two conventions are
+specific to this kind of source: `skos:relatedMatch` marks a data point that is
+*derivable* from hub elements (age, disease-free interval, prior exposure) rather
+than carried by one, and data points without any hub element are not omitted but
+classed in `elements.csv` (`hub_carriage`: by-reference, extend-model,
+new-module, derived, process) so the gap report can count them.
+
 ## Predicates (SKOS)
 
 | predicate | meaning (subject vs object) | use when |
@@ -48,9 +60,28 @@ Float `0.0–1.0`. Convention used in the seed set:
 This crosswalk currently maps at the **element / structural** layer (which field
 corresponds to which field). A second **value / terminology** layer (mapping the
 *codes* inside an element — e.g. oBDS laterality vs ECCDM laterality value set)
-can be added as separate SSSOM sets, e.g.
-`mappings/value/<source>-laterality__to__eccdm.sssom.tsv`. Keep them separate so
-element coverage and code coverage are reported independently.
+is added as separate SSSOM sets so element coverage and code coverage are
+reported independently. The first one is
+`mappings/int-breast__values__to__snomed.sssom.tsv`: the INT Milan breast
+workbook does not define its own elements (its rows are the ECCDM attributes),
+so its contribution is the local *value lists*, mapped code by code to SNOMED CT.
+
+Conventions for code-level sets:
+
+- **Object** is a code-system concept (`sct:<id>`, SNOMED CT International
+  Edition, version pinned in the header as `object_source_version`).
+  `object_label` is the FSN, fetched from a terminology server at build time
+  and re-checked by `scripts/verify_snomed_mapping.py` (exists, active, FSN
+  equal). No hand-typed identifiers.
+- **Subject** is the local code, `<prefix>:<Model>.<Attribute>.<list>.<code>`,
+  with `source_context` = "`Model.Attribute / list = code`".
+- `object_id = sssom:NoTermFound` records a code with no SNOMED equivalent; the
+  comment names the nearest concept and why it does not fit.
+- `hub_element` says which ECCDM element the coded value would feed. The marker
+  `(no ECCDM slot)` flags a hub gap found through the codes (e.g. surgery
+  procedure type, lost-to-follow-up, treatment workflow status).
+- Predicates keep SSSOM semantics: `skos:broadMatch` = object broader than the
+  local code, `skos:narrowMatch` = object narrower.
 
 ## Non-standard extension columns
 
@@ -64,6 +95,7 @@ This crosswalk uses:
 | `element_kind` | SDTM/ADaM class of the source element | `collected`, `calculated` |
 | `source_context` | the capture-context axis the source indexes the concept by | see below |
 | `review_status` | curation state | `proposed`, `reviewed` |
+| `hub_element` | (code-level sets) ECCDM element the coded value feeds; `(no ECCDM slot)` = hub gap | free text |
 
 ### `source_context` — the collision resolver
 

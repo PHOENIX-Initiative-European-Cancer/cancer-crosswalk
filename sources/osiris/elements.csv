@@ -1,0 +1,219 @@
+id,iso_id,module,domain,element,label,required,datatype,terminology,definition
+osiris:Patient_Id,C1,Patient,patient,Patient_Id,Patient Id,mandatory,String,,Patient ID in the center providing the information
+osiris:Patient_Gender,C2,Patient,patient,Patient_Gender,Gender,mandatory,String,FHIR:AdministrativeGender,Gender of the patient
+osiris:Patient_Ethnicity,C3,Patient,patient,Patient_Ethnicity,Ethnicity,optional,String,FHIR:Race,Ethnicity of the patient
+osiris:Patient_BirthDate,C4,Patient,patient,Patient_BirthDate,Birth Date,mandatory,Date,,Date of birth of the patient
+osiris:Patient_DeathDate,C5,Patient,patient,Patient_DeathDate,Death Date,optional,Date,,Date of death of the patient
+osiris:Patient_ProviderCenterId,C6,Patient,patient,Patient_ProviderCenterId,Provider  Center  Id,mandatory,String,,Center ID of the center providing the information
+osiris:Patient_OriginCenterId,C71,Patient,patient,Patient_OriginCenterId,Origin  Center  Id,mandatory,String,,Center ID of the center of origin of the patient
+osiris:Patient_CauseOfDeath,C7,Patient,patient,Patient_CauseOfDeath,Cause of death,mandatory if DeathDate is set,String,UMLS:C0007465,Description of the cause of death of the patient
+osiris:Patient_LastNewsDate,C8,Patient,patient,Patient_LastNewsDate,Last News Date,mandatory,Date,,Date of last news (= date of last patient visit if there is no other information available) (day is set to the 15th)
+osiris:Patient_LastNewsStatus,C9,Patient,patient,Patient_LastNewsStatus,Last News Status,mandatory,String,OSIRIS:LastNewsStatus,Indicator of the patient's last known vital status (alive or deceased)
+osiris:Consent_Date,C72,Consent,patient,Consent_Date,Date,mandatory,Date,,Date of consent signature
+osiris:Consent_GeneticAnalysisAuthorization,C79,Consent,patient,Consent_GeneticAnalysisAuthorization,Genetic Analysis Authorization,mandatory,String,OSIRIS:Boolean,Consent for genetic analysis
+osiris:RelatedPathology_PathologyCode,C13,RelatedPathology,patient,RelatedPathology_PathologyCode,Pathology Code,mandatory if ObjectClass is set,String,ICD10,International code for the related disease (other than cancer). 3 characters.
+osiris:RelatedPathology_DiagnosisDate,C14,RelatedPathology,patient,RelatedPathology_DiagnosisDate,Diagnosis Date,mandatory if ObjectClass is set,Date,,Date of diagnosis for the related disease.
+osiris:RelatedPathology_PathologyEndDate,C15,RelatedPathology,patient,RelatedPathology_PathologyEndDate,Pathology End Date,optional,Date,,Date of the end of the related disease (if occuring and known)
+osiris:FamilyCancerHistory_TopographyCode,C17,FamilyCancerHistory,patient,FamilyCancerHistory_TopographyCode,Topography Code,mandatory if ObjectClass is set,String,ICDO3:Topography,International code for the localization of the oncologic primary site
+osiris:FamilyCancerHistory_Parentage,C77,FamilyCancerHistory,patient,FamilyCancerHistory_Parentage,Parentage,mandatory if ObjectClass is set,String,OSIRIS:FamilyCancerHistoryParentage,Family relationship
+osiris:TumorPathologyEvent_Type,C20,TumorPathologyEvent,tumour,TumorPathologyEvent_Type,Type,mandatory,String,OSIRIS:EventType,"The field 'Type' allows to describe the 'Cancer' event as a global disease, as well as the various events constituting this disease (primary tumor, local relapse, metastatic relapse...)"
+osiris:TumorPathologyEvent_StartDate,C21,TumorPathologyEvent,tumour,TumorPathologyEvent_StartDate,Start Date,mandatory,Date,,Date of start of cancer event or disease
+osiris:TumorPathologyEvent_EndDate,C82,TumorPathologyEvent,tumour,TumorPathologyEvent_EndDate,End Date,optional,Date,,Date of end of cancer event or disease
+osiris:TumorPathologyEvent_PerformanceStatus,C22,TumorPathologyEvent,tumour,TumorPathologyEvent_PerformanceStatus,Performance Status,optional,String,OMS:PerformanceStatus,Definition of the autonomy scale (Karnofsky scale or OMS)
+osiris:TumorPathologyEvent_G8,C23,TumorPathologyEvent,tumour,TumorPathologyEvent_G8,G8 score,optional,Integer,,Tool for the evaluation of the general condition of the patient
+osiris:TumorPathologyEvent_HistologicalGradeType,C29,TumorPathologyEvent,tumour,TumorPathologyEvent_HistologicalGradeType,Histological Grade Type,"optional, mandatory if HistologicalGradeValue is set",String,OSIRIS:HistologicalGradeType,List of histological grading scales
+osiris:TumorPathologyEvent_HistologicalGradeValue,C30,TumorPathologyEvent,tumour,TumorPathologyEvent_HistologicalGradeValue,Histological Grade Value,"optional, mandatory if HistologicalGradeType is set",String,OSIRIS:HistologicalGradeValue,Value of histological grade
+osiris:TumorPathologyEvent_StadeType,C31,TumorPathologyEvent,tumour,TumorPathologyEvent_StadeType,Stade Type,"optional, mandatory if StadeValue is set",String,OSIRIS:StadeType,List of stage scales
+osiris:TumorPathologyEvent_StadeValue,C32,TumorPathologyEvent,tumour,TumorPathologyEvent_StadeValue,Stade Value,"optional, mandatory if StadeType is set",String,OSIRIS:StadeValue,Stage value
+osiris:TumorPathologyEvent_DiagnosisDate,C33,TumorPathologyEvent,tumour,TumorPathologyEvent_DiagnosisDate,Diagnosis Date,mandatory,Date,,Date of diagnosis of the tumor event
+osiris:TumorPathologyEvent_TopographyCode,C34,TumorPathologyEvent,tumour,TumorPathologyEvent_TopographyCode,Topography Code,mandatory,String,ICDO3:Topography,Localisation of the primary tumor
+osiris:TumorPathologyEvent_MorphologyCode,C35,TumorPathologyEvent,tumour,TumorPathologyEvent_MorphologyCode,Morphology Code,mandatory,String,ICDO3:Morphology,International code of lesion / histological type / tumor morphology of the tumoral event
+osiris:TumorPathologyEvent_Laterality,C36,TumorPathologyEvent,tumour,TumorPathologyEvent_Laterality,Laterality,optional,String,OSIRIS:Laterality,Laterality of location (if it exists)
+osiris:TNM_T,C83,TNM,tumour,TNM_T,T,"optional, mandatory if either N, M or TNMType is set",String,OSIRIS:T_TNM,"Size of the tumor, propagation the site of the primary tumor"
+osiris:TNM_N,C84,TNM,tumour,TNM_N,N,"optional, mandatory if either T, M or TNMType is set",String,OSIRIS:N_TNM,Propagation at the ganglion level
+osiris:TNM_M,C85,TNM,tumour,TNM_M,M,"optional, mandatory if either T, N or TNMType is set",String,OSIRIS:M_TNM,"Remote propagation, presence of metastases"
+osiris:TNM_Version,C86,TNM,tumour,TNM_Version,TNM Version,optional,String,OSIRIS:TNMVersion,TNM classification version
+osiris:TNM_Type,C87,TNM,tumour,TNM_Type,TNM Type,"optional, mandatory if either T, N or M is set",String,OSIRIS:TNMType,"c, p, r,..."
+osiris:Analysis_Code,C70,Analysis,omics,Analysis_Code,Code,optional,String,,Code of analysis
+osiris:Analysis_Type,C37,Analysis,omics,Analysis_Type,Type,mandatory if ObjectClass is set,String,OSIRIS:AnalysisType,Type of analysis
+osiris:Analysis_Date,C38,Analysis,omics,Analysis_Date,Date,mandatory if ObjectClass is set,Date,,Date of analysis
+osiris:ResponseEvaluation_Date,C78,ResponseEvaluation,treatment,ResponseEvaluation_Date,Date,mandatory if ObjectClass is set,Date,,Date of assessment of treatment response
+osiris:ResponseEvaluation_Status,C73,ResponseEvaluation,treatment,ResponseEvaluation_Status,Status,mandatory if ObjectClass is set,String,OSIRIS:RECIST,Assessment of treatment response
+osiris:Biomarker_Code,C39,Biomarker,omics,Biomarker_Code,Code,mandatory if ObjectClass is set,String,OSIRIS:BiomarkerCode,Biomarker name
+osiris:Biomarker_Value,C40,Biomarker,omics,Biomarker_Value,Value,mandatory if ObjectClass is set,String,,Biomarker value
+osiris:Biomarker_Unit,C81,Biomarker,omics,Biomarker_Unit,Unit,optional,String,,Biomarker unit
+osiris:Treatment_Type,C41,Treatment,treatment,Treatment_Type,Type,mandatory if ObjectClass is set,String,OSIRIS:TreatmentType,Type of treatment
+osiris:Treatment_LineNumber,C74,Treatment,treatment,Treatment_LineNumber,Line Number,optional,String,,Line of treatment
+osiris:Treatment_ActivityCode,C42,Treatment,treatment,Treatment_ActivityCode,Activity Code,optional,String,CCAM,CCAM code of the medical act
+osiris:Treatment_StartDate,C43,Treatment,treatment,Treatment_StartDate,Start Date,mandatory if ObjectClass is set,Date,,Date of treatment start
+osiris:Treatment_EndDate,C44,Treatment,treatment,Treatment_EndDate,End Date,mandatory if ObjectClass is set,Date,,Date of treatment end
+osiris:Treatment_ClinicalTrialContext,C45,Treatment,treatment,Treatment_ClinicalTrialContext,Clinical Trial Context,optional,String,OSIRIS:Boolean,Treatment performed in a clinical study setting
+osiris:Treatment_ClinicalTrialName,C75,Treatment,treatment,Treatment_ClinicalTrialName,Clinical Trial Name,"optional, mandatory if ClinicalTrialContext is 'Yes'",String,,Name of the clinical study
+osiris:Treatment_ClinicalTrialId,C76,Treatment,treatment,Treatment_ClinicalTrialId,Clinical Trial Id,"optional, mandatory if ClinicalTrialContext is 'Yes'",String,,NCT identifier of the clinical study
+osiris:Treatment_SurgeryResectionQuality,C46,Treatment,treatment,Treatment_SurgeryResectionQuality,Surgery Resection Quality,optional,String,OSIRIS:SurgeryResectionQuality,Quality of resection (anapath)
+osiris:Treatment_SurgeryNature,C47,Treatment,treatment,Treatment_SurgeryNature,Surgery Nature,optional,String,,Nature of the surgery
+osiris:AdverseEvent_Code,C48,AdverseEvent,treatment,AdverseEvent_Code,Code,mandatory if ObjectClass is set,String,MedDRA_CTCAE-v5.0,"International code of the adverse event occurring during treatment (excluding other cancer), only the first 4 letters."
+osiris:AdverseEvent_Date,C49,AdverseEvent,treatment,AdverseEvent_Date,Date,mandatory if ObjectClass is set,Date,,Date of the diagnosis of the adverse event
+osiris:AdverseEvent_EndDate,C50,AdverseEvent,treatment,AdverseEvent_EndDate,End Date,optional,Date,,End date of the adverse event (if known)
+osiris:AdverseEvent_Grade,C80,AdverseEvent,treatment,AdverseEvent_Grade,Grade,mandatory if ObjectClass is set,String,,Grade of the adverse event
+osiris:Drug_Code,C51,Drug,treatment,Drug_Code,Code,mandatory if ObjectClass is set,String,ATC,Therapeutic classification code (5th level if possible)
+osiris:Drug_Name,C52,Drug,treatment,Drug_Name,Name,mandatory if ObjectClass is set,String,,Name of the molecule
+osiris:BiologicalSample_ExternalAccession,C53,BiologicalSample,sample,BiologicalSample_ExternalAccession,Sample External Accession,mandatory if ObjectClass is set,String,,Unique identifier of the sample
+osiris:BiologicalSample_ParentExternalAccession,C54,BiologicalSample,sample,BiologicalSample_ParentExternalAccession,Parent sample External Accession,optional,String,,"Unique identifier of the parent sample (if there is one, example histo#)"
+osiris:BiologicalSample_CollectDate,C56,BiologicalSample,sample,BiologicalSample_CollectDate,Collect Date,mandatory if ObjectClass is set,Date,,Date of sampling
+osiris:BiologicalSample_TopographyCode,C57,BiologicalSample,sample,BiologicalSample_TopographyCode,Topography Code,mandatory if ObjectClass is set,String,ICDO3:Topography,Code of tumor localization
+osiris:BiologicalSample_Nature,C58,BiologicalSample,sample,BiologicalSample_Nature,Nature,mandatory if ObjectClass is set,String,OSIRIS:SampleNature,Nature of the sample
+osiris:BiologicalSample_Origin,C59,BiologicalSample,sample,BiologicalSample_Origin,Origin,mandatory if ObjectClass is set,String,OSIRIS:SampleOrigin,Nature of the original sample (Healthy or Tumoral)
+osiris:BiologicalSample_StorageTemperature,C60,BiologicalSample,sample,BiologicalSample_StorageTemperature,Storage Temperature,optional,String,OSIRIS:StorageTemperature,Mode of preservation
+osiris:BiologicalSample_TumorCellularity,C61,BiologicalSample,sample,BiologicalSample_TumorCellularity,Tumor Cellularity,optional,Integer,,Percentage of tumor cells quantified in the sample
+osiris:Technology_TechnicalProtocol,O6,Technology,omics,Technology_TechnicalProtocol,Technical Protocol,mandatory,String,OSIRIS:TechnicalProtocol,Protocol used for the experiment
+osiris:Technology_PlatformName,O7,Technology,omics,Technology_PlatformName,Platform Name,mandatory,String,OSIRIS:PlatformName,Technological platform name (provider followed by the platform name)
+osiris:Technology_PlatformAccession,O8,Technology,omics,Technology_PlatformAccession,Platform Accession,optional,String,,GEO Identifier of the platform
+osiris:Technology_DateOfExperiment,O9,Technology,omics,Technology_DateOfExperiment,Date Of Experiment,optional,Date,,Date when the experiment was performed
+osiris:Panel_Name,O10,Panel,omics,Panel_Name,Name,optional,String,OSIRIS:PanelName,Name of the panel targeted by the experimental analysis (provider followed by the panel name)
+osiris:AnalysisProcess_AnalyticPipelineCode,O11,AnalysisProcess,omics,AnalysisProcess_AnalyticPipelineCode,Analytic Pipeline Code,mandatory,String,,Identifier of the pipeline used into the analysis (unique in the center)
+osiris:OmicAnalysis_AlgorithmicCellularity,O12,OmicAnalysis,omics,OmicAnalysis_AlgorithmicCellularity,Algorithmic Cellularity,optional,Integer,,Calculated percentage of tumor cells in sample
+osiris:OmicAnalysis_AlgorithmicPloidy,O13,OmicAnalysis,omics,OmicAnalysis_AlgorithmicPloidy,Algorithmic Ploidy,optional,String,OSIRIS:AlgorithmicPloidy,Calculated number of sets of chromosomes in a cell of the sample
+osiris:OmicAnalysis_NumberOfBreakPoints,O14,OmicAnalysis,omics,OmicAnalysis_NumberOfBreakPoints,Number Of Break Points,optional,Integer,,Calculated number of break points in genomic profile
+osiris:AlterationOnSample_AlterationType,O15,AlterationOnSample,omics,AlterationOnSample_AlterationType,Alteration Type,mandatory,String,OSIRIS:AlterationType,General type of the detected genetic alteration (high level type)
+osiris:AlterationOnSample_Pathogenicity,O81,AlterationOnSample,omics,AlterationOnSample_Pathogenicity,Pathogenicity,optional,String,OSIRIS:AlterationOnSample_Pathogenicity,Conclusion of the biologist on the pathogenicity of the variant before the Molecular Tumor Board
+osiris:AlterationOnSample_Actionability,O82,AlterationOnSample,omics,AlterationOnSample_Actionability,Actionability,optional,String,OSIRIS:AlterationOnSample_Actionability,Conclusion of the clinicians wether the variant is actionable or not during the Molecular Tumor Board
+osiris:AlterationOnSample_ProposedForOrientation,O83,AlterationOnSample,omics,AlterationOnSample_ProposedForOrientation,Proposed For Orientation,optional,String,OSIRIS:Boolean,Is the ClinicalTumorBoardConclusion used to orient the treatment decision ?
+osiris:Validation_Type,O16,Validation,omics,Validation_Type,Type,mandatory if ObjectClass is set,String,OSIRIS:ValidationType,Type of validation of the detected alteration
+osiris:Validation_Method,O17,Validation,omics,Validation_Method,Method,mandatory if ObjectClass is set,String,,Validation method depending on the type of validation
+osiris:Validation_Status,O18,Validation,omics,Validation_Status,Status,mandatory if ObjectClass is set,String,OSIRIS:ValidationStatus,Validation status of the detected alteration
+osiris:Alteration_Chromosome,O19,Alteration,omics,Alteration_Chromosome,Chromosome,mandatory,String,OSIRIS:Chromosome,Chromosome containing the genetic finding
+osiris:Alteration_GenomicStart,O20,Alteration,omics,Alteration_GenomicStart,Genomic Start,mandatory,Integer,,"Nucleotide location for start of genomic finding on the positive (+) genomics strand, 1-based"
+osiris:Alteration_GenomicStop,O21,Alteration,omics,Alteration_GenomicStop,Genomic Stop,mandatory,Integer,,"Nucleotide location for end of genomic finding on the positive (+) genomic strand, 1-based"
+osiris:Alteration_GenomeBuild,O22,Alteration,omics,Alteration_GenomeBuild,Genome Build,mandatory,String,FHIR:Sequence,Genome Build used for reference
+osiris:Alteration_Cytoband,O23,Alteration,omics,Alteration_Cytoband,Cytoband,optional,String,,Cytogenetic location
+osiris:GenomeEntity_Type,O24,GenomeEntity,omics,GenomeEntity_Type,Type,mandatory,String,OSIRIS:GenomeEntityType,"Type of the genome entity. For eg: gene, mRNA, ncRNA..."
+osiris:GenomeEntity_Database,O25,GenomeEntity,omics,GenomeEntity_Database,Database,mandatory,String,OSIRIS:GenomeEntityDatabase,Database of the genome entity
+osiris:GenomeEntity_Id,O26,GenomeEntity,omics,GenomeEntity_Id,Id,mandatory,String,,Identifier of the genome entity in the genome entity database
+osiris:GenomeEntity_Symbol,O27,GenomeEntity,omics,GenomeEntity_Symbol,Symbol,mandatory if Gene,String,,Hugo gene symbol
+osiris:Fusion_Type,O28,Fusion,omics,Fusion_Type,Type,optional,String,OSIRIS:FusionType,"Type of the fusion event. For eg: translocation, readthrough"
+osiris:Fusion_Point5prime,O35,Fusion,omics,Fusion_Point5prime,Point 5 prime,mandatory,Integer,,Position of the fusion point on the 5 prime partner
+osiris:Fusion_Chromosome5prime,O97,Fusion,omics,Fusion_Chromosome5prime,Chromosome 5 prime,mandatory,String,OSIRIS:Chromosome,
+osiris:Fusion_Point3prime,O40,Fusion,omics,Fusion_Point3prime,Point 3 prime,mandatory,Integer,,Position of the fusion point on the 3 prime partner
+osiris:Fusion_Chromosome3prime,O98,Fusion,omics,Fusion_Chromosome3prime,Chromosome 3 prime,mandatory,String,OSIRIS:Chromosome,
+osiris:Fusion_InFrame,O41,Fusion,omics,Fusion_InFrame,In Frame,optional,String,OSIRIS:Boolean,Specify whether the fusion is in frame
+osiris:Fusion_NbSpanningPair,O44,Fusion,omics,Fusion_NbSpanningPair,Nb Spanning Pair,mandatory,Integer,,Number of reads pairs spanning the fusion
+osiris:Fusion_NbSplitReads,O46,Fusion,omics,Fusion_NbSplitReads,Nb Split Reads,optional,Integer,,Number of reads containing the fusion point
+osiris:CNV_SegmentIntensity,O47,CNV,omics,CNV_SegmentIntensity,Segment Intensity,mandatory,Float,,Intensity of the measured signal
+osiris:CNV_SegmentGenomicStatus,O49,CNV,omics,CNV_SegmentGenomicStatus,Segment Genomic Status,mandatory,String,OSIRIS:SegmentGenomicStatus,Copy number status
+osiris:CNV_CopyNumber,O50,CNV,omics,CNV_CopyNumber,Copy Number,optional,Integer,,Estimated DNA copy number
+osiris:CNV_LOH,O51,CNV,omics,CNV_LOH,LOH,optional,String,OSIRIS:Boolean,Is the segment located in a region of loss of heterozygosity ? (can be independant from copy number information
+osiris:CNV_SegmentSize,,CNV,omics,CNV_SegmentSize,SegmentSize,optional,Integer,,
+osiris:Variant_ReferenceAllele,O53,Variant,omics,Variant_ReferenceAllele,Reference Allele,mandatory,String,,"Plus strand reference allele at this position. Include the sequence deleted for a deletion, or '-' for an insertion."
+osiris:Variant_AlternativeAllele,O54,Variant,omics,Variant_AlternativeAllele,Alternative Allele,mandatory,String,,"Plus strand observed alternative allele at this position. Include the sequence inserted for a insertion, or '-' for a deletion."
+osiris:Variant_DNASequenceVariationType,O55,Variant,omics,Variant_DNASequenceVariationType,DNA Sequence Variation Type,mandatory,String,LOINC:48019-4,Codified type of the DNA sequence variation
+osiris:Annotation_ReferenceType,O90,Annotation,omics,Annotation_ReferenceType,Reference Type,mandatory if DNASequenceVariation is set,String,OSIRIS:Annotation_ReferenceType,
+osiris:Annotation_ReferenceDatabase,O91,Annotation,omics,Annotation_ReferenceDatabase,Reference Database,mandatory if DNASequenceVariation is set,String,OSIRIS:Annotation_ReferenceDatabase,
+osiris:Annotation_ReferenceValue,O92,Annotation,omics,Annotation_ReferenceValue,Reference Value,optional,String,,
+osiris:Annotation_MutationPredictionAlgorithm,O63,Annotation,omics,Annotation_MutationPredictionAlgorithm,Mutation Prediction Algorithm,optional,String,OSIRIS:MutationPredictionAlgorithm,Algorithm to predict the variation effect over the protein
+osiris:Annotation_MutationPredictionValue,O64,Annotation,omics,Annotation_MutationPredictionValue,Mutation Prediction Value,optional,String,,Prediction of the variation effect over the protein
+osiris:Annotation_MutationPredictionScore,O65,Annotation,omics,Annotation_MutationPredictionScore,Mutation Prediction Score,optional,Float,,Level of confidence of the prediction of the variation effect over the protein
+osiris:Annotation_PfamDomain,O58,Annotation,omics,Annotation_PfamDomain,Pfam Domain,optional,String,,Pfams domains related to alteration position
+osiris:Annotation_PfamId,O59,Annotation,omics,Annotation_PfamId,Pfam Id,optional,String,,Identifier of Pfams domains related to alteration position
+osiris:Annotation_DNARegionName,O66,Annotation,omics,Annotation_DNARegionName,DNA Region Name,optional,String,,"Human readable name for the region of interest related to the transcript (eg: exon1, intron1, UTR3')"
+osiris:Annotation_DNASequenceVariation,O71,Annotation,omics,Annotation_DNASequenceVariation,DNA Sequence Variation,mandatory,String,,HGVS nomenclature on the chosen transcript
+osiris:Annotation_AminoAcidChange,O72,Annotation,omics,Annotation_AminoAcidChange,Amino Acid Change,optional,String,,HGVS nomenclature on the chosen protein transcript
+osiris:Annotation_GenomicSequenceVariation,O73,Annotation,omics,Annotation_GenomicSequenceVariation,Genomic Sequence Variation,optional,String,,HGVS nomenclature on the given GenomeReferenceSequenceId.
+osiris:Annotation_RNASequenceVariation,O74,Annotation,omics,Annotation_RNASequenceVariation,RNA Sequence Variation,optional,String,,HGVS nomenclature on the given TranscriptReferenceSequenceId and experimentely observed on RNA.
+osiris:Annotation_AminoAcidChangeType,O75,Annotation,omics,Annotation_AminoAcidChangeType,Amino Acid Change Type,optional,String,OSIRIS:AminoAcidChangeType,nomenclature of changes at protein-level
+osiris:Annotation_FusionPrimeEnd,O93,Annotation,omics,Annotation_FusionPrimeEnd,Fusion Prime End,optional,String,OSIRIS:Annotation_FusionPrimeEnd,Prime end of the fusion partner
+osiris:Annotation_Strand,O94,Annotation,omics,Annotation_Strand,Strand,optional,String,OSIRIS:Strand,Strand
+osiris:Annotation_OnSplicingSite,O95,Annotation,omics,Annotation_OnSplicingSite,OnSplicingSite,optional,String,OSIRIS:Boolean,Indicate wether the variant is on a splicing site
+osiris:VariantInSample_PositionReadDepth,O76,VariantInSample,omics,VariantInSample_PositionReadDepth,Position Read Depth,mandatory,Integer,,Total sequencing depth at the variant position observed in the specimen
+osiris:VariantInSample_VariantReadDepth,O77,VariantInSample,omics,VariantInSample_VariantReadDepth,Variant Read Depth,mandatory,Integer,,Sequencing depth of the alternative allele at the variant position observed in the specimen
+osiris:VariantInSample_StrandBias,O78,VariantInSample,omics,VariantInSample_StrandBias,Strand Bias,optional,String,OSIRIS:Boolean,Indication of the existence of strand bias at the variant position
+osiris:VariantInSample_GenomicSourceClass,O79,VariantInSample,omics,VariantInSample_GenomicSourceClass,Genomic Source Class,mandatory,String,LOINC:LL378-1,"Genomic class of the variant (eg: germline, somatic, and prenatal)"
+osiris:VariantInSample_AllelicState,O80,VariantInSample,omics,VariantInSample_AllelicState,Allelic State,optional,String,LOINC:LL381-5,Level of allelic occurrence of a DNA Sequence Variation
+osiris:GeneExpression_DataType,O84,GeneExpression,omics,GeneExpression_DataType,Data Type,mandatory,String,OSIRIS:ExpressionDataType,Type of the expression value corresponding to the level of data processing
+osiris:GeneExpression_Value,O85,GeneExpression,omics,GeneExpression_Value,Value,mandatory,Float,,Numerical value for expression
+osiris:Equipment_ModelName,I1,Equipment,imaging,Equipment_ModelName,Manufacturer's model name,,,DICOM,
+osiris:Equipment_Manufacturer,I2,Equipment,imaging,Equipment_Manufacturer,Manufacturer's name,,,DICOM,
+osiris:Study_StudyInstanceUID,I3,Study,imaging,Study_StudyInstanceUID,Study Instance UID,,,DICOM,
+osiris:Study_StudyDescription,I4,Study,imaging,Study_StudyDescription,Study description,,,DICOM,
+osiris:Study_AcquisitionDate,I5,Study,imaging,Study_AcquisitionDate,Acquisition date,,,DICOM,
+osiris:Study_Location,I6,Study,imaging,Study_Location,Location,,,,
+osiris:Study_InstitutionName,I7,Study,imaging,Study_InstitutionName,Institution's name,,,DICOM,
+osiris:Study_ModalitiesInStudy,I8,Study,imaging,Study_ModalitiesInStudy,Modalities in study,,,DICOM,
+osiris:Study_NbStudyRelatedSeries,I9,Study,imaging,Study_NbStudyRelatedSeries,Number of Study Related Series,,,DICOM,
+osiris:Series_SeriesNumber,I10,Series,imaging,Series_SeriesNumber,Series Number,,,DICOM,
+osiris:Series_SeriesInstanceUID,I11,Series,imaging,Series_SeriesInstanceUID,Series Instance UID,,,DICOM,
+osiris:Series_Modality,I12,Series,imaging,Series_Modality,Modality,,,DICOM,
+osiris:Series_Description,I13,Series,imaging,Series_Description,Description,,,DICOM,
+osiris:Series_BodyPartExamined,I14,Series,imaging,Series_BodyPartExamined,Body Part Examined,,,DICOM,
+osiris:Series_NbSeriesRelatedInstances,I15,Series,imaging,Series_NbSeriesRelatedInstances,Number of Series Related Instances,,,DICOM,
+osiris:Series_SoftwareVersion,I16,Series,imaging,Series_SoftwareVersion,Software's version,,,DICOM,
+osiris:Injection_Radiopharmaceutical,I17,Injection,imaging,Injection_Radiopharmaceutical,Radiopharmaceutical,,,DICOM,
+osiris:Injection_ContrastBolusAgent,I18,Injection,imaging,Injection_ContrastBolusAgent,Contrast/bolus agent,,,DICOM,
+osiris:Injection_ContrastBolusStartTime,I19,Injection,imaging,Injection_ContrastBolusStartTime,Contrast/bolus start time,,,DICOM,
+osiris:Injection_ContrastBolusStopTime,I20,Injection,imaging,Injection_ContrastBolusStopTime,Contrast/bolus stop time,,,DICOM,
+osiris:Injection_RadiopharmaceuticalStartTime,I21,Injection,imaging,Injection_RadiopharmaceuticalStartTime,Radiopharmaceutical start time,,,DICOM,
+osiris:Injection_RadionuclideTotalDose,I22,Injection,imaging,Injection_RadionuclideTotalDose,Radionuclide total dose,,,DICOM,
+osiris:CommonImage_SOPInstanceUID,I23,CommonImage,imaging,CommonImage_SOPInstanceUID,SOP Instance UID,,,DICOM,
+osiris:CommonImage_SliceThickness,I24,CommonImage,imaging,CommonImage_SliceThickness,Slice thickness,,,DICOM,
+osiris:CommonImage_PixelSpacing,I25,CommonImage,imaging,CommonImage_PixelSpacing,Pixel spacing,,,DICOM,
+osiris:CommonImage_FieldOfView,I26,CommonImage,imaging,CommonImage_FieldOfView,Field of view,,,,
+osiris:CommonImage_Rows,I27,CommonImage,imaging,CommonImage_Rows,rows,,,DICOM,
+osiris:CommonImage_Columns,I28,CommonImage,imaging,CommonImage_Columns,columns,,,DICOM,
+osiris:MRImage_SequenceName,I29,MRImage,imaging,MRImage_SequenceName,Sequence's name,,,DICOM,
+osiris:MRImage_MagneticFieldStrength,I30,MRImage,imaging,MRImage_MagneticFieldStrength,Magnetic field strength,,,DICOM,
+osiris:MRImage_MRAcquisitionType,I31,MRImage,imaging,MRImage_MRAcquisitionType,MR acquisition type,,,DICOM,
+osiris:MRImage_RepetitionTime,I32,MRImage,imaging,MRImage_RepetitionTime,Repetition time,,,DICOM,
+osiris:MRImage_EchoTime,I33,MRImage,imaging,MRImage_EchoTime,EchoTime,,,DICOM,
+osiris:MRImage_ImagingFrequency,I34,MRImage,imaging,MRImage_ImagingFrequency,ImagingFrequency,,,DICOM,
+osiris:MRImage_FlipAngle,I35,MRImage,imaging,MRImage_FlipAngle,FlipAngle,,,DICOM,
+osiris:MRImage_InversionTime,I36,MRImage,imaging,MRImage_InversionTime,InversionTime,,,DICOM,
+osiris:MRImage_ReceiveCoilName,I37,MRImage,imaging,MRImage_ReceiveCoilName,ReceiveCoilName,,,DICOM,
+osiris:CTImage_KVp,I38,CTImage,imaging,CTImage_KVp,KVp,,,DICOM,
+osiris:CTImage_XRayTubeCurrent,I39,CTImage,imaging,CTImage_XRayTubeCurrent,XRayTubeCurrent,,,DICOM,
+osiris:CTImage_ExposureTime,I40,CTImage,imaging,CTImage_ExposureTime,ExposureTime,,,DICOM,
+osiris:CTImage_SpiralPitchFactor,I41,CTImage,imaging,CTImage_SpiralPitchFactor,SpiralPitchFactor,,,DICOM,
+osiris:CTImage_FilterType,I42,CTImage,imaging,CTImage_FilterType,FilterType,,,DICOM,
+osiris:CTImage_ConvolutionKernel,I43,CTImage,imaging,CTImage_ConvolutionKernel,ConvolutionKernel,,,DICOM,
+osiris:PTImage_AttenuationCorrectionMethod,I44,PTImage,imaging,PTImage_AttenuationCorrectionMethod,AttenuationCorrectionMethod,,,DICOM,
+osiris:PTImage_ReconstructionMethod,I45,PTImage,imaging,PTImage_ReconstructionMethod,ReconstructionMethod,,,DICOM,
+osiris:PTImage_ScatterCorrectionMethod,I46,PTImage,imaging,PTImage_ScatterCorrectionMethod,ScatterCorrectionMethod,,,DICOM,
+osiris:NMImage_AttenuationCorrectionMethod,I47,NMImage,imaging,NMImage_AttenuationCorrectionMethod,AttenuationCorrectionMethod,,,DICOM,
+osiris:NMImage_ReconstructionMethod,I48,NMImage,imaging,NMImage_ReconstructionMethod,ReconstructionMethod,,,DICOM,
+osiris:NMImage_ScatterCorrectionMethod,I49,NMImage,imaging,NMImage_ScatterCorrectionMethod,ScatterCorrectionMethod,,,DICOM,
+osiris:DXImage_ImageLaterality,I50,DXImage,imaging,DXImage_ImageLaterality,ImageLaterality,,,DICOM,
+osiris:DXImage_PatientOrientation,I51,DXImage,imaging,DXImage_PatientOrientation,PatientOrientation,,,DICOM,
+osiris:DXImage_AnatomicRegionSequenceCodeMeaning,I52,DXImage,imaging,DXImage_AnatomicRegionSequenceCodeMeaning,AnatomicRegionSequenceCodeMeaning,,,DICOM,
+osiris:DXImage_Anatomic Region SequenceCodeValue,I53,DXImage,imaging,DXImage_Anatomic Region SequenceCodeValue,Anatomic Region SequenceCodeValue,,,DICOM,
+osiris:DXImage_KVP,I54,DXImage,imaging,DXImage_KVP,KVP,,,DICOM,
+osiris:DXImage_Exposure,I55,DXImage,imaging,DXImage_Exposure,Exposure,,,DICOM,
+osiris:DXImage_ExposureTime,I56,DXImage,imaging,DXImage_ExposureTime,ExposureTime,,,DICOM,
+osiris:DXImage_ContrastBolusAgent,I57,DXImage,imaging,DXImage_ContrastBolusAgent,ContrastBolusAgent,,,DICOM,
+osiris:ROISegmentation_ReferencedSOPInstanceUID,I58,ROISegmentation,imaging,ROISegmentation_ReferencedSOPInstanceUID,ReferencedSOPInstanceUID,,,DICOM,
+osiris:ROISegmentation_ROINumber,I59,ROISegmentation,imaging,ROISegmentation_ROINumber,ROINumber,,,DICOM,
+osiris:ROISegmentation_ROIName,I60,ROISegmentation,imaging,ROISegmentation_ROIName,ROIName,,,DICOM,
+osiris:ROISegmentation_ROIDescription,I61,ROISegmentation,imaging,ROISegmentation_ROIDescription,ROIDescription,,,DICOM,
+osiris:ROISegmentation_ROIType,I62,ROISegmentation,imaging,ROISegmentation_ROIType,ROIType,,,,
+osiris:ROISegmentation_ROIFilename,I63,ROISegmentation,imaging,ROISegmentation_ROIFilename,ROIFilename,,,,
+osiris:RadiomicsCriteria_SoftwareName,I64,RadiomicsCriteria,imaging,RadiomicsCriteria_SoftwareName,SoftwareName,,,IBSI?,
+osiris:RadiomicsCriteria_SoftwareVersion,I65,RadiomicsCriteria,imaging,RadiomicsCriteria_SoftwareVersion,SoftwareVersion,,,IBSI?,
+osiris:RadiomicsCriteria_Method,I66,RadiomicsCriteria,imaging,RadiomicsCriteria_Method,Method,,,IBSI?,
+osiris:RadiomicsCriteria_UsedImageFilter,I67,RadiomicsCriteria,imaging,RadiomicsCriteria_UsedImageFilter,UsedImageFilter,,,IBSI?,
+osiris:RadiomicsCriteria_DistanceWeighting,I68,RadiomicsCriteria,imaging,RadiomicsCriteria_DistanceWeighting,DistanceWeighting,,,IBSI?,
+osiris:RadiomicsCriteria_NumberOfGreyLevels,I69,RadiomicsCriteria,imaging,RadiomicsCriteria_NumberOfGreyLevels,NumberOfGreyLevels,,,IBSI?,
+osiris:RadiomicsCriteria_BinSize,I70,RadiomicsCriteria,imaging,RadiomicsCriteria_BinSize,BinSize,,,IBSI?,
+osiris:RadiomicsCriteria_IntensityResampling,I71,RadiomicsCriteria,imaging,RadiomicsCriteria_IntensityResampling,IntensityResampling,,,IBSI?,
+osiris:RadiomicsCriteria_LowestIntensity,I72,RadiomicsCriteria,imaging,RadiomicsCriteria_LowestIntensity,LowestIntensity,,,IBSI?,
+osiris:RadiomicsCriteria_BoundsRangeOfValueAfterDiscretisation,I73,RadiomicsCriteria,imaging,RadiomicsCriteria_BoundsRangeOfValueAfterDiscretisation,BoundsRangeOfValueAfterDiscretisation,,,IBSI?,
+osiris:RadiomicsCriteria_SpatialResamplingMethod,I74,RadiomicsCriteria,imaging,RadiomicsCriteria_SpatialResamplingMethod,SpatialResamplingMethod,,,IBSI?,
+osiris:RadiomicsCriteria_SpatialResamplingValues,I75,RadiomicsCriteria,imaging,RadiomicsCriteria_SpatialResamplingValues,SpatialResamplingValues,,,IBSI?,
+osiris:RadiomicsCriteria_TextureMatrixAggregation,I76,RadiomicsCriteria,imaging,RadiomicsCriteria_TextureMatrixAggregation,TextureMatrixAggregation,,,IBSI?,
+osiris:RadiomicsImageFilter_SoftwareName,I77,RadiomicsImageFilter,imaging,RadiomicsImageFilter_SoftwareName,SoftwareName,,,IBSI?,
+osiris:RadiomicsImageFilter_SoftwareVersion,I78,RadiomicsImageFilter,imaging,RadiomicsImageFilter_SoftwareVersion,SoftwareVersion,,,IBSI?,
+osiris:RadiomicsImageFilter_FilterName,I79,RadiomicsImageFilter,imaging,RadiomicsImageFilter_FilterName,FilterName,,,IBSI?,
+osiris:RadiomicsImageFilter_FilterType,I80,RadiomicsImageFilter,imaging,RadiomicsImageFilter_FilterType,FilterType,,,IBSI?,
+osiris:RadiomicsImageFilter_FilterInterpolation,I81,RadiomicsImageFilter,imaging,RadiomicsImageFilter_FilterInterpolation,FilterInterpolation,,,IBSI?,
+osiris:RadiomicsImageFilter_IntensityRounding,I82,RadiomicsImageFilter,imaging,RadiomicsImageFilter_IntensityRounding,IntensityRounding,,,IBSI?,
+osiris:RadiomicsImageFilter_BoundaryCondition,I83,RadiomicsImageFilter,imaging,RadiomicsImageFilter_BoundaryCondition,BoundaryCondition,,,IBSI?,
+osiris:RadiomicsFeature_Id,I84,RadiomicsFeature,imaging,RadiomicsFeature_Id,Id,,,IBSI?,
+osiris:RadiomicsFeature_Name,I85,RadiomicsFeature,imaging,RadiomicsFeature_Name,Name,,,IBSI?,
+osiris:RadiomicsFeature_Value,I86,RadiomicsFeature,imaging,RadiomicsFeature_Value,Value,,,IBSI?,

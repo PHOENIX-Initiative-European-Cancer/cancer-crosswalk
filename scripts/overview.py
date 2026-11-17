@@ -25,10 +25,10 @@ from collections import Counter, defaultdict
 from pathlib import Path
 
 import matplotlib.pyplot as plt
-import matplotlib.colors as mcolors
 from matplotlib.patches import Patch
 
 import inverse_gaps as ig  # reuse SOURCES, classify(), load_source()
+import figstyle as fs
 
 HERE = Path(__file__).resolve().parent
 REPO = HERE.parent
@@ -36,13 +36,10 @@ HUB = REPO / "hub" / "eccdm" / "elements.csv"
 MAPPINGS = REPO / "mappings"
 DEFAULT_OUT = REPO / "docs" / "overview.png"
 
-PRED = {"skos:exactMatch": "#1a7d3c", "skos:closeMatch": "#7cb342",
-        "skos:narrowMatch": "#4a90d9", "skos:broadMatch": "#f5a623",
-        "skos:relatedMatch": "#b39ddb"}
 SRC_SHORT = {"b1mg-cmd": "B1MG", "mii-onko-obds": "oBDS",
              "nabon-mammacarcinoom": "NABON", "senologie-datenkranz": "Senologie"}
-CARR_COLOR = {"by-reference": "#4a90d9", "new-module": "#e0662b",
-              "out-of-scope": "#c9ccd1", "review": "#e8e2b0"}
+CARR_COLOR = fs.CARRIAGE_COLOUR
+FS = 1.0                                     # font scale, raised in --slide mode
 
 
 def read_sssom(path: Path):
@@ -54,7 +51,14 @@ def read_sssom(path: Path):
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--out", type=Path, default=DEFAULT_OUT)
+    ap.add_argument("--slide", action="store_true",
+                    help="slide version: panels side by side, no figure title, larger type")
     args = ap.parse_args()
+    global FS
+    FS = 1.35 if args.slide else 1.0
+    fs.apply()
+    if args.slide and args.out == DEFAULT_OUT:
+        args.out = DEFAULT_OUT.with_name("overview-slide.png")
 
     hub = list(csv.DictReader(HUB.open(encoding="utf-8")))
     models = []
@@ -88,50 +92,54 @@ def main() -> int:
         for r in ig.load_source(REPO / path):
             if r["id"] in mapped:
                 continue
-            m, c = ig.classify(r["_text"])
-            if c in ("by-reference", "new-module"):   # clinical extension need only
+            m, c = ig.classify(r)
+            if c in ("by-reference", "extend-model", "new-module"):   # clinical only
                 mod_src[m][src] += 1
                 mod_carr[m] = c
 
-    fig = plt.figure(figsize=(13, 12))
-    gs = fig.add_gridspec(2, 1, height_ratios=[len(models), max(6, len(mod_src))],
-                          hspace=0.28)
+    if args.slide:
+        fig = plt.figure(figsize=(18, 8.4))
+        gs = fig.add_gridspec(1, 2, width_ratios=[1, 1.5], wspace=1.05,
+                              left=0.145, right=0.985, top=0.86, bottom=0.11)
+    else:
+        fig = plt.figure(figsize=(13, 12))
+        gs = fig.add_gridspec(2, 1, height_ratios=[len(models), max(6, len(mod_src))],
+                              hspace=0.28)
 
     # ---- Panel A: model x source coverage ----
     axA = fig.add_subplot(gs[0])
     nrows, ncols = len(models), len(srcs)
-    COVER_HUE = "#2c7fb8"   # single hue; intensity = coverage fraction only
     for i, model in enumerate(models):
         for j, src in enumerate(srcs):
             cov = covered[(model, src)]
             frac = len(cov) / size[model]
             if cov:
-                rgba = mcolors.to_rgba(COVER_HUE, alpha=0.18 + 0.72 * frac)
+                step = min(4, 1 + int(frac * 4))          # one hue, light -> dark
+                rgba = fs.HUB_RAMP[step]
                 txt = f"{len(cov)}/{size[model]}"
-                tcol = "white" if frac > 0.55 else "#1a1a1a"
+                tcol = fs.SURF if step >= 3 else fs.INK
             else:
-                rgba = mcolors.to_rgba("#ececec", 1)
-                txt, tcol = "·", "#999"
+                rgba = fs.HUB_RAMP[0]
+                txt, tcol = "·", fs.MUTED
             axA.add_patch(plt.Rectangle((j, nrows - 1 - i), 1, 1, facecolor=rgba,
-                                        edgecolor="white", lw=1.2))
+                                        edgecolor=fs.SURF, lw=2))
             axA.text(j + 0.5, nrows - 1 - i + 0.5, txt, ha="center", va="center",
-                     fontsize=8, color=tcol)
+                     fontsize=8 * FS, color=tcol)
     axA.set_xlim(0, ncols); axA.set_ylim(0, nrows)
     axA.set_xticks([j + 0.5 for j in range(ncols)])
-    axA.set_xticklabels([SRC_SHORT[s] for s in srcs], fontsize=9)
+    axA.set_xticklabels([SRC_SHORT[s] for s in srcs], fontsize=9 * FS)
     axA.xaxis.tick_top()
     axA.set_yticks([nrows - 1 - i + 0.5 for i in range(nrows)])
-    axA.set_yticklabels(models, fontsize=8)
+    axA.set_yticklabels(models, fontsize=8 * FS)
     axA.tick_params(length=0)
     for sp in axA.spines.values():
         sp.set_visible(False)
-    axA.set_title("A · Hub coverage per ECCDM model  (cell = elements mapped / "
-                  "model size; darker = higher coverage)", fontsize=10, pad=26)
-    cov_legend = [Patch(facecolor=mcolors.to_rgba("#2c7fb8", a), label=lbl)
-                  for a, lbl in [(0.9, "high"), (0.5, "mid"), (0.2, "low")]] + \
-                 [Patch(facecolor="#ececec", label="gap")]
-    axA.legend(handles=cov_legend, loc="upper left", bbox_to_anchor=(1.01, 1),
-               fontsize=7.5, frameon=False, title="coverage")
+    axA.set_title("A · Hub coverage per ECCDM model\n(elements mapped / model size, darker = more)",
+                  fontsize=10 * FS, pad=26 * FS, loc="left", color=fs.INK)
+    cov_legend = [Patch(facecolor=fs.HUB_RAMP[k], label=lbl)
+                  for k, lbl in [(4, "high"), (2, "mid"), (1, "low"), (0, "none")]]
+    axA.legend(handles=cov_legend, loc="upper left", bbox_to_anchor=(0, -0.02), ncol=4,
+               fontsize=7.5 * FS, frameon=False, handlelength=1.2, columnspacing=1.2)
 
     # ---- Panel B: Extension modules ----
     axB = fig.add_subplot(gs[1])
@@ -141,30 +149,37 @@ def main() -> int:
         for src in srcs:
             v = mod_src[m].get(src, 0)
             if v:
-                axB.barh(i, v, left=left, height=0.6,
-                         facecolor=CARR_COLOR[mod_carr[m]],
-                         edgecolor="white", alpha=0.55 + 0.11 * srcs.index(src))
-                axB.text(left + v / 2, i, str(v), ha="center", va="center",
-                         fontsize=7, color="white")
+                axB.barh(i, v, left=left, height=0.62, facecolor=fs.SRC_COLOUR[src],
+                         edgecolor=fs.SURF, linewidth=1.5)
+                if v >= 9:                                  # label only where it fits
+                    axB.text(left + v / 2, i, str(v), ha="center", va="center",
+                             fontsize=7 * FS, color=fs.SURF)
                 left += v
-        axB.text(left + 1, i, f"  {mod_carr[m]}", va="center", fontsize=7,
-                 color=CARR_COLOR[mod_carr[m]])
+        axB.text(left + 1.5, i, mod_carr[m], va="center", fontsize=7 * FS,
+                 color=fs.INK2, style="italic")
     axB.set_yticks(range(len(order)))
-    axB.set_yticklabels(order, fontsize=8.5)
-    axB.set_xlabel("source fields with NO hub home (breast-specific / detailed)")
-    axB.tick_params(length=0)
-    for sp in ("top", "right"):
+    axB.set_yticklabels(order, fontsize=8.5 * FS)
+    axB.set_xlabel("source fields with no hub home", fontsize=8.5 * FS)
+    axB.set_xlim(0, max(sum(mod_src[m].values()) for m in order) * 1.22)
+    axB.tick_params(length=0, labelsize=8 * FS)
+    axB.xaxis.grid(True, color=fs.GRID, linewidth=0.8); axB.set_axisbelow(True)
+    for sp in ("top", "right", "left"):
         axB.spines[sp].set_visible(False)
-    axB.set_title("B · Extension modules — content the generic hub can't hold "
-                  "(→ attach by evidence-reference / new module)", fontsize=10, pad=8)
-    axB.text(0.99, -0.14, "shading within a bar = the 4 sources; "
-             "out-of-scope (admin/biobank) and unclustered fields omitted",
-             transform=axB.transAxes, ha="right", fontsize=7, color="#888")
+    axB.spines["bottom"].set_color(fs.GRID)
+    axB.set_title("B · Content the generic hub cannot hold, by category\n"
+                  "(stack = source; tag = how ECCDM could carry it)",
+                  fontsize=10 * FS, pad=8 * FS, loc="left", color=fs.INK)
+    axB.legend(handles=[Patch(facecolor=fs.SRC_COLOUR[s_], label=SRC_SHORT[s_]) for s_ in srcs],
+               loc="lower right", frameon=False, fontsize=7.5 * FS, handlelength=1.2)
+    axB.text(1.0, -0.1 if args.slide else -0.14, "out-of-scope fields (admin, registry transport, "
+             "other-entity modules, biobank infrastructure) omitted",
+             transform=axB.transAxes, ha="right", fontsize=7 * FS, color=fs.MUTED)
 
-    fig.suptitle("cancer-crosswalk — generic ECCDM spine (A) vs breast-specific "
-                 "extension need (B)", fontsize=13, fontweight="bold", y=0.995)
+    if not args.slide:
+        fig.suptitle("cancer-crosswalk — generic ECCDM spine (A) vs breast-specific "
+                     "extension need (B)", fontsize=13 * FS, fontweight="bold", y=0.995)
     args.out.parent.mkdir(parents=True, exist_ok=True)
-    fig.savefig(args.out, dpi=150, bbox_inches="tight")
+    fig.savefig(args.out, dpi=150, bbox_inches=None if args.slide else "tight")
     print(f"Wrote {args.out}")
     return 0
 

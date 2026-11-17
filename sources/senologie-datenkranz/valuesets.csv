@@ -1,0 +1,80 @@
+name,title,systems
+Senologie_Operation_Art,BIH LM Senologie Operation,SNOMED
+VSSenologieDiagnosesicherung,ValueSet Diagnosesicherung,local:CSSenologieDiagnosesicherung
+VSSenologieICD10,ValueSet Senologie ICD-10-GM,ICD
+VS_OncoBox_Primaerfallart,VS OncoBox Primaerfallart,local:CS_OncoBox_Primaerfallart
+VS_Senologie_ACR_Brustdichte,VS Senologie ACR Brustdichte,SNOMED
+VS_Senologie_Applikationsart,VS Senologie Applikationsart,SNOMED
+VS_Senologie_Auffaellig_Unauffaellig,VS Senologie Auffällig/Unauffällig,SNOMED
+VS_Senologie_B3_Subtypen,VS Senologie B3-Subtypen,SNOMED
+VS_Senologie_BIRADS,VS Senologie BI-RADS Kategorie,SNOMED
+VS_Senologie_B_Klassifikation,VS Senologie B-Klassifikation (NHSBSP),local:form-helper
+VS_Senologie_Beurteilbarkeit,VS Senologie Beurteilbarkeit,local:bildgebung-custom
+VS_Senologie_Bildgebung_Modalitaet,VS Senologie Bildgebungs-Modalität,SNOMED
+VS_Senologie_Clavien_Dindo,VS Senologie Clavien-Dindo Grade,SNOMED
+VS_Senologie_ClockFace_Position,VS Senologie Clock-Face Position (Uhrzeitposition),SNOMED
+VS_Senologie_Detektion_Modus,VS Senologie Screening-Status,SNOMED
+VS_Senologie_Diagnose,VS Senologie Diagnose,SNOMED|local:cs-senologie-diagnose-custom
+VS_Senologie_Diagnose_B3,VS Senologie B3 Läsionen,SNOMED
+VS_Senologie_Diagnose_Lokal,VS Senologie Diagnose Lokal,SNOMED|local:cs-senologie-diagnose-custom
+VS_Senologie_Diagnose_Mamma,VS Senologie Diagnose Mamma (24 Choices),SNOMED|local:cs-senologie-diagnose-custom
+VS_Senologie_Diagnose_SCT,VS Senologie Diagnose SNOMED CT,SNOMED
+VS_Senologie_Diagnose_Sicherheit,VS Senologie Diagnostische Sicherheit,HL7
+VS_Senologie_Dosis_Einheit,VS Senologie Dosis-Einheit,UCUM
+VS_Senologie_ECOG,VS Senologie ECOG-Performance-Status,LOINC
+VS_Senologie_Familien_Erkrankung,VS Senologie Familienanamnese-Erkrankung,SNOMED
+VS_Senologie_Fernmetastasen_Lokalisation,VS Senologie Fernmetastasen-Lokalisation,SNOMED
+VS_Senologie_Genexpressionstest,VS Senologie Genexpressionstest,local:cs-senologie-genexpressionstest
+VS_Senologie_Grading_Mamma,VS Senologie Grading Mamma (Elston-Ellis),SNOMED
+VS_Senologie_HER2_FISH,VS Senologie HER2 FISH-Ergebnis,SNOMED
+VS_Senologie_HER2_Gesamt,VS Senologie HER2 Gesamtbewertung (Leitlinie),local:cs-senologie-biomarker
+VS_Senologie_HER2_IHC_Score,VS Senologie HER2 IHC-Score,MII
+VS_Senologie_Histologie_Typ,VS Senologie Histologie-Typ Mamma,SNOMED
+VS_Senologie_IHC_Intensitaet,VS Senologie IHC-Färbeintensität,local:cs-senologie-biomarker
+VS_Senologie_ISH_Methode,VS Senologie ISH-Methode,SNOMED|local:cs-senologie-biomarker
+VS_Senologie_JaNein,VS Senologie Ja/Nein,SNOMED
+VS_Senologie_Komplikation_Zeitpunkt,VS Senologie Komplikations-Zeitpunkt,SNOMED
+VS_Senologie_Kontrazeption_Status,VS Senologie Kontrazeption Status,SNOMED|local:form-helper
+VS_Senologie_Kontrolltermin_Art,VS Senologie Kontrolltermin-Art,local:clinical-findings-custom
+VS_Senologie_LK_Status_Bildgebung,VS Senologie LK-Status (Bildgebung),local:bildgebung-custom
+VS_Senologie_L_Kategorie,VS Senologie L-Kategorie (Lymphangiosis),UICC
+VS_Senologie_Lymphoedem_Grad,VS Senologie Lymphoedem Grad,local:form-helper
+VS_Senologie_Menopausenstatus,VS Senologie Menopausenstatus,SNOMED
+VS_Senologie_Menopausenstatus_Erweitert,VS Senologie Menopausenstatus (mit ext. Codes),SNOMED
+VS_Senologie_Metastasierung,VS Senologie Metastasierung,local:cs-senologie-metastasierung
+VS_Senologie_Mikrokalk_Triage,VS Senologie Mikrokalk-Triage,local:bildgebung-custom
+VS_Senologie_Nachsorge_Art,VS Senologie Nachsorge Art,local:cs-senologie-follow-up
+VS_Senologie_Nachsorge_Modus,VS Senologie Nachsorge-Modus,local:form-helper
+VS_Senologie_Pn_Kategorie,VS Senologie Pn-Kategorie (Perineural),UICC
+VS_Senologie_Praeparat_Art,VS Senologie Präparat-Art,SNOMED
+VS_Senologie_PreOp_Markierung,VS Senologie Pre-OP-Markierung,SNOMED|local:form-helper
+VS_Senologie_Ptosis_Grad,VS Senologie Ptosis-Grad (Regnault),local:clinical-findings-custom
+VS_Senologie_Quadrant_Mamma,VS Senologie Quadrant Mamma,SNOMED
+VS_Senologie_RECIST_Response,VS Senologie RECIST-Response,SNOMED|local:clinical-findings-custom
+VS_Senologie_RT_Applikationsart,VS Senologie Strahlentherapie-Applikationsart,SNOMED
+VS_Senologie_RT_Zielvolumen,VS Senologie Strahlentherapie-Zielvolumen,SNOMED
+VS_Senologie_R_Status,VS Senologie R-Status (Resektionsstatus),SNOMED
+VS_Senologie_Raucherstatus,VS Senologie Raucherstatus,LOINC
+VS_Senologie_Risikoklasse,VS Senologie Risikoklasse,HL7
+VS_Senologie_Screeningstatus,VS Senologie Screeningstatus,SNOMED
+VS_Senologie_Seite,VS Senologie Seite,
+VS_Senologie_Seite_Mamma,VS Senologie Seitenlokalisation Mamma,SNOMED
+VS_Senologie_Standort,VS Senologie Standort (intern / extern),local:bildgebung-custom
+VS_Senologie_Symmetrie,VS Senologie Symmetrie der Brüste,SNOMED
+VS_Senologie_Systemtherapie_Art,VS Senologie Systemtherapie-Art,SNOMED
+VS_Senologie_Systemtherapie_Medikation,VS Senologie Systemtherapie Medikation,SNOMED
+VS_Senologie_TNM_M_Kategorie_Mamma,VS Senologie TNM M-Kategorie (Mamma),UICC
+VS_Senologie_TNM_N_Kategorie_Mamma,VS Senologie TNM N-Kategorie (Mamma),UICC
+VS_Senologie_TNM_T_Kategorie_Mamma,VS Senologie TNM T-Kategorie (Mamma),UICC
+VS_Senologie_Therapie_Intention,VS Senologie Therapie-Intention,SNOMED|local:form-helper
+VS_Senologie_Therapie_Status,VS Senologie Therapie-Status,SNOMED|local:form-helper
+VS_Senologie_Tumorboard_Empfehlung_Status,VS Senologie Tumorboard Empfehlung Status,local:tumorboard-empfehlung
+VS_Senologie_Tumormanifestation,VS Senologie Tumormanifestation,local:cs-senologie-tumormanifestation
+VS_Senologie_Tumornachweis_Status,VS Senologie Tumornachweis-Status,SNOMED|local:clinical-findings-custom
+VS_Senologie_UICC_Stadium_Mamma,VS Senologie UICC-Stadium (Mamma),SNOMED|UICC
+VS_Senologie_US_DEGUM,VS Senologie US-DEGUM Klassifikation,local:bildgebung-custom
+VS_Senologie_V_Kategorie,VS Senologie V-Kategorie (Vasoinvasion),UICC
+VS_Senologie_Verlauf_Tumorstatus_Gesamt,VS Senologie Verlauf Tumorstatus Gesamtbeurteilung,SNOMED
+VS_Senologie_Verwandtschaftsgrad,VS Senologie Verwandtschaftsgrad,HL7
+VS_Senologie_Vorstellungsgrund,VS Senologie Vorstellungsgrund,SNOMED|local:form-helper
+VS_Senologie_Zweittumor,VS Senologie Zweittumor,SNOMED

@@ -18,9 +18,19 @@ curie_map:
   # --- hub ---
   eccdm: "https://hl7.eu/fhir/ig/cancer-common/element/"
 
+  # --- code systems (object side of code-level mapping sets) ---
+  sct: "http://snomed.info/id/"
+
   # --- spokes (source datasets) ---
   miionko: "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/element/"
   obds: "https://www.basisdatensatz.de/element/"
   senol: "https://www.krebsgesellschaft.de/senologie/datenkranz/element/"
   b1mg: "https://w3id.org/b1mg/cancer-minimal-dataset/element/"
   nabon: "https://www.nabon.nl/informatiestandaard/mammacarcinoom/element/"
+  # INT Milan publishes no model of its own; the workbook annotates ECCDM
+  # attributes with local codes, so the namespace is minted under the crosswalk.
+  intbr: "https://w3id.org/cancer-crosswalk/sources/int-breast/element/"
+  # ESMO Clinical Practice Guidelines (breast) are a *requirement* source: data
+  # points that guideline recommendations depend on, not a dataset. ESMO
+  # publishes no per-item IRIs, so the namespace is minted under the crosswalk.
+  esmo: "https://w3id.org/cancer-crosswalk/sources/esmo-breast/element/"

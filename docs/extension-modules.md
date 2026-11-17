@@ -5,68 +5,124 @@ to NO ECCDM hub element, clustered into candidate extension modules and
 classified by how ECCDM could carry it.
 
 - **by-reference** — needs an evidence hook + an Observation/Finding logical model on the hub; the finding then hangs off by reference.
+- **extend-model** — attribute-level detail of a model ECCDM already has (CancerStage, SystemicTreatment, Radiotherapy, Surgery, LastFollowUp).
 - **new-module** — needs a whole new hub model.
-- **out-of-scope** — administrative / genomics-infrastructure, not clinical content ECCDM targets.
+- **out-of-scope** — administrative, registry transport, other-entity organ modules, genomics infrastructure: not clinical content ECCDM targets.
+- **review** — structural leaves whose context was lost in extraction.
 
 Unmapped source elements: mii-onko-obds 388, nabon-mammacarcinoom 283, b1mg-cmd 106, senologie-datenkranz 260.
 
-## Pathology detail  ·  _by-reference_  (117 fields)
+## Pathology detail  ·  _by-reference_  (121 fields)
 
-- **mii-onko-obds** (27): AnlassGleasonScore, GleasonScore, GradPrimaer, GradRektumAnastomoseninsuffizienz, GradSekundaer, Histologie, Histologie_EinsendeNr, LK_befallen … (+10)
-- **nabon-mammacarcinoom** (28): Aantal onderzochte lymfeklieren, Aantal verdachte lymfeklieren, Afstand tot tumorpositieve snijvlak, Beoordeling lymfeklieren, ER-percentage lymfeklieren, ER-status lymfeklieren, Graad DCIS postoperatief, Graad DCIS preoperatief … (+20)
-- **senologie-datenkranz** (62): BildgebungMamma.LymphknotenBildgebung, Diagnose.Grad, KlinischeUntersuchung.Lymphknotenstatus, Pathologie.BefundDCIS, Pathologie.BefundDCIS.Art, Pathologie.BefundDCIS.Biomarker, Pathologie.BefundDCIS.Biomarker.ER.Faerbeintensitaet, Pathologie.BefundDCIS.Biomarker.ER.Gesamtstatus … (+54)
+- **mii-onko-obds** (21): Befundtext, Gesamtbeurteilung_Residualstatus, Histologie, Histologie_EinsendeNr, LK_befallen, LK_untersucht, Lokale_Beurteilung_Residualstatus, Pathologie … (+6)
+- **nabon-mammacarcinoom** (42): Aantal onderzochte lymfeklieren, Aantal positieve lymfeklieren, Aantal verdachte lymfeklieren, Aanvullende pathologie, Afstand tot tumorpositieve snijvlak, Angioinvasie, Beoordeling lymfeklieren, ER-percentage lymfeklieren … (+34)
+- **senologie-datenkranz** (58): Diagnose.DiagnoseB3SubTyp, Pathologie, Pathologie.AbsoluterChemoNutzen, Pathologie.BefundDCIS, Pathologie.BefundDCIS.Art, Pathologie.BefundDCIS.MaxAusdehnung, Pathologie.BefundDCIS.R, Pathologie.BefundDCIS.Resektionsraender … (+50)
 
-## Biomarker / receptor status  ·  _by-reference_  (53 fields)
+## Imaging findings / BI-RADS  ·  _by-reference_  (88 fields)
+
+- **mii-onko-obds** (1): IntraopPraeparatkontrolle
+- **nabon-mammacarcinoom** (75): Aankleuringspatroon massa, Aankleuringspatroon non-mass enhancement, Asymmetrie, BI-RADS (birads), Begrenzing massa, Begrenzing massa MRI, Bevindingen, Calcificaties … (+67)
+- **senologie-datenkranz** (12): BildgebungMamma, BildgebungMamma.ACRDichte, BildgebungMamma.BIRADS, BildgebungMamma.Befundtext, BildgebungMamma.Herdbefund, BildgebungMamma.LymphknotenBildgebung, BildgebungMamma.Mikrokalk, BildgebungMamma.Standort … (+4)
+
+## Biomarker / receptor status  ·  _by-reference_  (69 fields)
 
 - **mii-onko-obds** (6): Her2neuStatus, HormonrezeptorStatus_Oestrogen, HormonrezeptorStatus_Progesteron
 - **nabon-mammacarcinoom** (19): Bepaling receptorstatus, ER-percentage afwijking postoperatief, ER-percentage afwijking preoperatief, ER-percentage metastase, ER-status afwijking postoperatief, ER-status afwijking preoperatief, ER-status metastase, ER-status recidief … (+11)
-- **senologie-datenkranz** (28): Pathologie.BefundDCIS.Biomarker.ER, Pathologie.BefundDCIS.Biomarker.ER.AllredScore, Pathologie.BefundDCIS.Biomarker.ER.IRSScore, Pathologie.BefundDCIS.Biomarker.HER2, Pathologie.BefundDCIS.Biomarker.HER2.Gesamtstatus, Pathologie.BefundDCIS.Biomarker.HER2.IHCScore, Pathologie.BefundDCIS.Biomarker.HER2.ISHDurchgefuehrt, Pathologie.BefundDCIS.Biomarker.HER2.ISHStatus … (+20)
+- **b1mg-cmd** (3): Code, Name, Type
+- **senologie-datenkranz** (41): Pathologie.BefundDCIS.Biomarker, Pathologie.BefundDCIS.Biomarker.ER, Pathologie.BefundDCIS.Biomarker.ER.AllredScore, Pathologie.BefundDCIS.Biomarker.ER.Faerbeintensitaet, Pathologie.BefundDCIS.Biomarker.ER.Gesamtstatus, Pathologie.BefundDCIS.Biomarker.ER.IRSScore, Pathologie.BefundDCIS.Biomarker.ER.ProzentPositiveZellen, Pathologie.BefundDCIS.Biomarker.HER2 … (+33)
 
-## Imaging findings / BI-RADS  ·  _by-reference_  (44 fields)
+## Patient history / risk factors  ·  _by-reference_  (46 fields)
 
-- **mii-onko-obds** (1): IntraopPraeparatkontrolle
-- **nabon-mammacarcinoom** (41): Aankleuringspatroon massa, Aankleuringspatroon non-mass enhancement, Aantal positieve lymfeklieren, BI-RADS (birads), Begrenzing massa, Begrenzing massa MRI, Beleidsadvies BI-RADS, Calcificaties … (+33)
-- **senologie-datenkranz** (2): BildgebungMamma.ACRDichte, BildgebungMamma.BIRADS
+- **mii-onko-obds** (3): Fruehere_Tumorerkrankung, Praetherapeutischer_Menopausenstatus, Syndrom_oder_sonstiges
+- **nabon-mammacarcinoom** (23): Aandoeningen familieanamnese, Aantal familieleden, Anamnese, Bekend met nierfunctiestoornis, BiologischeRelatie, Borstvoedend, Contrastallergie, Datum … (+14)
+- **b1mg-cmd** (6): Age_at_Diagnosis, History, Name, Quantity, Smoking_Status, Type
+- **senologie-datenkranz** (14): ChecklisteErblicheBelastung, ChecklisteErblicheBelastung.Durchgefuehrt, ChecklisteErblicheBelastung.Score, Familienanamnese, Familienanamnese.Mammakarzinom, Familienanamnese.Mammakarzinom.Erkrankungsalter, Familienanamnese.Ovarialkarzinom, Familienanamnese.Ovarialkarzinom.Erkrankungsalter … (+6)
 
-## Menopause / patient history  ·  _by-reference_  (31 fields)
+## Molecular tests / genomics  ·  _by-reference_  (18 fields)
 
-- **mii-onko-obds** (3): Diagnosesicherung, Freitext, Praetherapeutischer_Menopausenstatus
-- **nabon-mammacarcinoom** (14): Aandoeningen familieanamnese, Anamnese, Datum, Familie anamnese, Familieanamnese, Familieanamnese uitgevoerd, Menopauzale status, Probleem … (+5)
-- **senologie-datenkranz** (14): Familienanamnese, Familienanamnese.Mammakarzinom, Familienanamnese.Mammakarzinom.Erkrankungsalter, Familienanamnese.Ovarialkarzinom, Familienanamnese.Ovarialkarzinom.Erkrankungsalter, Familienanamnese.Verwandtschaftsgrad, GynaekologischeAnamnese, GynaekologischeAnamnese.Hormonersatztherapie … (+6)
+- **mii-onko-obds** (5): Auspraegung, Bezeichnung, Datum, Genetische_Variante, Sonstige_Auspraegung
+- **nabon-mammacarcinoom** (4): Genetisch onderzoek verricht, Genmutatie, Genprofieltest, Mammaprint
+- **senologie-datenkranz** (9): Genetik, Genetik.Genexpressionstest, Genetik.Genexpressionstest.Fernrezidivrisiko, Genetik.Genexpressionstest.Risikoklasse, Genetik.Genexpressionstest.Score, Genetik.Genexpressionstest.Testmethode, Genetik.SomatischeMutation, Genetik.SomatischeMutation.Ergebnis … (+1)
 
-## Molecular tests / genomics  ·  _by-reference_  (26 fields)
+## Clinical examination / performance status  ·  _by-reference_  (18 fields)
 
-- **mii-onko-obds** (4): Genetische_Variante, RASMutation, S
-- **nabon-mammacarcinoom** (1): Mammaprint
-- **b1mg-cmd** (13): Alignment, Alignment_Genome, Clinical_Variant_Interpretation, Code, File_Format, Name, Parentage, Protocol … (+5)
-- **senologie-datenkranz** (8): Genetik.Genexpressionstest, Genetik.Genexpressionstest.Fernrezidivrisiko, Genetik.Genexpressionstest.Risikoklasse, Genetik.Genexpressionstest.Score, Genetik.Genexpressionstest.Testmethode, Genetik.SomatischeMutation, Genetik.SomatischeMutation.Ergebnis, Genetik.SomatischeMutation.Gen
+- **mii-onko-obds** (3): ASA, Allgemeiner_Leistungszustand
+- **nabon-mammacarcinoom** (4): Algemeen lichamelijk onderzoek, Huidig probleem, Palpabel, WHO Performance status
+- **b1mg-cmd** (1): Clinical_Status
+- **senologie-datenkranz** (10): KlinischeUntersuchung, KlinischeUntersuchung.Datum, KlinischeUntersuchung.Hautveraenderungen, KlinischeUntersuchung.KlinischeTumorformel, KlinischeUntersuchung.KlinischeTumorformel.r, KlinischeUntersuchung.KlinischeTumorformel.y, KlinischeUntersuchung.Lymphknotenstatus, KlinischeUntersuchung.Mamillenbefund … (+2)
 
-## Surgery detail / reconstruction  ·  _by-reference_  (15 fields)
+## Treatment detail (drug, dose, cycles, fractions, technique)  ·  _extend-model_  (95 fields)
 
-- **mii-onko-obds** (3): KomplPostOP_ClavienDindo, PraeopDrahtmarkierung, RektumAnzeichnungStomaposition
-- **nabon-mammacarcinoom** (10): Oncoplastische reconstructie met plastisch chirurg, Operatie tumor, Reconstructie, Uitslag biopt borstafwijking (Type tumor preoperatief), Voorkeur patient operatie borst, pN okselklier, pT, ypT … (+1)
-- **senologie-datenkranz** (2): Operation.Komplikation, Operation.Komplikation.ClavienDindo
+- **mii-onko-obds** (40): ATC, Applikationsart, Atemgetriggert, Bestrahlung, Bezeichnung, Boost, Code, Dosis … (+17)
+- **nabon-mammacarcinoom** (7): Behandelingsmodaliteit, Boost, Huidige therapie, Reden neoadjuvante therapie, Switch naar (therapie), Toelichting radiotherapie, Vervolg therapie
+- **b1mg-cmd** (20): Cumulative_Drug_Dosage, Dosage, Dosage_Units, Drug_ID_ATC, Drug_Name, Duration, Fractions, Line … (+5)
+- **senologie-datenkranz** (28): Begleitmedikation, Begleitmedikation.Dosierschema, Begleitmedikation.Dosis, Begleitmedikation.Einnahmezeitraum, Begleitmedikation.Medikament, GeplanteSystemtherapie, GeplanteSystemtherapie.GeplanteDosisDatum, GeplanteSystemtherapie.Intention … (+20)
 
-## Tumour board / MDO  ·  _new-module_  (40 fields)
+## Diagnosis / staging detail (TNM, localisation, side)  ·  _extend-model_  (76 fields)
 
-- **mii-onko-obds** (8): Abweichung_Patientenwunsch, Datum, Meldeanlass, Menge_Typ_Therapieempfehlung, Therapieempfehlung, Tumorkonferenz, Typ, Typ_Therapieempfehlung
-- **nabon-mammacarcinoom** (15): Aanvrager, Advies, Advies klinische studie, Afwijken richtlijn, Beleid, Beleidsadvies familieanamnese, Beleidsadvies screening, Conclusie … (+7)
-- **senologie-datenkranz** (17): Tumorkonferenz, Tumorkonferenz.Datum, Tumorkonferenz.Empfehlung, Tumorkonferenz.Empfehlung.AntiresorptiveTherapie, Tumorkonferenz.Empfehlung.Chemotherapie, Tumorkonferenz.Empfehlung.EmpfehlungText, Tumorkonferenz.Empfehlung.EndokrineTherapie, Tumorkonferenz.Empfehlung.Genetik … (+9)
+- **mii-onko-obds** (46): Code, Datum, Diagnose, Diagnosedatum, Diagnosesicherung, Fernmetastase, Freitext, ICD … (+26)
+- **nabon-mammacarcinoom** (18): Aandoening, Afstand tot de tepel, Differentiaal diagnose, M, Primaire tumor aanwezig, Probleem, Resectabiliteit recidief, Toelichting metastasen … (+9)
+- **b1mg-cmd** (1): Topology_Code
+- **senologie-datenkranz** (11): Diagnose, Diagnose.Diagnosekode, Diagnose.Diagnosesicherung, Diagnose.Falltyp, Diagnose.Grad, Diagnose.Metastasierungsstadium, Diagnose.Seite, Diagnose.Tumormanifestation … (+3)
 
-## Unclustered / to triage  ·  _review_  (564 fields)
+## Surgery / procedure detail (biopsy, implants, planning)  ·  _extend-model_  (50 fields)
 
-- **mii-onko-obds** (253): ASA, ATC, Abteilung, Allgemeiner_Leistungszustand, Anmerkung, AnzahlPosStanzen, AnzahlStanzen, Applikationsart … (+162)
-- **nabon-mammacarcinoom** (150): Aandoening, Aantal biopten, Aantal familieleden, Aanvullend onderzoek, Aanvullende pathologie, Aanwezigen, Achternaam, AchternaamPartner … (+136)
-- **b1mg-cmd** (35): Adverse_Events, Age_at_Diagnosis, Clinical_Status, Cumulative_Drug_Dosage, Dosage, Dosage_Units, Drug_ID_ATC, Drug_Name … (+15)
-- **senologie-datenkranz** (126): Begleitmedikation, Begleitmedikation.Dosierschema, Begleitmedikation.Dosis, Begleitmedikation.Einnahmezeitraum, Begleitmedikation.Medikament, BildgebungMamma, BildgebungMamma.Befundtext, BildgebungMamma.Herdbefund … (+118)
+- **mii-onko-obds** (7): ArtEingriff, Code, Hauptoperateur, OPS, Operateur, PraeopDrahtmarkierung, Version
+- **nabon-mammacarcinoom** (18): Aantal biopten, Aanvullend onderzoek, Biopsierichting, Drainage, Gauge, Huidsparend, Oncoplastische reconstructie met plastisch chirurg, Operatie tumor … (+10)
+- **b1mg-cmd** (1): Resection_Quality
+- **senologie-datenkranz** (24): Operation, Operation.Art, Operation.Erstoperateur, Operation.Implantat, Operation.Implantat.Art, Operation.Implantat.Hersteller, Operation.Implantat.REFNummer, Operation.Implantat.Seriennummer … (+16)
 
-## Administrative / submitter  ·  _out-of-scope_  (102 fields)
+## Follow-up, response, death & second tumour  ·  _extend-model_  (17 fields)
 
-- **mii-onko-obds** (83): Absender, Adresse, Adresse1, Adresse2, Adresse3, Adresse4, Adresse5, Adresse6 … (+57)
-- **nabon-mammacarcinoom** (5): AanduidingBijNummer, EmailAdressen, Naamgegevens, PatientIdentificatienummer, ZorgverlenerIdentificatienummer
+- **mii-onko-obds** (10): Datum, N, NU, Tod, Tod_tumorbedingt, Verlauf, Verlauf_Lokaler_Tumorstatus, Verlauf_Tumorstatus_Fernmetastasen … (+1)
+- **nabon-mammacarcinoom** (1): Follow-up
+- **senologie-datenkranz** (6): Verlauf, Verlauf.Melder, Verlauf.NachsorgeArt, Verlauf.ZweitttumorDatum, Verlauf.ZweitttumorICD, Verlauf.Zweittumor
+
+## Tumour board / MDO  ·  _new-module_  (42 fields)
+
+- **mii-onko-obds** (6): Abweichung_Patientenwunsch, Datum, Therapieempfehlung, Tumorkonferenz, Typ, Typ_Therapieempfehlung
+- **nabon-mammacarcinoom** (18): Aanvrager, Aanwezigen, Advies, Afwijken richtlijn, Beleid, Beleidsadvies BI-RADS, Beleidsadvies familieanamnese, Beleidsadvies screening … (+10)
+- **senologie-datenkranz** (18): Tumorkonferenz, Tumorkonferenz.Datum, Tumorkonferenz.Empfehlung, Tumorkonferenz.Empfehlung.AntiresorptiveTherapie, Tumorkonferenz.Empfehlung.Chemotherapie, Tumorkonferenz.Empfehlung.EmpfehlungText, Tumorkonferenz.Empfehlung.EndokrineTherapie, Tumorkonferenz.Empfehlung.Genetik … (+10)
+
+## Adverse events / complications  ·  _new-module_  (30 fields)
+
+- **mii-onko-obds** (13): Art, Bezeichnung, Code, Grad, ICD, Komplikation, Komplikationen, MedDRA_Code … (+3)
+- **nabon-mammacarcinoom** (1): Complicaties
+- **b1mg-cmd** (6): Adverse_Events, Toxicity_Type
+- **senologie-datenkranz** (10): Nebenwirkung, Nebenwirkung.CTCAEGrad, Nebenwirkung.Datum, Nebenwirkung.Ereignis, Nebenwirkung.VerursachendeTherapie, Operation.Komplikation, Operation.Komplikation.Art, Operation.Komplikation.ClavienDindo … (+2)
+
+## Study participation  ·  _new-module_  (15 fields)
+
+- **mii-onko-obds** (2): Studienteilnahme, Therapiestudie
+- **nabon-mammacarcinoom** (2): Advies klinische studie, Klinische studie
+- **senologie-datenkranz** (11): Studienteilnahme, Studienteilnahme.Aufklaerungsdatum, Studienteilnahme.Kontakt, Studienteilnahme.Screeningstatus, Studienteilnahme.Studienarm, Studienteilnahme.Studienname, Studienteilnahme.StudiennameCode, Studienteilnahme.Studienscreening … (+3)
+
+## Psychosocial / supportive care  ·  _new-module_  (8 fields)
+
+- **mii-onko-obds** (2): Psychoonkologiekontakt, Sozialdienstkontakt
+- **senologie-datenkranz** (6): Psychoonkologie, Psychoonkologie.Datum, Psychoonkologie.Stattgefunden, Sozialdienst, Sozialdienst.Datum, Sozialdienst.Stattgefunden
+
+## Administrative / identifiers / contact  ·  _out-of-scope_  (122 fields)
+
+- **mii-onko-obds** (75): Absender, Adresse, Adresse1, Adresse2, Adresse3, Adresse4, Adresse5, Adresse6 … (+42)
+- **nabon-mammacarcinoom** (34): AanduidingBijNummer, Achternaam, AchternaamPartner, AdditioneleInformatie, Adresgegevens, Contactgegevens, EmailAdres, EmailAdressen … (+22)
 - **b1mg-cmd** (13): Clinical_Center, Country, Data_Center, Data_Publisher, Database_Dataset_ID, Email, Identification, Institution_Clinical … (+5)
-- **senologie-datenkranz** (1): Verlauf.Melder
 
-## Genomics / biobank infrastructure  ·  _out-of-scope_  (45 fields)
+## Other-entity & paediatric registry modules (prostate, colorectal, melanoma, DKKR)  ·  _out-of-scope_  (81 fields)
 
-- **b1mg-cmd** (45): Anatomy, Date, Description, ID, Matching_Samples, Normal_Tumor_Matched, Normal_Tumor_Matching_Sample, Presence_of_Matching_Samples … (+3)
+- **mii-onko-obds** (81): AnlassGleasonScore, AnzahlPosStanzen, AnzahlStanzen, CaBefallStanze, DKKR_Einwilligung, DKKR_Gen_Name, DKKR_Hauptwohnsitz_bei_Erstdiagnose_in_Deutschland, DKKR_Menge_Gen … (+47)
+
+## Registry transport / XML structure  ·  _out-of-scope_  (69 fields)
+
+- **mii-onko-obds** (63): Anmerkung, Art, Bemerkung, CodeVersion2014, CodeVersion2021, Datum, Eigene_Leistung, Einwilligung_nicht_meldepflichtig … (+36)
+- **nabon-mammacarcinoom** (4): AdresSoort, EmailSoort, Naamgebruik, NummerSoort
+- **senologie-datenkranz** (2): BildgebungSonstige.KodierteBefundaussage, Pathologie.StrukturierterBefund
+
+## Genomics / biobank infrastructure  ·  _out-of-scope_  (55 fields)
+
+- **b1mg-cmd** (55): Alignment, Alignment_Genome, Anatomy, Clinical_Variant_Interpretation, Date, Description, File_Format, ID … (+13)
+
+## Referral / care setting  ·  _out-of-scope_  (17 fields)
+
+- **mii-onko-obds** (4): Abteilung, Einrichtung, KH_Abt_Station_Praxis, Kontakt
+- **nabon-mammacarcinoom** (13): Adresgegevens, Naamgegevens, Reden verwijzing, Specialisme, Type verwijzer, Verwijzer, Verwijzing, Wijze van detectie (Hoe is de patient verwezen) … (+4)
