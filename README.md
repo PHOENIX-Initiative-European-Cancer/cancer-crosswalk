@@ -92,7 +92,7 @@ sssom validate mappings/*.sssom.tsv
 
 Hub coverage: **63 %** (43 / 68 elements). Of the 1,037 unmapped source
 fields, 693 are clinical content ECCDM would need (14 named categories:
-by-reference / extend-model / new-module) and 344 are out of scope
+coded-finding / extend-model / new-module) and 344 are out of scope
 (administrative, registry transport, other-entity organ modules, biobank
 infrastructure) — see `docs/outside-hub.png` and `docs/extension-modules.md`.
 **All 148 element mappings are `proposed` (not expert-reviewed).**

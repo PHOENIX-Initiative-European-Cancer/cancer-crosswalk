@@ -78,9 +78,11 @@ and a justification. We validate every set with the official `sssom` toolkit.
 > - **hub coverage** — of ECCDM's 68 elements, how many a source reaches.
 > - **source coverage** — of a source's fields, how many reach the hub.
 > - **carriage** — for an unmapped source field, *how* ECCDM could carry it:
->   `by-reference` (as a referenced observation), `extend-model` (attribute-level
->   detail on a model ECCDM already has), `new-module` (needs a new hub model),
->   or `out-of-scope` (not clinical cancer content).
+>   `coded-finding` (a generic coded Condition/Observation attached by reference;
+>   the terminology carries the meaning), `extend-model` (attribute-level
+>   detail on a model ECCDM already has), `new-module` (needs a hub model, either
+>   because the hub has no counterpart or because the meaning needs structure a
+>   code alone cannot carry), or `out-of-scope` (not clinical cancer content).
 
 ## 4. How to read the figures
 
@@ -90,8 +92,7 @@ sources; each cell shows *elements mapped / model size*, darker = higher
 coverage. This is the "how much of the generic hub is filled" view.
 *Panel B* — the extension need: the clinical fields that have **no** hub home,
 grouped into named information categories, sized by how many fields, coloured
-by carriage (blue = by-reference, green = extend an existing model, orange = new
-module). This is the "what the hub is missing" view.
+by source, tagged with the carriage class. This is the "what the hub is missing" view.
 
 ![**Figure 1.** Generic ECCDM spine (A) vs breast-specific extension need (B).](overview.png){ width=100% }
 
@@ -116,7 +117,7 @@ many sources share the category and how ECCDM could carry it.
 ECCDM models sit in the core, shaded by hub coverage. Angle is the clinical
 domain, clockwise along the care pathway. Radius is how ECCDM could carry the
 missing content: ring 1 extends a model ECCDM already has, ring 2 attaches a
-coded finding by evidence reference, ring 3 needs a new hub module, and the
+generic coded finding the terminology carries, ring 3 needs a hub model, and the
 outer band is not clinical cancer content. Bubble area is the number of
 unmapped fields; the inner violet disc is the **breast-cancer-specific** share
 (keyword-tagged, a lower bound); the four-cell strip marks which sources
@@ -163,16 +164,18 @@ infrastructure in B1MG (55), referral / care setting (17).
 
 The clinical 693 split by carriage:
 
-- **by-reference** (coded observations, 360): pathology detail (121), imaging
-  findings / BI-RADS (88), biomarker / receptor status (69), patient history /
-  risk factors (46), molecular tests (18), clinical examination / performance
-  status (18).
+- **coded-finding** (the terminology carries the meaning, 64): patient history /
+  risk factors (46), clinical examination / performance status (18). A generic
+  coded Condition or Observation attached by evidence reference suffices.
 - **extend-model** (finer attributes on models ECCDM already has, 238):
   treatment detail — drug, dose, cycles, fractions, technique (95); diagnosis /
   staging detail — TNM prefixes and symbols, localisation, side (76); surgery /
   procedure detail — biopsy, implants, planning (50); follow-up, response, death
   and second tumour (17).
-- **new-module** (95): tumour board / MDO (42), adverse events / complications
+- **new-module** (391): content whose meaning needs structure a code alone cannot
+  carry — pathology detail (121), imaging findings / BI-RADS (88), biomarker /
+  receptor status (69), molecular tests (18) — and content with no hub
+  counterpart: tumour board / MDO (42), adverse events / complications
   (30), study participation (15), psychosocial / supportive care (8).
 
 Per source, the *outside-but-clinical* share is 86 % for Senologie, 74 % for
@@ -213,12 +216,12 @@ The missing content maps onto a short wishlist, ordered by effort:
 
 | module | fields | carriage | nature |
 |---|---|---|---|
-| Pathology detail (margins, sentinel nodes, invasive/DCIS, grading) | 121 | by-reference | data dictionary (Observations + value sets) |
-| Imaging findings / BI-RADS | 88 | by-reference | data dictionary |
-| Biomarker / receptor status (ER/PR/HER2, Ki-67, PD-L1) | 69 | by-reference | data dictionary |
-| Patient history / risk factors (family history, menopause, pregnancy) | 46 | by-reference | data dictionary |
-| Molecular tests (Oncotype, MammaPrint, somatic mutations) | 18 | by-reference | data dictionary |
-| Clinical examination / performance status | 18 | by-reference | data dictionary |
+| Pathology detail (margins, sentinel nodes, invasive/DCIS, grading) | 121 | new-module | findings model: specimen, site, margin, method |
+| Imaging findings / BI-RADS | 88 | new-module | findings model: side, lesion, category |
+| Biomarker / receptor status (ER/PR/HER2, Ki-67, PD-L1) | 69 | new-module | Biomarker model: method, score system, result |
+| Patient history / risk factors (family history, menopause, pregnancy) | 46 | coded-finding | generic coded Condition/Observation + value sets |
+| Molecular tests (Oncotype, MammaPrint, somatic mutations) | 18 | new-module | test model: assay, gene, result |
+| Clinical examination / performance status | 18 | coded-finding | generic coded Observation + value sets |
 | Treatment detail (drug, dose, cycles, fractions, technique) | 95 | extend-model | attributes on SystemicTreatment / Radiotherapy |
 | Diagnosis / staging detail (TNM prefixes & symbols, localisation, side) | 76 | extend-model | attributes on CancerStage / CancerConditionAtDiagnosis |
 | Surgery / procedure detail (biopsy, implants, planning) | 50 | extend-model | attributes on Surgery |

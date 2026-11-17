@@ -53,7 +53,7 @@ C_OOS = fs.OOS
 F = {"title": 9.5, "sector": 6.5, "ring": 5.6, "core": 6, "bubble": 6.2, "cat": 4.6, "legend": 8.5, "note": 7}
 F_PAIR = {"title": 14, "sector": 10.5, "ring": 8.5, "core": 9.5, "bubble": 9.5, "cat": 7.2, "legend": 12, "note": 10}
 R_MAX = 0.45
-RING_LABEL = {1: "ring 1 · extend model", 2: "ring 2 · by reference",
+RING_LABEL = {1: "ring 1 · extend model", 2: "ring 2 · coded finding",
               3: "ring 3 · new module", 4: "outside · not clinical"}
 
 
@@ -246,7 +246,7 @@ def render(stage: int, out: Path, data):
                fontsize=F["legend"], bbox_to_anchor=(0.5, 0.01))
     sub = {1: "one circle per source · angle = clinical domain · core = ECCDM models, shade = hub coverage · bubble area = fields with no hub home",
            2: "stage 2 · the overlay shows where the sources coincide",
-           3: "stage 3 · radius = how ECCDM could carry the content: extend a model · attach by reference · new module · outside"}[stage]
+           3: "stage 3 · radius = how ECCDM could carry the content: extend a model · coded finding · new module · outside"}[stage]
     fig.suptitle(f"cancer-crosswalk — sources as layers over the ECCDM hub\n{sub}",
                  fontsize=13, fontweight="bold", y=0.985)
     fig.subplots_adjust(left=0.02, right=0.98, top=0.9, bottom=0.07, wspace=0.05, hspace=0.12)

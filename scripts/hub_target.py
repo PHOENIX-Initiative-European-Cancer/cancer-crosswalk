@@ -8,7 +8,7 @@ Polar layout.
   * radius = carriage, i.e. distance from the hub:
              core      ECCDM's own models (filled by hub coverage)
              ring 1    extend-model  — finer attributes on a model ECCDM has
-             ring 2    by-reference  — coded findings attached by evidence reference
+             ring 2    coded-finding — generic coded finding, terminology-carried
              ring 3    new-module    — needs a new hub model
              outside   out-of-scope  — not clinical cancer content
   * bubble area = unmapped source fields in that category; the inner disc is
@@ -81,8 +81,8 @@ CATEGORY = {
     "Other-entity & paediatric registry modules (prostate, colorectal, melanoma, DKKR)":
         (6, "other-entity\nmodules"),
 }
-RING = {"extend-model": 1, "by-reference": 2, "new-module": 3, "out-of-scope": 4}
-RING_LABEL = {1: "ring 1\nextend an\nexisting model", 2: "ring 2\nattach by\nevidence reference",
+RING = {"extend-model": 1, "coded-finding": 2, "new-module": 3, "out-of-scope": 4}
+RING_LABEL = {1: "ring 1\nextend an\nexisting model", 2: "ring 2\ncoded finding,\nterminology-carried",
               3: "ring 3\nnew hub\nmodule", 4: "outside\nnot clinical\ncancer content"}
 R_CORE = 1.2
 R_EDGE = [R_CORE, 2.35, 3.5, 4.65, 5.8]      # ring boundaries

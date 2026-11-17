@@ -7,7 +7,7 @@ Panel A (top): model-level hub coverage — 11 ECCDM models x 4 sources, cell
 
 Panel B (bottom): Extension modules — the breast-specific / detailed content
   that has NO hub home, as stacked bars per candidate extension module, coloured
-  by carriage (by-reference / new-module). Shows the hub is a thin generic spine
+  by carriage (coded-finding / extend-model / new-module). Shows the hub is a thin generic spine
   while the specialised detail forms fat extension modules.
 
 Reads hub/eccdm/elements.csv, mappings/*.sssom.tsv, and reuses the clustering
@@ -93,7 +93,7 @@ def main() -> int:
             if r["id"] in mapped:
                 continue
             m, c = ig.classify(r)
-            if c in ("by-reference", "extend-model", "new-module"):   # clinical only
+            if c in ("coded-finding", "extend-model", "new-module"):   # clinical only
                 mod_src[m][src] += 1
                 mod_carr[m] = c
 

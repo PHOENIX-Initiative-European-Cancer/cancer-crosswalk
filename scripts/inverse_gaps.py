@@ -10,10 +10,18 @@ to the hub and clusters it into candidate **extension modules** (extension
 modules ECCDM would need), classifying each by how it *could* be carried:
 
   carriage:
-    by-reference       -> no hub field, but attachable as referenced evidence
-                          IF ECCDM adds an evidence hook + an Observation/Finding
-                          logical model (e.g. ER/PR/HER2, BI-RADS, pathology).
-    new-module         -> needs a whole new hub model (e.g. tumour board / MDO).
+    coded-finding      -> no hub field, but the terminology carries the meaning:
+                          a generic coded Condition/Observation attached by
+                          evidence reference suffices (comorbidities, risk
+                          factors, performance status).
+    new-module         -> needs a whole new hub model: either the content has
+                          no hub counterpart (tumour board / MDO) or its meaning
+                          needs structure the terminology cannot carry alone
+                          (biomarkers with method and score, BI-RADS, pathology
+                          detail, molecular tests). Note 2026-11-17: these four
+                          were classed by-reference until it became clear that
+                          "attach a coded finding" only defers the syntactic
+                          decision to the referenced resource.
     out-of-scope       -> administrative / genomics-infrastructure, not clinical
                           content ECCDM aims to model.
 
@@ -56,7 +64,7 @@ SOURCES = {
 # Anything left is "Unclustered / to triage".
 #
 # carriage (how ECCDM could carry the field):
-#   by-reference  attachable as a referenced Observation/Finding (data dictionary)
+#   coded-finding attachable as a generic coded Condition/Observation (terminology-carried)
 #   extend-model  attribute-level detail of an EXISTING hub model
 #   new-module    needs a whole new hub model
 #   out-of-scope  not clinical cancer content ECCDM targets
@@ -94,19 +102,19 @@ MODULES = [
       "complicat", "komplpostop"]),
     ("Psychosocial / supportive care", "new-module",
      ["psychoonko", "sozialdienst", "maatschappelijk"]),
-    ("Biomarker / receptor status", "by-reference",
+    ("Biomarker / receptor status", "new-module",
      ["her2", "hormonrez", "oestrogen", "estrogen", "progesteron", "receptor",
       "rezeptor", "ki-67", "ki67", "pd-l1", "pdl1", "immunhisto", "allred", "irsscore",
       "irs-score", ".biomarker", "proliferatie"]),
-    ("Molecular tests / genomics", "by-reference",
+    ("Molecular tests / genomics", "new-module",
      ["oncotype", "mammaprint", "genexpress", "genetic", "genetik", "genetisch",
       "genmutatie", "genprofiel", "variant", "mutation", "sequenc", "genom",
       "moleculair", "gen_name"]),
-    ("Clinical examination / performance status", "by-reference",
+    ("Clinical examination / performance status", "coded-finding",
      ["klinischeuntersuchung", "palpation", "mamillenbefund", "hautveraend",
       "lichamelijk onderzoek", "performance", "leistungszustand", " asa ", "ecog",
       "karnofsky", "tumorformel", "clinical_status", "huidig probleem", "palpabel"]),
-    ("Imaging findings / BI-RADS", "by-reference",
+    ("Imaging findings / BI-RADS", "new-module",
      ["bi-rads", "birads", " acr ", "acrdichte", "mammografie", "echografie", "mammograf", "massa",
       "calcificat", "aankleuring", "densiteit", "echogenic", "laesie", "beeldvormend",
       "radiolog", "mri", "echo", "enhancement", "cyste", "asymmetrie", "elasticit",
@@ -121,7 +129,7 @@ MODULES = [
       "oriëntatie", "specifieke diagnosen", "uitslag beeldvormend", "tussentijdse controle",
       "restcalcificaties", "intraoperativesimaging", "imaging", " positie ", " diameter ",
       " bevindingen "]),
-    ("Pathology detail", "by-reference",
+    ("Pathology detail", "new-module",
      ["resekt", "snijvlak", "margin", "sentinel", "schildwacht", "lymfeklier",
       "lymphknoten", "lk_", "lkratio", "invasief", "invasiv", "dcis", "nottingham",
       "mitose", "tubulus", "grading", " grad ", ".grad ", "graad", "praeparat",
@@ -130,7 +138,7 @@ MODULES = [
       "residualstatus", "sicherheitsabstand", "huidinvasie", "tumordistributie",
       "tumorgroesse", "multifokal", "pt-diameter", "pn okselklier", "ypn okselklier",
       "mariklier", "intrammaire", "chemonutzen", "subtyp"]),
-    ("Patient history / risk factors", "by-reference",
+    ("Patient history / risk factors", "coded-finding",
      ["menopau", "anamnese", "voorgeschied", "gravida", "schwangerschaft", "familie",
       "brca", "zwanger", "borstvoedend", "allergie", "nierfunctie", "smoking",
       "raucher", "age_at", "history", "erblich", "fruehere_tumorerkrankung",
@@ -408,7 +416,7 @@ def main() -> int:
             totals[src] += 1
 
     # order modules by carriage then size
-    carr_rank = {"by-reference": 0, "extend-model": 1, "new-module": 2,
+    carr_rank = {"coded-finding": 0, "extend-model": 1, "new-module": 2,
                  "out-of-scope": 3, "review": 4}
     mods = sorted(by_module, key=lambda m: (carr_rank[carriage_of[m]],
                                             -sum(len(v) for v in by_module[m].values())))
@@ -417,11 +425,13 @@ def main() -> int:
              "Generated by `scripts/inverse_gaps.py`. Every source element that maps",
              "to NO ECCDM hub element, clustered into candidate extension modules and",
              "classified by how ECCDM could carry it.\n",
-             "- **by-reference** — needs an evidence hook + an Observation/Finding "
-             "logical model on the hub; the finding then hangs off by reference.",
+             "- **coded-finding** — the terminology carries the meaning: a generic coded "
+             "Condition/Observation attached by evidence reference suffices.",
              "- **extend-model** — attribute-level detail of a model ECCDM already "
              "has (CancerStage, SystemicTreatment, Radiotherapy, Surgery, LastFollowUp).",
-             "- **new-module** — needs a whole new hub model.",
+             "- **new-module** — needs a whole new hub model, either because the hub has no "
+             "counterpart or because the meaning needs structure (method, score, side) that a "
+             "code alone cannot carry.",
              "- **out-of-scope** — administrative, registry transport, other-entity "
              "organ modules, genomics infrastructure: not clinical content ECCDM targets.",
              "- **review** — structural leaves whose context was lost in extraction.\n",

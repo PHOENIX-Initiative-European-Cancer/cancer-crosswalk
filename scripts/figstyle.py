@@ -47,7 +47,7 @@ OOS_DARK = "#7C7B77"
 
 SRC_COLOUR = {"mii-onko-obds": S_TEAL, "nabon-mammacarcinoom": S_CORAL, "b1mg-cmd": S_OCHRE,
               "senologie-datenkranz": S_LAVENDER, "int-breast": S_RED}
-CARRIAGE_COLOUR = {"by-reference": S_TEAL, "extend-model": S_LAVENDER, "new-module": S_OCHRE,
+CARRIAGE_COLOUR = {"coded-finding": S_TEAL, "extend-model": S_LAVENDER, "new-module": S_OCHRE,
                    "out-of-scope": OOS, "review": BAND2}
 HUB = NAVY
 HUB_RAMP = ["#EEF1F3", "#B7C8D2", "#6C8FA3", "#2F607B", NAVY]   # coverage 0 .. 1, one hue

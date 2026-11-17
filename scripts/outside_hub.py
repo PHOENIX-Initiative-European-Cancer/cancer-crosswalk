@@ -62,13 +62,13 @@ C_MUTED = fs.MUTED
 C_GRID = fs.GRID
 C_SURF = fs.SURF
 FS = 1.0                                     # font scale, raised in --slide mode
-CARRIAGE_COLOUR = {"by-reference": C_EXT, "extend-model": C_EXT, "new-module": C_EXT,
+CARRIAGE_COLOUR = {"coded-finding": C_EXT, "extend-model": C_EXT, "new-module": C_EXT,
                    "out-of-scope": C_OOS, "review": C_TRIAGE}
 CARRIAGE_LABEL = {
-    "by-reference": "clinical content with no hub home",
+    "coded-finding": "clinical content with no hub home",
     "out-of-scope": "not clinical cancer content — out of scope for ECCDM",
 }
-CARRIAGE_SHORT = {"by-reference": "by reference", "extend-model": "extend model",
+CARRIAGE_SHORT = {"coded-finding": "coded finding", "extend-model": "extend model",
                   "new-module": "new module", "out-of-scope": "out of scope",
                   "review": "review"}
 
@@ -94,7 +94,7 @@ def collect():
             theme, carr = classify(r)
             carriage[theme] = carr
             matrix[theme][src] += 1
-            if carr in ("by-reference", "extend-model", "new-module"):
+            if carr in ("coded-finding", "extend-model", "new-module"):
                 c["ext"] += 1
             elif carr == "out-of-scope":
                 c["oos"] += 1
@@ -175,7 +175,7 @@ def main() -> int:
 
     # ---------------- B · outside content: source x theme dot matrix ----------
     themes = [t for t in matrix if carriage[t] != "review"]
-    rank = {"by-reference": 0, "extend-model": 1, "new-module": 2, "out-of-scope": 3}
+    rank = {"coded-finding": 0, "extend-model": 1, "new-module": 2, "out-of-scope": 3}
     themes.sort(key=lambda t: (rank[carriage[t]], -sum(matrix[t].values())))
     nmax = max(matrix[t][s] for t in themes for s in srcs)
     smax = 1050   # pt² for the largest dot
@@ -231,7 +231,7 @@ def main() -> int:
 
     handles = [Line2D([], [], marker="o", linestyle="", markersize=9,
                       color=CARRIAGE_COLOUR[k], label=CARRIAGE_LABEL[k])
-               for k in ("by-reference", "out-of-scope")]
+               for k in ("coded-finding", "out-of-scope")]
     if args.slide:
         axA.legend(handles=[Patch(facecolor=c, label=l) for k, c, l in segs if k in used] + handles,
                    loc="upper left", bbox_to_anchor=(-0.02, -0.3), ncol=1, frameon=False,
