@@ -52,7 +52,8 @@ MBC = "MBC2026"
 MBC21 = "MBC2021"
 
 # carriage classes for data points WITHOUT a hub element (mirrors inverse_gaps)
-BYREF = "by-reference"      # finding/observation that would hang off the hub by reference
+BYREF = "by-reference"      # legacy label in the curated table; remapped in main() (see CODED / NEWMOD)
+CODED = "coded-finding"     # terminology carries the meaning: generic coded finding by reference suffices
 EXTEND = "extend-model"     # attribute of a model ECCDM already has
 NEWMOD = "new-module"       # needs a new hub model
 DERIVED = "derived"         # computable from hub elements (dates, sequences, composites)
@@ -614,6 +615,12 @@ def main():
     keys = [r["key"] for r in ROWS]
     if len(keys) != len(set(keys)):
         sys.exit("duplicate keys: " + ", ".join(k for k, c in Counter(keys).items() if c > 1))
+    # 2026-11-17: "by-reference" only defers the syntactic decision to the referenced resource.
+    # Where the meaning needs structure a code cannot carry (biomarkers, genetics, pathology,
+    # imaging) the class is new-module; elsewhere a generic coded finding suffices.
+    for r in ROWS:
+        if r["carriage"] == BYREF:
+            r["carriage"] = NEWMOD if r["model"] in ("Biomarker", "Genetic", "Pathology", "Imaging") else CODED
 
     # ---- elements.csv
     OUT_ELEMENTS.parent.mkdir(parents=True, exist_ok=True)

@@ -16,7 +16,7 @@ on (`sources/esmo-breast/`). The direction and predicates are unchanged
 specific to this kind of source: `skos:relatedMatch` marks a data point that is
 *derivable* from hub elements (age, disease-free interval, prior exposure) rather
 than carried by one, and data points without any hub element are not omitted but
-classed in `elements.csv` (`hub_carriage`: by-reference, extend-model,
+classed in `elements.csv` (`hub_carriage`: coded-finding, extend-model,
 new-module, derived, process) so the gap report can count them.
 
 ## Predicates (SKOS)

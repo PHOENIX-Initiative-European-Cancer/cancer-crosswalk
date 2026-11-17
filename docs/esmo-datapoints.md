@@ -23,11 +23,11 @@ Data points with no hub home, by carriage class:
 
 | carriage | n |
 |---|---|
-| by-reference | 44 |
+| new-module | 32 |
+| coded-finding | 16 |
 | extend-model | 11 |
 | process | 4 |
 | derived | 4 |
-| new-module | 4 |
 
 Hub elements the guidelines need (exact/close/narrow/broad rows): **35 of 68**. Of these, INT availability: yes 31, partial 2, no 2.
 
@@ -37,33 +37,33 @@ These are the items that select a treatment in the guidelines and that ECCDM can
 
 | data point | guideline | decision it drives | carriage | oBDS | NABON | B1MG | Senologie | INT |
 |---|---|---|---|---|---|---|---|---|
-| Menopausal status | EBC2024;MBC2026 | OFS mandatory with endocrine therapy in pre/perimenopausal; AI vs tamoxifen; bisphosphonate benefit | by-reference | 1 | 1 |  | 1 |  |
-| Performance status | EBC2024;MBC2026 | ET alone instead of CDK4/6i combination; ChT decisions; treatment intensity | by-reference | 2 | 1 |  |  |  |
-| Geriatric assessment / frailty | EBC2024;MBC2021 | Treatment intensity in elderly patients | by-reference |  |  |  |  |  |
-| Fertility wish, pregnancy and contraception | EBC2024;MBC2026 | Fertility preservation before ChT; ET interruption for pregnancy; counselling in MBC | by-reference |  | 1 |  | 1 |  |
+| Menopausal status | EBC2024;MBC2026 | OFS mandatory with endocrine therapy in pre/perimenopausal; AI vs tamoxifen; bisphosphonate benefit | coded-finding | 1 | 1 |  | 1 |  |
+| Performance status | EBC2024;MBC2026 | ET alone instead of CDK4/6i combination; ChT decisions; treatment intensity | coded-finding | 2 | 1 |  |  |  |
+| Geriatric assessment / frailty | EBC2024;MBC2021 | Treatment intensity in elderly patients | coded-finding |  |  |  |  |  |
+| Fertility wish, pregnancy and contraception | EBC2024;MBC2026 | Fertility preservation before ChT; ET interruption for pregnancy; counselling in MBC | coded-finding |  | 1 |  | 1 |  |
 | Patient preference / shared decision | EBC2024;MBC2026 | Every treatment recommendation; sequencing; surgery of primary | process | 2 | 1 |  |  |  |
-| Multifocality / multicentricity | EBC2024 | MRI indication, BCS feasibility, APBI exclusion | by-reference |  |  |  | 1 |  |
+| Multifocality / multicentricity | EBC2024 | MRI indication, BCS feasibility, APBI exclusion | new-module |  |  |  | 1 |  |
 | Biological subtype (luminal A/B-like, HER2-positive, triple-negative) | EBC2024;MBC2026 | Selects every systemic treatment algorithm; brain imaging strategy; DS-GPA | derived |  |  |  | 2 |  |
-| Oestrogen receptor (ER) status | EBC2024;MBC2026 | Endocrine therapy; subtype; PIK3CA testing; ET vs ChT | by-reference | 6 | 21 |  | 13 |  |
-| Progesterone receptor (PgR) status | EBC2024;MBC2026 | HR status; subtype | by-reference | 2 | 7 |  | 4 |  |
-| HER2 status (final category) | EBC2024;MBC2026 | Anti-HER2 therapy; T-DXd in HER2-low/ultralow; TNBC definition; gBRCA testing in HER2-negative | by-reference | 2 | 4 |  | 10 |  |
-| Ki-67 after short preoperative endocrine therapy (endocrine response) | EBC2024 | Estimates ChT benefit in HR+ with 0-3 nodes | by-reference |  |  |  |  |  |
-| PD-L1 status, score type and assay | EBC2024;MBC2026 | ICI eligibility in metastatic TNBC; assay decides which regimen | by-reference |  |  |  | 3 |  |
-| Germline BRCA1/2 pathogenic variant | EBC2024;MBC2026 | Adjuvant olaparib; PARPi in MBC; carboplatin in TNBC; screening and MRI | by-reference | 1 | 1 |  | 4 |  |
-| Other germline variants (PALB2, other high-risk genes) | EBC2024;MBC2026 | Olaparib/talazoparib (off-label) in MBC; screening pathway | by-reference |  |  |  | 1 | 1 |
-| PIK3CA mutation (tissue or ctDNA) | MBC2026 | Inavolisib triplet first line; capivasertib; alpelisib | by-reference |  |  |  |  |  |
-| AKT1 and PTEN alterations | MBC2026 | Fulvestrant-capivasertib | by-reference |  | 1 |  |  |  |
-| ESR1 mutation (ctDNA or tissue) after progression on AI | MBC2026 | Elacestrant or imlunestrant | by-reference |  |  |  |  |  |
-| Somatic BRCA1/2 mutation | MBC2026 | PARPi monotherapy | by-reference |  |  |  |  |  |
-| HER2 (ERBB2) mutation | MBC2026 | Neratinib-trastuzumab-fulvestrant, tucatinib or T-DXd in HER2-mutated MBC with brain metastases | by-reference |  |  |  |  |  |
-| Tumour-agnostic markers (NTRK fusion, MSI-H/dMMR, TMB) | MBC2021 | Larotrectinib/entrectinib; pembrolizumab after subtype-specific options | by-reference |  |  |  |  |  |
-| Broader genomic profiling result with ESCAT tier and specimen type | EBC2024;MBC2026 | Treatment change or trial access only if ESCAT-actionable; which material supports ESR1 and PI3K-pathway calls | by-reference | 10 | 4 | 10 | 21 | 1 |
-| Pharmacogenetic tests (DPD/DPYD before capecitabine, UGT1A1) | MBC2026;MBC2021 | Capecitabine initiation; sacituzumab toxicity risk | by-reference |  |  |  |  |  |
+| Oestrogen receptor (ER) status | EBC2024;MBC2026 | Endocrine therapy; subtype; PIK3CA testing; ET vs ChT | new-module | 6 | 21 |  | 13 |  |
+| Progesterone receptor (PgR) status | EBC2024;MBC2026 | HR status; subtype | new-module | 2 | 7 |  | 4 |  |
+| HER2 status (final category) | EBC2024;MBC2026 | Anti-HER2 therapy; T-DXd in HER2-low/ultralow; TNBC definition; gBRCA testing in HER2-negative | new-module | 2 | 4 |  | 10 |  |
+| Ki-67 after short preoperative endocrine therapy (endocrine response) | EBC2024 | Estimates ChT benefit in HR+ with 0-3 nodes | new-module |  |  |  |  |  |
+| PD-L1 status, score type and assay | EBC2024;MBC2026 | ICI eligibility in metastatic TNBC; assay decides which regimen | new-module |  |  |  | 3 |  |
+| Germline BRCA1/2 pathogenic variant | EBC2024;MBC2026 | Adjuvant olaparib; PARPi in MBC; carboplatin in TNBC; screening and MRI | new-module | 1 | 1 |  | 4 |  |
+| Other germline variants (PALB2, other high-risk genes) | EBC2024;MBC2026 | Olaparib/talazoparib (off-label) in MBC; screening pathway | new-module |  |  |  | 1 | 1 |
+| PIK3CA mutation (tissue or ctDNA) | MBC2026 | Inavolisib triplet first line; capivasertib; alpelisib | new-module |  |  |  |  |  |
+| AKT1 and PTEN alterations | MBC2026 | Fulvestrant-capivasertib | new-module |  | 1 |  |  |  |
+| ESR1 mutation (ctDNA or tissue) after progression on AI | MBC2026 | Elacestrant or imlunestrant | new-module |  |  |  |  |  |
+| Somatic BRCA1/2 mutation | MBC2026 | PARPi monotherapy | new-module |  |  |  |  |  |
+| HER2 (ERBB2) mutation | MBC2026 | Neratinib-trastuzumab-fulvestrant, tucatinib or T-DXd in HER2-mutated MBC with brain metastases | new-module |  |  |  |  |  |
+| Tumour-agnostic markers (NTRK fusion, MSI-H/dMMR, TMB) | MBC2021 | Larotrectinib/entrectinib; pembrolizumab after subtype-specific options | new-module |  |  |  |  |  |
+| Broader genomic profiling result with ESCAT tier and specimen type | EBC2024;MBC2026 | Treatment change or trial access only if ESCAT-actionable; which material supports ESR1 and PI3K-pathway calls | new-module | 10 | 4 | 10 | 21 | 1 |
+| Pharmacogenetic tests (DPD/DPYD before capecitabine, UGT1A1) | MBC2026;MBC2021 | Capecitabine initiation; sacituzumab toxicity risk | new-module |  |  |  |  |  |
 | CPS+EG score | EBC2024 | Olaparib eligibility in HR+ residual disease | derived |  |  |  | 1 |  |
 | Composite risk categories (monarchE, NATALEE, OlympiA definitions) | EBC2024 | Abemaciclib, ribociclib, olaparib eligibility | derived |  |  |  |  |  |
-| Bone lesion complications: fracture risk, SINS, spinal cord compression | MBC2026;MBC2021 | RT dose (8 Gy x1 vs fractionated), orthopaedic evaluation, stabilisation surgery, MRI | by-reference |  |  |  |  |  |
-| Disease tempo: visceral crisis / imminent organ failure, aggressiveness | MBC2026;MBC2021 | ChT instead of ET-based therapy; combination vs sequential ChT; monitoring interval | by-reference |  |  |  |  |  |
-| Contraindications and candidacy (ChT, anthracycline, taxane, ET, tamoxifen in men, ICI, everolimus) | EBC2024;MBC2026 | Non-anthracycline regimens; ET + anti-HER2 without ChT; less toxic ChT partner; non-ICI first line | by-reference |  |  |  |  |  |
+| Bone lesion complications: fracture risk, SINS, spinal cord compression | MBC2026;MBC2021 | RT dose (8 Gy x1 vs fractionated), orthopaedic evaluation, stabilisation surgery, MRI | coded-finding |  |  |  |  |  |
+| Disease tempo: visceral crisis / imminent organ failure, aggressiveness | MBC2026;MBC2021 | ChT instead of ET-based therapy; combination vs sequential ChT; monitoring interval | coded-finding |  |  |  |  |  |
+| Contraindications and candidacy (ChT, anthracycline, taxane, ET, tamoxifen in men, ICI, everolimus) | EBC2024;MBC2026 | Non-anthracycline regimens; ET + anti-HER2 without ChT; less toxic ChT partner; non-ICI first line | coded-finding |  |  |  |  |  |
 | Drug availability and regulatory status (EMA/FDA) | MBC2026;MBC2021 | Alternative choices throughout the MBC algorithms | process |  |  |  |  |  |
 
 ## All data points
@@ -76,16 +76,16 @@ Standards column: letters mark which standard maps to the hub element (o = oBDS,
 |---|---|---|---|---|---|---|---|---|
 | Age at diagnosis | predictive | EBC2024;MBC2026 | years; biological vs chronological age; ≥50 for APBI; DS-GPA component | `CancerPatient.birthDate` skos:relatedMatch | derivable / related | — | —<br>probe: 1/1/2/3/1 | hub |
 | Sex | predictive | EBC2024;MBC2021 | female / male (male breast cancer) | `CancerPatient.sexAtBirth` skos:exactMatch | hub (exact/close) | yes | B[exact] N[close] o[close]<br>probe: 1/4/1/0/2 | hub |
-| Menopausal status | predictive | EBC2024;MBC2026 | pre- / peri- / postmenopausal; serum estradiol and FSH if in doubt; treatment-induced amenorrhoea | — | no hub home | — | —<br>probe: 1/1/0/1/0 | by-reference |
-| Performance status | predictive | EBC2024;MBC2026 | ECOG/WHO scale (scale not fixed by ESMO); general health status | — | no hub home | — | —<br>probe: 2/1/0/0/0 | by-reference |
+| Menopausal status | predictive | EBC2024;MBC2026 | pre- / peri- / postmenopausal; serum estradiol and FSH if in doubt; treatment-induced amenorrhoea | — | no hub home | — | —<br>probe: 1/1/0/1/0 | coded-finding |
+| Performance status | predictive | EBC2024;MBC2026 | ECOG/WHO scale (scale not fixed by ESMO); general health status | — | no hub home | — | —<br>probe: 2/1/0/0/0 | coded-finding |
 | Comorbidities | predictive | EBC2024;MBC2026 | present/absent and type; cardiac disease; diabetes (HbA1c for alpelisib) | `CancerPatient.comorbiditiesAtCancerDiagnosis` skos:exactMatch | hub (exact/close) | yes | B[close]<br>probe: 1/0/3/0/6 | hub |
-| Cardiac function (LVEF) | monitoring | EBC2024;MBC2026 | LVEF at baseline and during anthracycline / anti-HER2 therapy | — | no hub home | — | —<br>probe: 0/0/0/0/0 | by-reference |
-| Geriatric assessment / frailty | predictive | EBC2024;MBC2021 | performed / result; biological age | — | no hub home | — | —<br>probe: 0/0/0/0/0 | by-reference |
-| Family history and hereditary risk category | diagnostic | EBC2024;MBC2021 | strong family history per national criteria; known high-risk pathogenic variant | — | no hub home | — | —<br>probe: 0/16/0/9/0 | by-reference |
-| Fertility wish, pregnancy and contraception | predictive | EBC2024;MBC2026 | fertility wish; pregnancy status; fertility preservation performed; contraception counselled | — | no hub home | — | —<br>probe: 0/1/0/1/0 | by-reference |
-| Body weight / BMI | monitoring | EBC2024 | weight, BMI | — | no hub home | — | —<br>probe: 0/0/0/0/0 | by-reference |
-| Lifestyle: physical activity, alcohol, smoking | monitoring | EBC2024 | activity level; alcohol intake; smoking | — | no hub home | — | —<br>probe: 0/0/3/0/0 | by-reference |
-| Symptoms (presenting, local, bone pain, neurological) | diagnostic | EBC2024;MBC2026 | symptomatic vs screen-detected; local symptoms of primary; bone pain severity; CNS symptoms | — | no hub home | — | —<br>probe: 0/2/0/3/2 | by-reference |
+| Cardiac function (LVEF) | monitoring | EBC2024;MBC2026 | LVEF at baseline and during anthracycline / anti-HER2 therapy | — | no hub home | — | —<br>probe: 0/0/0/0/0 | coded-finding |
+| Geriatric assessment / frailty | predictive | EBC2024;MBC2021 | performed / result; biological age | — | no hub home | — | —<br>probe: 0/0/0/0/0 | coded-finding |
+| Family history and hereditary risk category | diagnostic | EBC2024;MBC2021 | strong family history per national criteria; known high-risk pathogenic variant | — | no hub home | — | —<br>probe: 0/16/0/9/0 | coded-finding |
+| Fertility wish, pregnancy and contraception | predictive | EBC2024;MBC2026 | fertility wish; pregnancy status; fertility preservation performed; contraception counselled | — | no hub home | — | —<br>probe: 0/1/0/1/0 | coded-finding |
+| Body weight / BMI | monitoring | EBC2024 | weight, BMI | — | no hub home | — | —<br>probe: 0/0/0/0/0 | coded-finding |
+| Lifestyle: physical activity, alcohol, smoking | monitoring | EBC2024 | activity level; alcohol intake; smoking | — | no hub home | — | —<br>probe: 0/0/3/0/0 | coded-finding |
+| Symptoms (presenting, local, bone pain, neurological) | diagnostic | EBC2024;MBC2026 | symptomatic vs screen-detected; local symptoms of primary; bone pain severity; CNS symptoms | — | no hub home | — | —<br>probe: 0/2/0/3/2 | coded-finding |
 | Patient preference / shared decision | predictive | EBC2024;MBC2026 | documented preference | — | no hub home | — | —<br>probe: 2/1/0/0/0 | process |
 
 ### Pathology
@@ -94,15 +94,15 @@ Standards column: letters mark which standard maps to the hub element (o = oBDS,
 |---|---|---|---|---|---|---|---|---|
 | Histological type | prognostic | EBC2024;MBC2026 | WHO classification; lobular; special low-grade types (adenoid cystic, secretory, medullary); confirmed on metastatic biopsy | `CancerConditionAtDiagnosis.histologyBehaviour` skos:exactMatch | hub (exact/close) | yes | B[exact] N[close] S[close] o[exact]<br>probe: 18/7/8/2/5 | hub |
 | Histological grade | prognostic | EBC2024 | grade 1-3; DCIS nuclear grade | `CancerConditionAtDiagnosis.tumourGradeValue` skos:exactMatch<br>`CancerConditionAtDiagnosis.tumourGradeSystem` skos:exactMatch | hub (exact/close) | yes | B[close] N[close] S[close] o[close]<br>probe: 6/4/2/6/4 | hub |
-| Tumour size (clinical and pathological, mm) | prognostic | EBC2024 | mm; thresholds 2 cm, 3 cm (APBI), 5 cm (abemaciclib, PMRT, staging imaging) | — | no hub home | — | —<br>probe: 4/5/1/0/0 | by-reference |
+| Tumour size (clinical and pathological, mm) | prognostic | EBC2024 | mm; thresholds 2 cm, 3 cm (APBI), 5 cm (abemaciclib, PMRT, staging imaging) | — | no hub home | — | —<br>probe: 4/5/1/0/0 | new-module |
 | Laterality | diagnostic | EBC2024 | left / right / bilateral | — | no hub home | — | —<br>probe: 1/1/4/8/3 | extend-model |
-| Multifocality / multicentricity | predictive | EBC2024 | unifocal / multifocal / multicentric; number of lesions | — | no hub home | — | —<br>probe: 0/0/0/1/0 | by-reference |
-| Lymphovascular invasion | prognostic | EBC2024 | present / absent | — | no hub home | — | —<br>probe: 1/1/0/5/0 | by-reference |
-| Resection margin status and width | treatment record | EBC2024 | no tumour at ink (invasive); ≥2 mm (DCIS); ≥3 mm for low-risk DCIS APBI; involved margins | — | no hub home | — | —<br>probe: 7/3/0/16/2 | by-reference |
-| DCIS component (presence, extent, grade, microinvasion) | prognostic | EBC2024 | pure DCIS vs invasive; size ≤2.5 cm; nuclear grade; microinvasion | — | no hub home | — | —<br>probe: 2/2/0/37/3 | by-reference |
+| Multifocality / multicentricity | predictive | EBC2024 | unifocal / multifocal / multicentric; number of lesions | — | no hub home | — | —<br>probe: 0/0/0/1/0 | new-module |
+| Lymphovascular invasion | prognostic | EBC2024 | present / absent | — | no hub home | — | —<br>probe: 1/1/0/5/0 | new-module |
+| Resection margin status and width | treatment record | EBC2024 | no tumour at ink (invasive); ≥2 mm (DCIS); ≥3 mm for low-risk DCIS APBI; involved margins | — | no hub home | — | —<br>probe: 7/3/0/16/2 | new-module |
+| DCIS component (presence, extent, grade, microinvasion) | prognostic | EBC2024 | pure DCIS vs invasive; size ≤2.5 cm; nuclear grade; microinvasion | — | no hub home | — | —<br>probe: 2/2/0/37/3 | new-module |
 | Inflammatory breast cancer | predictive | EBC2024 | yes / no (cT4d) | `CancerStage.stage.value` skos:narrowMatch | hub (narrow/broad) | yes | B[close] N[close] S[close] o[narrow/broad]<br>probe: 0/0/0/0/0 | hub |
-| Axillary node pathology: nodes examined and positive, SLN details | prognostic | EBC2024 | number of SLNs removed / positive; macro- vs micrometastasis vs ITC; extracapsular extension; number of positive nodes (1-3, ≥4); residual axillary disease | — | no hub home | — | —<br>probe: 4/26/0/4/0 | by-reference |
-| Pretreatment axillary node histology / cytology | diagnostic | EBC2024 | performed / result; node marked (clip) before PST | — | no hub home | — | —<br>probe: 0/1/0/0/1 | by-reference |
+| Axillary node pathology: nodes examined and positive, SLN details | prognostic | EBC2024 | number of SLNs removed / positive; macro- vs micrometastasis vs ITC; extracapsular extension; number of positive nodes (1-3, ≥4); residual axillary disease | — | no hub home | — | —<br>probe: 4/26/0/4/0 | new-module |
+| Pretreatment axillary node histology / cytology | diagnostic | EBC2024 | performed / result; node marked (clip) before PST | — | no hub home | — | —<br>probe: 0/1/0/0/1 | new-module |
 | Biopsy of a metastatic lesion at first MBC diagnosis | diagnostic | MBC2026;MBC2021 | performed / not feasible; site (avoid bone); re-biopsy at mixed response | — | no hub home | — | —<br>probe: 0/0/0/0/0 | extend-model |
 | Biological subtype (luminal A/B-like, HER2-positive, triple-negative) | predictive | EBC2024;MBC2026 | derived from ER, PgR, HER2, Ki-67 and grade; ER-low 1-9% behaves like TNBC | — | no hub home | — | —<br>probe: 0/0/0/2/0 | derived |
 
@@ -110,31 +110,31 @@ Standards column: letters mark which standard maps to the hub element (o = oBDS,
 
 | data point | role | guideline | value domain | hub element(s) | hub home | INT | standards | carriage |
 |---|---|---|---|---|---|---|---|---|
-| Oestrogen receptor (ER) status | predictive | EBC2024;MBC2026 | positive ≥1% cells; ER-low 1-9%; percentage; re-assessed on metastasis | — | no hub home | — | —<br>probe: 6/21/0/13/0 | by-reference |
-| Progesterone receptor (PgR) status | predictive | EBC2024;MBC2026 | positive / negative; percentage | — | no hub home | — | —<br>probe: 2/7/0/4/0 | by-reference |
-| HER2 status (final category) | predictive | EBC2024;MBC2026 | positive / negative; HER2-low (IHC 1+ or 2+/ISH-), HER2-ultralow, HER2-0; re-assessed on metastasis and in resected brain metastases | — | no hub home | — | —<br>probe: 2/4/0/10/0 | by-reference |
-| HER2 test details (IHC score, ISH result) | diagnostic | EBC2024;MBC2026 | IHC 0 / 1+ / 2+ / 3+; ISH amplified / not; FISH/CISH mandatory at 2+ | — | no hub home | — | —<br>probe: 1/0/0/8/0 | by-reference |
-| Ki-67 proliferation index | prognostic | EBC2024 | percentage; ≥20% high-risk (abemaciclib, ribociclib); luminal A vs B | — | no hub home | — | —<br>probe: 0/1/0/2/0 | by-reference |
-| Ki-67 after short preoperative endocrine therapy (endocrine response) | predictive | EBC2024 | Ki-67 ≤10% after 2-4 weeks of ET | — | no hub home | — | —<br>probe: 0/0/0/0/0 | by-reference |
-| Multigene expression assay (Oncotype DX, MammaPrint, EndoPredict, Prosigna, BCI) | prognostic | EBC2024 | assay name; score; risk class | — | no hub home | — | —<br>probe: 0/2/0/5/0 | by-reference |
-| Tumour-infiltrating lymphocytes (TILs) | prognostic | EBC2024 | percentage; no decision threshold | — | no hub home | — | —<br>probe: 0/0/0/0/0 | by-reference |
-| PD-L1 status, score type and assay | predictive | EBC2024;MBC2026 | CPS ≥10 (22C3) for pembrolizumab; immune-cell ≥1% (SP142) for atezolizumab; not used in EBC | — | no hub home | — | —<br>probe: 0/0/0/3/0 | by-reference |
+| Oestrogen receptor (ER) status | predictive | EBC2024;MBC2026 | positive ≥1% cells; ER-low 1-9%; percentage; re-assessed on metastasis | — | no hub home | — | —<br>probe: 6/21/0/13/0 | new-module |
+| Progesterone receptor (PgR) status | predictive | EBC2024;MBC2026 | positive / negative; percentage | — | no hub home | — | —<br>probe: 2/7/0/4/0 | new-module |
+| HER2 status (final category) | predictive | EBC2024;MBC2026 | positive / negative; HER2-low (IHC 1+ or 2+/ISH-), HER2-ultralow, HER2-0; re-assessed on metastasis and in resected brain metastases | — | no hub home | — | —<br>probe: 2/4/0/10/0 | new-module |
+| HER2 test details (IHC score, ISH result) | diagnostic | EBC2024;MBC2026 | IHC 0 / 1+ / 2+ / 3+; ISH amplified / not; FISH/CISH mandatory at 2+ | — | no hub home | — | —<br>probe: 1/0/0/8/0 | new-module |
+| Ki-67 proliferation index | prognostic | EBC2024 | percentage; ≥20% high-risk (abemaciclib, ribociclib); luminal A vs B | — | no hub home | — | —<br>probe: 0/1/0/2/0 | new-module |
+| Ki-67 after short preoperative endocrine therapy (endocrine response) | predictive | EBC2024 | Ki-67 ≤10% after 2-4 weeks of ET | — | no hub home | — | —<br>probe: 0/0/0/0/0 | new-module |
+| Multigene expression assay (Oncotype DX, MammaPrint, EndoPredict, Prosigna, BCI) | prognostic | EBC2024 | assay name; score; risk class | — | no hub home | — | —<br>probe: 0/2/0/5/0 | new-module |
+| Tumour-infiltrating lymphocytes (TILs) | prognostic | EBC2024 | percentage; no decision threshold | — | no hub home | — | —<br>probe: 0/0/0/0/0 | new-module |
+| PD-L1 status, score type and assay | predictive | EBC2024;MBC2026 | CPS ≥10 (22C3) for pembrolizumab; immune-cell ≥1% (SP142) for atezolizumab; not used in EBC | — | no hub home | — | —<br>probe: 0/0/0/3/0 | new-module |
 
 ### Genetic
 
 | data point | role | guideline | value domain | hub element(s) | hub home | INT | standards | carriage |
 |---|---|---|---|---|---|---|---|---|
-| Germline BRCA1/2 pathogenic variant | predictive | EBC2024;MBC2026 | pathogenic / likely pathogenic / wild type; tested per national criteria or when olaparib candidate; all HER2-negative MBC | — | no hub home | — | —<br>probe: 1/1/0/4/0 | by-reference |
-| Other germline variants (PALB2, other high-risk genes) | predictive | EBC2024;MBC2026 | PALB2 pathogenic / wild type; other high-risk PVs | — | no hub home | — | —<br>probe: 0/0/0/1/1 | by-reference |
-| Germline testing performed and genetic counselling | treatment record | EBC2024;MBC2026 | offered / performed / counselled; date | — | no hub home | — | —<br>probe: 10/1/0/11/0 | by-reference |
-| PIK3CA mutation (tissue or ctDNA) | predictive | MBC2026 | mutated / wild type; exon 7, 9 or 20 for alpelisib | — | no hub home | — | —<br>probe: 0/0/0/0/0 | by-reference |
-| AKT1 and PTEN alterations | predictive | MBC2026 | altered / not | — | no hub home | — | —<br>probe: 0/1/0/0/0 | by-reference |
-| ESR1 mutation (ctDNA or tissue) after progression on AI | predictive | MBC2026 | mutated / wild type; timing: at progression on AI ± CDK4/6i | — | no hub home | — | —<br>probe: 0/0/0/0/0 | by-reference |
-| Somatic BRCA1/2 mutation | predictive | MBC2026 | pathogenic / likely pathogenic / wild type | — | no hub home | — | —<br>probe: 0/0/0/0/0 | by-reference |
-| HER2 (ERBB2) mutation | predictive | MBC2026 | mutated / not | — | no hub home | — | —<br>probe: 0/0/0/0/0 | by-reference |
-| Tumour-agnostic markers (NTRK fusion, MSI-H/dMMR, TMB) | predictive | MBC2021 | present / absent | — | no hub home | — | —<br>probe: 0/0/0/0/0 | by-reference |
-| Broader genomic profiling result with ESCAT tier and specimen type | predictive | EBC2024;MBC2026 | actionable alteration list; ESCAT I-A to II-B; specimen = ctDNA / metastatic tissue / primary tissue; test date | — | no hub home | — | —<br>probe: 10/4/10/21/1 | by-reference |
-| Pharmacogenetic tests (DPD/DPYD before capecitabine, UGT1A1) | predictive | MBC2026;MBC2021 | deficient / normal | — | no hub home | — | —<br>probe: 0/0/0/0/0 | by-reference |
+| Germline BRCA1/2 pathogenic variant | predictive | EBC2024;MBC2026 | pathogenic / likely pathogenic / wild type; tested per national criteria or when olaparib candidate; all HER2-negative MBC | — | no hub home | — | —<br>probe: 1/1/0/4/0 | new-module |
+| Other germline variants (PALB2, other high-risk genes) | predictive | EBC2024;MBC2026 | PALB2 pathogenic / wild type; other high-risk PVs | — | no hub home | — | —<br>probe: 0/0/0/1/1 | new-module |
+| Germline testing performed and genetic counselling | treatment record | EBC2024;MBC2026 | offered / performed / counselled; date | — | no hub home | — | —<br>probe: 10/1/0/11/0 | new-module |
+| PIK3CA mutation (tissue or ctDNA) | predictive | MBC2026 | mutated / wild type; exon 7, 9 or 20 for alpelisib | — | no hub home | — | —<br>probe: 0/0/0/0/0 | new-module |
+| AKT1 and PTEN alterations | predictive | MBC2026 | altered / not | — | no hub home | — | —<br>probe: 0/1/0/0/0 | new-module |
+| ESR1 mutation (ctDNA or tissue) after progression on AI | predictive | MBC2026 | mutated / wild type; timing: at progression on AI ± CDK4/6i | — | no hub home | — | —<br>probe: 0/0/0/0/0 | new-module |
+| Somatic BRCA1/2 mutation | predictive | MBC2026 | pathogenic / likely pathogenic / wild type | — | no hub home | — | —<br>probe: 0/0/0/0/0 | new-module |
+| HER2 (ERBB2) mutation | predictive | MBC2026 | mutated / not | — | no hub home | — | —<br>probe: 0/0/0/0/0 | new-module |
+| Tumour-agnostic markers (NTRK fusion, MSI-H/dMMR, TMB) | predictive | MBC2021 | present / absent | — | no hub home | — | —<br>probe: 0/0/0/0/0 | new-module |
+| Broader genomic profiling result with ESCAT tier and specimen type | predictive | EBC2024;MBC2026 | actionable alteration list; ESCAT I-A to II-B; specimen = ctDNA / metastatic tissue / primary tissue; test date | — | no hub home | — | —<br>probe: 10/4/10/21/1 | new-module |
+| Pharmacogenetic tests (DPD/DPYD before capecitabine, UGT1A1) | predictive | MBC2026;MBC2021 | deficient / normal | — | no hub home | — | —<br>probe: 0/0/0/0/0 | new-module |
 
 ### Staging
 
@@ -151,19 +151,19 @@ Standards column: letters mark which standard maps to the hub element (o = oBDS,
 | Bone-only / bone-predominant disease | predictive | MBC2026;MBC2021 | yes / no | `ClinicalCancerProgression.metastaticSites` skos:relatedMatch | derivable / related | — | —<br>probe: 0/0/0/0/0 | derived |
 | Brain metastases: presence, activity, number, neurological symptoms | predictive | MBC2026;MBC2021 | present / absent; active vs stable; count; symptomatic | `ClinicalCancerProgression.metastaticSites` skos:narrowMatch | hub (narrow/broad) | yes | N[close] S[close] o[close]<br>probe: 0/0/0/0/0 | hub |
 | Leptomeningeal disease (type I/II, nodular vs linear, CSF cytology) | predictive | MBC2026 | suspected / confirmed; type I (positive cytology or biopsy) / II; morphology | `ClinicalCancerProgression.metastaticSites` skos:narrowMatch | hub (narrow/broad) | yes | N[close] S[close] o[close]<br>probe: 0/0/0/0/0 | hub |
-| Bone lesion complications: fracture risk, SINS, spinal cord compression | predictive | MBC2026;MBC2021 | impending fracture (CT/X-ray); SINS; MSCC suspected/confirmed; complicated vs uncomplicated lesion; significant long-bone/vertebral lesions | — | no hub home | — | —<br>probe: 0/0/0/0/0 | by-reference |
-| Disease tempo: visceral crisis / imminent organ failure, aggressiveness | predictive | MBC2026;MBC2021 | present / absent; indolent vs aggressive; need for rapid response | — | no hub home | — | —<br>probe: 0/0/0/0/0 | by-reference |
+| Bone lesion complications: fracture risk, SINS, spinal cord compression | predictive | MBC2026;MBC2021 | impending fracture (CT/X-ray); SINS; MSCC suspected/confirmed; complicated vs uncomplicated lesion; significant long-bone/vertebral lesions | — | no hub home | — | —<br>probe: 0/0/0/0/0 | coded-finding |
+| Disease tempo: visceral crisis / imminent organ failure, aggressiveness | predictive | MBC2026;MBC2021 | present / absent; indolent vs aggressive; need for rapid response | — | no hub home | — | —<br>probe: 0/0/0/0/0 | coded-finding |
 | De novo vs recurrent metastatic disease; intact primary | predictive | MBC2026;MBC2021 | de novo stage IV / recurrent; primary intact or resected | `CancerStage.stage.value` skos:relatedMatch<br>`ClinicalCancerProgression.diseaseStatus` skos:relatedMatch | derivable / related | — | —<br>probe: 2/5/2/6/8 | derived |
 | Disease-free interval and treatment-free interval | predictive | MBC2026;MBC2021 | months from end of (neo)adjuvant therapy to relapse; thresholds <6, ≥6, ≥12 months; ≥12 months after CDK4/6i | `ClinicalCancerProgression.assertedDate` skos:relatedMatch<br>`SystemicTreatment.endDate` skos:relatedMatch | derivable / related | — | —<br>probe: 0/0/0/0/2 | derived |
 | Timing of relapse relative to adjuvant endocrine / anti-HER2 therapy (endocrine resistance class) | predictive | MBC2026;MBC2021 | on adjuvant ET, ≤12 months after, >12 months after; within 24 months of adjuvant ET; within 6-12 months of adjuvant pertuzumab/T-DM1; primary vs secondary endocrine resistance; PFS on prior ET | `ClinicalCancerProgression.assertedDate` skos:relatedMatch<br>`SystemicTreatment.endDate` skos:relatedMatch<br>`SystemicTreatment.type` skos:relatedMatch | derivable / related | — | —<br>probe: 0/0/0/0/0 | derived |
-| Baseline laboratory values and organ function | diagnostic | EBC2024;MBC2026 | full blood count, liver and renal function, alkaline phosphatase, calcium; HbA1c (alpelisib); organ function adequate / impaired | — | no hub home | — | —<br>probe: 0/0/0/0/0 | by-reference |
+| Baseline laboratory values and organ function | diagnostic | EBC2024;MBC2026 | full blood count, liver and renal function, alkaline phosphatase, calcium; HbA1c (alpelisib); organ function adequate / impaired | — | no hub home | — | —<br>probe: 0/0/0/0/0 | coded-finding |
 
 ### Imaging
 
 | data point | role | guideline | value domain | hub element(s) | hub home | INT | standards | carriage |
 |---|---|---|---|---|---|---|---|---|
 | Diagnostic breast imaging performed (mammography, ultrasound, tomosynthesis, CEM, MRI) | diagnostic | EBC2024 | modality; bilateral; regional nodes; MRI indications (uncertainty, gBRCA, lobular, multifocality, implants); baseline MRI before PST | `Imaging.type` skos:exactMatch<br>`Imaging.bodySite` skos:exactMatch | hub (exact/close) | partial, yes | N[close] N[narrow/broad] S[exact]<br>probe: 0/13/0/16/13 | hub |
-| Imaging findings (BI-RADS, lesion extent, residual disease, radiation necrosis) | diagnostic | EBC2024;MBC2026 | BI-RADS; size/extent; residual disease after PST; necrosis vs progression on brain imaging | — | no hub home | — | —<br>probe: 0/13/0/4/2 | by-reference |
+| Imaging findings (BI-RADS, lesion extent, residual disease, radiation necrosis) | diagnostic | EBC2024;MBC2026 | BI-RADS; size/extent; residual disease after PST; necrosis vs progression on brain imaging | — | no hub home | — | —<br>probe: 0/13/0/4/2 | new-module |
 | Staging imaging performed (chest CT, abdominal US/CT/MRI, bone scintigraphy, FDG-PET-CT) | diagnostic | EBC2024;MBC2026 | modality; indicated for stage IIb+, cN+, T ≥5 cm, aggressive biology, symptoms; minimum MBC baseline = CT chest/abdomen + bone scan; PET-CT alternative | `Imaging.type` skos:exactMatch<br>`Imaging.bodySite` skos:exactMatch | hub (exact/close) | partial, yes | N[close] N[narrow/broad] S[exact]<br>probe: 0/0/0/1/3 | hub |
 | CNS and bone-specific imaging (brain MRI, spine MRI, CT/X-ray for fracture risk) | diagnostic | MBC2026;MBC2021 | performed / modality; brain imaging only if symptomatic or subtype-oriented | `Imaging.type` skos:narrowMatch | hub (narrow/broad) | yes | N[close] S[exact]<br>probe: 0/0/0/0/9 | hub |
 | Imaging dates and interval to treatment start; modality consistency | monitoring | EBC2024;MBC2026 | date; ≤4 weeks between baseline imaging and treatment start; same modality at baseline and monitoring; every 2-4 months | `CancerConditionAtDiagnosis.imagingDate` skos:closeMatch | hub (exact/close) | yes | S[exact]<br>probe: 2/0/0/3/1 | extend-model |
@@ -203,7 +203,7 @@ Standards column: letters mark which standard maps to the hub element (o = oBDS,
 | Bone-modifying agent (agent, schedule, duration) and dental evaluation | treatment record | EBC2024;MBC2026 | denosumab q4w; zoledronic acid q4w -> q12w after ≥9 months stable; adjuvant bisphosphonate; interruption after 2 years in remission; dental evaluation and calcium/vitamin D before start | `SystemicTreatment.type` skos:narrowMatch | hub (narrow/broad) | partial | B[narrow/broad] N[close] S[narrow/broad] o[close]<br>probe: 0/0/0/1/0 | hub |
 | Prior exposure per agent class and setting ('not already used') | treatment record | MBC2026;MBC2021 | prior AI, CDK4/6i, taxane-trastuzumab, T-DXd, T-DM1, tucatinib, TKI, PARPi, ICI, sacituzumab, Dato-DXd, anthracycline, taxane; agents received in (neo)adjuvant vs metastatic setting | `SystemicTreatment.type` skos:relatedMatch | derivable / related | — | —<br>probe: 0/0/0/0/0 | derived |
 | Response and duration on prior therapy (PFS on prior ET, duration of CDK4/6i response, progression on taxane-trastuzumab) | predictive | MBC2026;MBC2021 | months; prolonged vs short; progression during vs after; endocrine-sensitive / resistant / refractory | `ClinicalCancerProgression.assertedDate` skos:relatedMatch<br>`OverallCancerTreatmentResponse.treatmentResponseType` skos:relatedMatch | derivable / related | — | —<br>probe: 0/0/0/0/0 | derived |
-| Contraindications and candidacy (ChT, anthracycline, taxane, ET, tamoxifen in men, ICI, everolimus) | predictive | EBC2024;MBC2026 | contraindicated / not; candidate / not; immune-toxicity risk factors | — | no hub home | — | —<br>probe: 0/0/0/0/0 | by-reference |
+| Contraindications and candidacy (ChT, anthracycline, taxane, ET, tamoxifen in men, ICI, everolimus) | predictive | EBC2024;MBC2026 | contraindicated / not; candidate / not; immune-toxicity risk factors | — | no hub home | — | —<br>probe: 0/0/0/0/0 | coded-finding |
 | Supportive co-medication (G-CSF, steroid mouthwash, calcium/vitamin D, premedication, stomatitis prophylaxis) | treatment record | EBC2024;MBC2026 | given / not; duration | — | no hub home | — | —<br>probe: 1/0/0/5/4 | extend-model |
 | Intervals between diagnosis, surgery and systemic therapy start | monitoring | EBC2024;MBC2026 | diagnosis/staging -> neoadjuvant start 2-4 weeks; surgery -> adjuvant start 4-6 weeks, efficacy loss >12 weeks; imaging -> MBC treatment ≤4 weeks | `SystemicTreatment.startDate` skos:relatedMatch<br>`Surgery.date` skos:relatedMatch | derivable / related | — | —<br>probe: 0/0/0/0/0 | derived |
 
@@ -225,10 +225,10 @@ Standards column: letters mark which standard maps to the hub element (o = oBDS,
 | Contralateral breast cancer and second primary cancers | monitoring | EBC2024 | contralateral BC; second primary; participation in other-cancer screening | `CancerConditionAtDiagnosis.bodySite` skos:relatedMatch | derivable / related | — | —<br>probe: 0/0/0/3/4 | extend-model |
 | Surveillance imaging (annual mammography, breast US/MRI) | monitoring | EBC2024 | annual ipsilateral (after BCS) and contralateral mammography; US/MRI in selected cases; no routine CT/bone scan/tumour markers in asymptomatic patients | `Imaging.type` skos:exactMatch | hub (exact/close) | yes | N[close] S[exact]<br>probe: 0/0/0/0/4 | hub |
 | Treatment toxicity and adverse events (type, CTCAE grade, immune-related, cardiotoxicity, surgical complications) | monitoring | EBC2024;MBC2026 | event, grade, causal therapy, date; assessed at each visit; remaining toxicities from prior therapy | — | no hub home | — | —<br>probe: 19/2/6/10/0 | new-module |
-| Skeletal-related events | monitoring | MBC2026;MBC2021 | fracture, MSCC, RT or surgery to bone, hypercalcaemia; first / subsequent; date | — | no hub home | — | —<br>probe: 0/0/0/0/0 | by-reference |
-| Bone mineral density | monitoring | EBC2024 | DXA result; osteopenia / osteoporosis under AI or OFS | — | no hub home | — | —<br>probe: 0/0/0/0/2 | by-reference |
+| Skeletal-related events | monitoring | MBC2026;MBC2021 | fracture, MSCC, RT or surgery to bone, hypercalcaemia; first / subsequent; date | — | no hub home | — | —<br>probe: 0/0/0/0/0 | coded-finding |
+| Bone mineral density | monitoring | EBC2024 | DXA result; osteopenia / osteoporosis under AI or OFS | — | no hub home | — | —<br>probe: 0/0/0/0/2 | coded-finding |
 | Patient-reported outcomes, quality of life, psychosocial and sexual health | monitoring | EBC2024;MBC2026 | ePRO instrument scores at each visit; QoL in efficacy evaluation; anxiety, depression, fatigue, sleep, cognition, work; sexual and genitourinary symptoms; palliative symptom burden | — | no hub home | — | —<br>probe: 1/0/0/3/0 | new-module |
-| Therapy adherence | monitoring | EBC2024;MBC2021 | adherent / not; reason | — | no hub home | — | —<br>probe: 0/0/1/0/0 | by-reference |
+| Therapy adherence | monitoring | EBC2024;MBC2021 | adherent / not; reason | — | no hub home | — | —<br>probe: 0/0/1/0/0 | coded-finding |
 | Prognostic composite scores (DS-GPA, prognosis estimate) | prognostic | MBC2026 | DS-GPA from subtype, age, progression, extracranial status, number of brain metastases; expected survival | — | no hub home | — | —<br>probe: 2/0/0/1/0 | derived |
 
 ### Process
