@@ -190,30 +190,42 @@ def main() -> int:
     ap.add_argument("--out", type=Path, default=DEFAULT_OUT)
     ap.add_argument("--slide", action="store_true", help="slide version: larger type, no figure title")
     ap.add_argument("--scan-senologie", action="store_true", help="refresh valuesets.csv from the IG checkout")
+    ap.add_argument("--no-int", action="store_true", help="Senologie panel only (no INT Milan material)")
     args = ap.parse_args()
     FS = 1.35 if args.slide else 1.0
     fs.apply()
     if args.slide and args.out == DEFAULT_OUT:
         args.out = DEFAULT_OUT.with_name("snomed-coverage-slide.png")
+    if args.no_int and args.out.name == "snomed-coverage-slide.png":
+        args.out = args.out.with_name("snomed-coverage-senologie-slide.png")
     if args.scan_senologie or not SENO_VS.exists():
         rows = scan_senologie()
         with SENO_VS.open("w", encoding="utf-8", newline="") as fh:
             w = csv.DictWriter(fh, fieldnames=["name", "title", "systems"]); w.writeheader(); w.writerows(rows)
         print(f"Wrote {SENO_VS} ({len(rows)} value sets)")
 
-    int_per = int_coverage()
+    int_per = int_coverage() if not args.no_int else {}
     seno_per = seno_coverage()
-    fig = plt.figure(figsize=(16, 7.6) if args.slide else (13, 6.5))
-    gs = fig.add_gridspec(1, 2, wspace=0.7, left=0.15, right=0.97, top=0.87, bottom=0.21)
-    axA = fig.add_subplot(gs[0]); axB = fig.add_subplot(gs[1])
-    a_sct, a_n = stacked(axA, int_per, MODEL_ORDER, MODEL_LABEL, MATCH,
-                         "A · INT Milan: local codes with a SNOMED CT concept\n"
-                         "per ECCDM model, code level; % = codes with a concept", "local codes", 3)
-    b_sct, b_n = stacked(axB, seno_per, DOMAIN_ORDER, {}, VSCLASS,
-                         "B · Senologie: value sets drawing on SNOMED CT\n"
-                         "per domain, value-set level; % = sets with SNOMED CT content", "value sets", 2)
-    print(f"INT: {a_sct}/{a_n} local codes with a SNOMED concept ({100 * a_sct / a_n:.0f} %); "
-          f"Senologie: {b_sct}/{b_n} value sets with SNOMED content ({100 * b_sct / b_n:.0f} %)")
+    if args.no_int:
+        fig = plt.figure(figsize=(9.5, 7.6))
+        gs = fig.add_gridspec(1, 1, left=0.36, right=0.96, top=0.87, bottom=0.21)
+        axB = fig.add_subplot(gs[0])
+        b_sct, b_n = stacked(axB, seno_per, DOMAIN_ORDER, {}, VSCLASS,
+                             "Senologie: value sets drawing on SNOMED CT\n"
+                             "per domain, value-set level; % = sets with SNOMED CT content", "value sets", 2)
+        print(f"Senologie: {b_sct}/{b_n} value sets with SNOMED content ({100 * b_sct / b_n:.0f} %)")
+    else:
+        fig = plt.figure(figsize=(16, 7.6) if args.slide else (13, 6.5))
+        gs = fig.add_gridspec(1, 2, wspace=0.7, left=0.15, right=0.97, top=0.87, bottom=0.21)
+        axA = fig.add_subplot(gs[0]); axB = fig.add_subplot(gs[1])
+        a_sct, a_n = stacked(axA, int_per, MODEL_ORDER, MODEL_LABEL, MATCH,
+                             "A · INT Milan: local codes with a SNOMED CT concept\n"
+                             "per ECCDM model, code level; % = codes with a concept", "local codes", 3)
+        b_sct, b_n = stacked(axB, seno_per, DOMAIN_ORDER, {}, VSCLASS,
+                             "B · Senologie: value sets drawing on SNOMED CT\n"
+                             "per domain, value-set level; % = sets with SNOMED CT content", "value sets", 2)
+        print(f"INT: {a_sct}/{a_n} local codes with a SNOMED concept ({100 * a_sct / a_n:.0f} %); "
+              f"Senologie: {b_sct}/{b_n} value sets with SNOMED content ({100 * b_sct / b_n:.0f} %)")
     if not args.slide:
         fig.suptitle("cancer-crosswalk — SNOMED CT coverage where the code layer is known",
                      fontsize=13, fontweight="bold", y=0.985)
